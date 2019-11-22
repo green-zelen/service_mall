@@ -1,0 +1,202 @@
+@media screen and (max-width: 991px) {
+    @component modal {
+        .prew-locate {
+            display: block;
+            margin: 0 -15px 2rem;
+            padding: 1.5rem 2.5rem;
+            background: $soft_blue;
+            a {
+                color: $white_color;
+            }
+        }
+        @descendent location {
+            .modal-header {
+                padding-bottom: 0;
+                .close {
+                    display: none;
+                }
+            }
+            .modal-footer {
+                display: none;
+            }
+        }
+        .locate {
+            .first-locate {
+                .locate-list {
+                    .checkbox {
+                        border-top: 1px solid #DEF0F7;
+                    }
+                }
+            }
+            .second-locate {
+                .locate-list {
+                    .checkbox {
+                        border-top: 1px solid #D0E8F0;
+                    }
+                }
+            }
+            .third-locate {
+                .locate-list {
+                    .checkbox {
+                        border-top: 1px solid #badae6;
+                        background-image: none;
+                    }
+                    .divider {
+                        display: none !important;
+                    }
+                }
+            }
+            .second-locate,
+            .third-locate {
+                display: none;
+                .prew-locate {
+                    margin-bottom: 0;
+                }
+            }
+            .locate-inner {
+                padding: 0 0 1rem;
+            }
+            .locate-list {
+                .checkbox {
+                    padding: 18px 3rem;
+                    background-image: url(../images/interface/bg-arrow-right.png);
+                    background-size: 10px;
+                    background-repeat: no-repeat;
+                    background-position: 97% 50%;
+                    &.line-checkbox {
+                        padding: 18px 3rem;
+                    }
+                    label {
+                        font-size: 1.2rem;
+                        padding-left: 30px;
+                        .check {
+                            top: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        .photo-miniature-inner {
+            textarea {
+                &.form-control {
+                    height: 9.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component modal {
+        @descendent header {
+            .close {
+                right: .7rem;
+                top: .9rem;
+                background-size: 170%;
+                background-position: -20px 1px;
+                z-index: 999;
+            }
+            .h1 {
+                font-size: 24px;
+            }
+            .icon-input {
+                &.search {
+                    margin-top: 1rem;
+                }
+            }
+            .city-now {
+                span {
+                    display: block;
+                    width: 100%;
+                }
+                a {
+                    margin-top: .5rem;
+                    font-size: 1.2rem;
+                    white-space: nowrap;
+                    &.inline {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        @descendent square {
+            .modal-dialog {
+                top: 0;
+                margin: 0;
+            }
+        }
+        .line-checkbox {
+            .left {
+                width: 100% !important;
+                .divider {
+                    display: none;
+                }
+            }
+            .right {
+                display: none !important;
+            }
+        }
+        .photo-miniature {
+            width: 200px;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    @component modal {
+        .photo-miniature-descr {
+            min-height: 15%;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component modal {
+        @descendent header {
+            .h1 {
+                font-size: 26px;
+            }
+        }
+        @descendent body {
+            .content-narrow {
+                width: 100%;
+                .form {
+                    width: 280px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .photo-miniature {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .photo-miniature-inner {
+            textarea {
+                &.form-control {
+                    height: 15rem;
+                }
+            }
+        }
+        .photo-miniature-descr {
+            font-size: .9rem;
+            line-height: 1.3rem;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    @component modal {
+        @descendent body {
+            .content-narrow {
+                .form {
+                    width: 220px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@component panel-default {
+    border: none;
+    border-radius: 8px;
+    background: $light_blue;
+    box-shadow: none;
+    &.gray {
+        background: $light_gray;
+        .panel-heading {
+            background: $light_gray;
+        }
+    }
+    .panel-heading {
+        padding: 1rem;
+        background: $light_blue;
+        border-radius: 8px;
+        box-shadow: none;
+        border: none;
+        .h4 {
+            color: $deep_blue;
+            font-weight: 700;
+            i.fa-caret-down {
+                float: right;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .panel-collapse {
+        .panel-body {
+            border-top: none;
+            padding: 1rem;
+            .form {
+                padding: 0 !important;
+            }
+        }
+    }
+}

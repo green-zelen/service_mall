@@ -1,0 +1,12 @@
+// Mobile Filters
+@media screen and (max-width: 767px) {
+    @component filter {
+        @descendent checkbox {
+            display: none;
+            position: relative;
+            right: 0;
+            float: none;
+            margin-top: 1rem;
+        }
+    }
+}

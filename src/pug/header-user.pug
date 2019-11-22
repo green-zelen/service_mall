@@ -1,0 +1,88 @@
+extends footer.pug
+
+block header-user 
+	//- Overlay
+	//- Класс .visible отображает оверлей
+	div.overlay
+	//- Header
+	header.header
+		//- mobile header
+		div.header-mobile
+			div.container
+				div.row
+					div.col-xs-12
+						//- Класс .open выдвигает кнопку вслед за боковым меню. Класс .close скрывает после открытия
+						a.call-bar(href='#')
+								i.fa.fa-bars
+						div.mobile-menu
+							a.logo(href='#')
+								img(src='images/corporate/logo.png' alt="Логотип ServiceMall")
+						//- sidebar 
+						//- Класс .open открывает боковое меню. Класс .close скрывает после открытия
+						div.sidebar
+							div.top
+								a.log-in(href='#') #[i.fa.fa-user] Михаил Кожевников
+							div.descr
+								nav.mobile-nav
+									ul.mobile-navigate
+										li.mobile-navigate-link
+											a(href='#') #[i.fa.fa-file-text-o] Каталог услуг
+										li.mobile-navigate-link
+											a(href='#') #[i.fa.fa-info] О проекте
+										li.mobile-navigate-link
+											a(href='#') #[i.fa.fa-star-o] Акции
+										li.mobile-navigate-link
+											a(href='#') #[i.fa.fa-calendar] Новости
+										li.mobile-navigate-link
+											a(href='#') #[i.fa.fa-edit] База знаний
+										li.mobile-navigate-link
+											a(href='#') #[i.fa.fa-envelope-o] Контакты
+		//- header-top
+		div.header-top
+			div.container
+				div.row
+					//- city
+					div.col-xs-12.col-sm-4.col-md-4
+						div.header-city
+							span.geolocation Ваш город:
+								a.geolocation-link(href='#' data-toggle="modal" data-target="#chooseLocateModal") #[i.fa.fa-map-marker] Южно-Сахалинск
+					//- socials
+					div.col-xs-12.col-sm-4.col-md-4
+						div.header-socials
+							a(href='#')
+								i.fa.fa-vk
+							a(href='#')
+								i.fa.fa-twitter
+							a(href='#')
+								i.fa.fa-facebook
+							a(href='#')
+								i.fa.fa-paper-plane
+					//- login
+					div.col-xs-12.col-sm-4.col-md-4
+						div.header-user
+							a.log-in(href='#') #[i.fa.fa-user] Михаил Кожевников
+		//- header-bottom
+		div.header-bottom
+			div.container
+				div.row
+					div.col-xs-12.col-sm-12.col-md-3
+						div.header-logo
+							a.logo(href='#')
+								img(src='images/corporate/logo.png' alt="Логотип ServiceMall")
+					div.col-xs-12.col-sm-12.col-md-9
+						nav.header-nav
+							ul.top-navigate
+								li.top-navigate-link.catalog
+									a(href='#') Каталог услуг
+								li.top-navigate-link
+									a(href='#') О проекте
+								li.top-navigate-link
+									a(href='#') Акции
+								li.top-navigate-link
+									a(href='#') Новости
+								li.top-navigate-link
+									a(href='#') Статьи
+								li.top-navigate-link
+									a(href='#') Контакты
+
+

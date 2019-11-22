@@ -1,0 +1,26 @@
+// Gallery
+
+@component gallery {
+	@descendent inner {
+		background: $light_gray;
+		padding: 1rem 0;
+		overflow-x: scroll;
+		width: 100%;
+		height: 212px;
+	}
+	@descendent photos-list {
+		padding: 0 .5rem;
+		    display: flex;
+	}
+	@descendent photo {
+		display: inline-block;
+		width: auto;
+		margin: 0 .5rem;
+		a {
+			img {
+				height: 180px;
+				width: auto;
+			}
+		}
+	}
+}

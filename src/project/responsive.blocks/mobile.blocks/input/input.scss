@@ -1,0 +1,53 @@
+// Mobile inputs
+@media screen and (max-width:991px) {
+    @component radio {
+        @descendent first-level {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    @component radio {
+        padding: 14px 0;
+        .check {
+            top: 16px;
+        }
+    }
+    @component checkbox {
+        padding: 14px 0;
+        .check {
+            top: 16px;
+        }
+    }
+    @component textarea {
+        @descendent with-button {
+            position: relative;
+            textarea {
+                padding-bottom: 5rem;
+            }
+        }
+    }
+    @component textarea {
+        @descendent with-button {
+            .btn {
+                &.private-info {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    margin: 1rem 0 2rem;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    input {
+        &.form-control {
+            &.inline {
+                margin-left: 0;
+                width: 50%;
+            }
+        }
+    }
+}

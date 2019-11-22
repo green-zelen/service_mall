@@ -1,0 +1,14 @@
+@media screen and (max-width:767px) {
+    .one-fifth {
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width:480px) {
+    .one-fifth {
+        width: 100%;
+    }
+    .one-third {
+        width: 100%;
+    }
+}

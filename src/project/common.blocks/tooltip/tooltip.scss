@@ -1,0 +1,40 @@
+// Tooltips
+@component tooltip {
+    position: absolute;
+    bottom: 30px;
+    left: -130%;
+    margin-left: -5px;
+    @descendent inner {
+        background: $white_color;
+        color: $black_color;
+        border-width: 5px 5px 0;
+        box-shadow: 0 0 5px #cecece;
+        min-width: 240px;
+        font-size: .8rem;
+        padding: .5rem;
+        text-align: left;
+    }
+    @descendent arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        bottom: -7px;
+        left: 50%;
+        margin-left: -80px;
+        border-width: 7px 7px 0;
+        border-top-color: #fff;
+    }
+    &.visible {
+        opacity: 1;
+        display: block;
+        &:hover {
+        	cursor: default;
+        }
+    }
+    &.hidden {
+        opacity: 0;
+        display: none;
+    }
+}

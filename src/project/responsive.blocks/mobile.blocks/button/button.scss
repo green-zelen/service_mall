@@ -1,0 +1,54 @@
+@media screen and (max-width:767px) {
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        font-size: 1.2rem;
+        padding: .8rem;
+        &.add-photo {
+            width: 100%;
+            display: block;
+        }
+        &.btn-round {
+            border-radius: 4px;
+        }
+    }
+    .buttons-inner {
+        .btn {
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            padding: .8rem;
+        }
+        &.right {
+            .btn {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .form {
+        .submit-form-button {
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .btn {
+        display: block !important;
+        width: 100% !important;
+    }
+    .buttons-inner {
+        .btn {
+            display: block !important;
+            width: 100% !important;
+        }
+    }
+}

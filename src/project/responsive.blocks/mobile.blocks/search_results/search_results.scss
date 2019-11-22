@@ -1,0 +1,395 @@
+// Mobile Search Results
+@media screen and (max-width: 991px) {
+    @component choose-expert {
+        @descendent table {
+            margin-bottom: 2rem;
+            height: 200px;
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            .table {
+                .result-line {
+                    tr {
+                        td {
+                            &.avatar {
+                                img {
+                                    width: 60px;
+                                }
+                            }
+                            &.name {
+                                font-size: .9rem;
+                                max-width: 140px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                padding-right: 10px !important;
+                            }
+                            font-size: .9rem;
+                            &.rating {
+                                min-width: 105px;
+                                i {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            &.orders {
+                                display: none;
+                            }
+                        }
+                        &.first-line {
+                            padding: 16px 10px 0;
+                            td {
+                                &.rating {
+                                    padding: 16px 10px 0 0;
+                                }
+                            }
+                        }
+                        &.second-line {
+                            td {
+                                padding: 0 10px 16px;
+                            }
+                        }
+                        &.third-line {
+                            td {
+                                &.photo-inner {
+                                    padding: 0 10px 16px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component choose-expert {
+        padding: 2rem 0 0;
+        @descendent list {
+            .divider {
+                &.divider-date {
+                    display: none;
+                }
+            }
+        }
+        @descendent filters {
+            .title {
+                font-size: 1rem;
+            }
+            .label {
+                padding: .6rem;
+                font-size: 1rem;
+                margin-right: .8rem;
+            }
+        }
+        @descendent table {
+            border-radius: 0;
+            margin-bottom: 0;
+            height: 100%;
+        }
+        @descendent card {
+            display: none;
+            &.single-card {
+                display: block;
+            }
+            &.all-view {
+                display: block;
+            }
+            .hint {
+                display: none;
+            }
+            &.mobile {
+                height: 100%;
+                position: absolute;
+                z-index: 997;
+                display: block;
+                width: 80%;
+                top: 0;
+                background: $light_blue;
+                &.open {
+                    right: 0;
+                    width: 85%;
+                    transition-duration: 1.5s;
+                    display: block;
+                    top: 0;
+                }
+                &.close {
+                    width: 85%;
+                    right: -85%;
+                    transition-duration: 1.5s;
+                    display: none;
+                }
+                .implementer-card {
+                    border-radius: 0;
+                }
+                .btn-more {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .photo-miniature {
+            .photo-miniature-descr {
+                display: none;
+            }
+        }
+        .dop-mobile-choose-expert-inner {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            margin: 1rem -15px 0;
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            .table {
+                .result-line {
+                    tr {
+                        td {
+                            &.avatar {
+                                img {
+                                    width: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .more-results {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component choose-expert {
+        @descendent card {
+            .implementer-card {
+                text-align: center;
+                .col-xs-3 {
+                    width: 100%!important;
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 1rem;
+                    .avatar {
+                        img {
+                            width: 160px;
+                        }
+                    }
+                }
+                .col-xs-9 {
+                    width: 100%!important;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            &.single-card {
+                .implementer-proposal-card {
+                    text-align: center;
+                    .col-xs-3 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                        margin-bottom: 1rem;
+                        .avatar {
+                            img {
+                                width: 160px;
+                            }
+                        }
+                    }
+                    .col-xs-9 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+            &.mobile {
+                height: 504px;
+                overflow-y: scroll;
+                padding: 1rem 1rem 2rem;
+                &.open {
+                    width: 82%;
+                    transition-duration: 1.5s;
+                }
+                &.close {
+                    width: 82%;
+                    right: -82%;
+                    transition-duration: 1.5s;
+                }
+            }
+        }
+        @descendent filters {
+            .label {
+                padding: .5rem 1rem;
+            }
+        }
+        .photo-miniature {
+            .photo-miniature-descr {
+                display: block;
+            }
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            border-radius: 0;
+            margin-bottom: 3rem;
+            .table {
+                .result-line {
+                    tr {
+                        td {
+                            &.avatar {
+                                img {
+                                    width: 40px;
+                                }
+                            }
+                            &.name {
+                                display: none;
+                            }
+                        }
+                        &.first-line {
+                            td {
+                                &.avatar {
+                                    padding: 16px 20px!important;
+                                }
+                                &.price {
+                                    padding: 16px 0 0;
+                                }
+                            }
+                        }
+                        &.second-line {
+                            td {
+                                &.title,
+                                &.name {
+                                    display: table-cell;
+                                    padding: 0 10px 16px 0;
+                                    white-space: normal;
+                                }
+                                &.descr,
+                                &.time {
+                                    display: none;
+                                }
+                            }
+                        }
+                        &.third-line,
+                        &.categories-line {
+                            display: none;
+                        }
+                        &.mobile-line {
+                            display: table-cell;
+                            td {
+                                white-space: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @descendent card {
+            &.mobile {
+                position: absolute;
+                z-index: 997;
+                display: block;
+                width: 80%;
+                top: 0;
+                height: 663px;
+                overflow-y: scroll;
+                padding: 1rem 1rem 2rem;
+                background: $light_blue;
+                &.open {
+                    right: 0;
+                    width: 82%;
+                    transition-duration: 1.5s;
+                    display: block;
+                    top: 0;
+                }
+                &.close {
+                    width: 82%;
+                    right: -82%;
+                    transition-duration: 1.5s;
+                    display: none;
+                }
+                .result-card {
+                    text-align: center;
+                    border-radius: 0;
+                    .col-xs-3 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                        margin-bottom: 1rem;
+                        .avatar {
+                            img {
+                                width: 160px;
+                            }
+                        }
+                    }
+                    .col-xs-9 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                    .parameters {
+                        i {
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+                .btn-more {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .choose-orders-result {
+            position: relative;
+            padding: 0;
+            margin: 1rem -15px 0;
+        }
+        .choose-implementers-result {
+            position: relative;
+            padding: 0;
+            margin: 1rem -15px 0;
+        }
+        .more-results {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    @component choose-expert {
+        @descendent table {
+            .expert-line {
+                .status {
+                    display: none;
+                }
+                .orders {
+                    display: none;
+                }
+                .location {
+                    display: none;
+                }
+            }
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            border-radius: 0;
+            margin-bottom: 3rem;
+            .table {
+                .result-line {
+                    tr {
+                        &.first-line {
+                            td {
+                                &.avatar {
+                                    padding: 16px 20px 16px 10px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

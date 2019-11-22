@@ -1,0 +1,63 @@
+// Navigation 
+@component top-navigate {
+    position: relative;
+    width: 100%;
+    @descendent link {
+        display: inline-block;
+        position: relative;
+        a {
+            color: $text_gray;
+            padding: .7rem 1.5rem;
+            &:hover {
+                color: $deep_blue;
+            }
+        }
+        &.catalog {
+            a {
+                color: $white_color;
+                background: $deep_red;
+                border-radius: 50rem;
+                padding: .3rem 1.8rem;
+                &:hover {
+                    background: $deep_blue;
+                }
+            }
+        }
+        &:last-child {
+            a {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@component mobile-navigate {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @descendent link {
+        list-style: none;
+        position: relative;
+        border-top: $gray_border;
+        text-align: left;
+        a {
+            padding: 1rem 2rem;
+            color: $dark_gray;
+            display: block;
+            width: 100%;
+            i {
+                color: $deep_blue;
+                width: .7rem;
+                margin-right: 2rem;
+            }
+            &:hover {
+                background: $light_blue;
+                color: $deep_blue;
+            }
+        }
+        &:last-child {
+            border-bottom: $soft_gray_border;
+        }
+    }
+}

@@ -1,0 +1,1805 @@
+// Desktop Layout
+@media screen and (min-width: 1024px) {
+    @component container {
+        width: 1000px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .modal {
+        .flex-rows {
+            display: block;
+        }
+    }
+}
+/* ! important a_Imports */
+@import "variables/variables.css";
+
+// Descktop Modals
+@media screen and (min-width: 992px) {
+    @component modal {
+        @descendent square {
+            .modal-dialog {
+                &.standart {
+                    width: 800px;
+                }
+                &.wide {
+                    width: 960px;
+                }
+            }
+        }
+    }
+}
+// Responsive Descktop Sections
+@media screen and (min-width:992px) and (max-width:1024px) {
+    @component i-am-customer {
+        @descendent hint {
+            .check-list {
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    @component i-am-implementer {
+        @descendent hint {
+            .check-list {
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    @component advantages {
+        @descendent third {
+            .advantage {
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}
+// Mobile Articles
+@media screen and (max-width: 991px) {
+    @component articles {
+        .news-block {
+            width: 540px;
+            margin: 0 auto;
+        }
+        .articles-block {
+            width: 540px;
+            margin: 0 auto;
+        }
+        @descendent inner {
+            .article {
+                display: block;
+                &.with-image {
+                    .image {
+                        width: 100%;
+                        display: block;
+                        img {
+                            border-radius: 8px 8px 0 0;
+                        }
+                    }
+                    .text {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @component news {
+        @descendent inner {
+            .article {
+                display: block;
+                .text {
+                    .title {
+                        .date {
+                            display: block;
+                            width: 100%;
+                            margin: .5rem 0;
+                        }
+                    }
+                }
+                &.with-image {
+                    .image {
+                        width: 100%;
+                        display: block;
+                    }
+                    .text {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component articles {
+        .news-block {
+            width: 100%;
+        }
+        .articles-block {
+            width: 100%;
+        }
+        @descendent inner {
+            .article {
+                display: flex;
+                &.with-image {
+                    .image {
+                        width: 240px;
+                        display: inline-block;
+                        img {
+                            border-radius: 8px 0 0 8px;
+                        }
+                    }
+                    .text {
+                        width: calc(100% - 240px);
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    @component news {
+        @descendent inner {
+            .article {
+                display: flex;
+                &.with-image {
+                    .image {
+                        width: 240px;
+                        display: inline-block;
+                    }
+                    .text {
+                        width: calc(100% - 240px);
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    @component articles {
+        @descendent inner {
+            .article {
+                display: block;
+                &.with-image {
+                    .image {
+                        width: 100%;
+                        display: block;
+                        img {
+                            border-radius: 8px 8px 0 0;
+                        }
+                    }
+                    .text {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @component news {
+        @descendent inner {
+            .article {
+                display: block;
+                &.with-image {
+                    .image {
+                        width: 100%;
+                        display: block;
+                    }
+                    .text {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        font-size: 1.2rem;
+        padding: .8rem;
+        &.add-photo {
+            width: 100%;
+            display: block;
+        }
+        &.btn-round {
+            border-radius: 4px;
+        }
+    }
+    .buttons-inner {
+        .btn {
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            padding: .8rem;
+        }
+        &.right {
+            .btn {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .form {
+        .submit-form-button {
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .btn {
+        display: block !important;
+        width: 100% !important;
+    }
+    .buttons-inner {
+        .btn {
+            display: block !important;
+            width: 100% !important;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    i {
+        &.fa-info-circle {
+        	display: none;
+        }
+    }
+}
+// Mobile Categories
+@media screen and (max-width: 991px) {
+    @component choose-order-category {
+        padding: 2rem 0;
+        .divider {
+            margin-top: 2rem;
+        }
+    }
+    @component choose-imp-category {
+        padding: 2rem 0;
+    }
+    @component chosen-first-category {
+        .locates-inner {
+            .line {
+                display: flex;
+                span {
+                    &.locate {
+                        width: auto;
+                        max-width: calc(100% - 60px);
+                        display: inline-block;
+                        text-align: left;
+                    }
+                    &.actions {
+                        width: 55px;
+                        display: inline-block;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component chosen-second-category {
+        .sub-category {
+            .portfolio {
+                button {
+                    margin: 2rem 0;
+                }
+            }
+        }
+    }
+    @component subcategories {
+        a {
+            margin-bottom: 1rem;
+        }
+    }
+    @component category {
+        @descendent list {
+            text-align: center;
+            border-bottom: 1px solid $soft_gray_border;
+            padding-bottom: 2rem;
+            margin-bottom: 4rem;
+            .image {
+                text-align: center;
+                img {
+                    width: 160px;
+                }
+            }
+            .title {
+                text-align: center;
+                a {
+                    font-size: 1.4rem;
+                }
+            }
+            .list {
+                ul {
+                    li {
+                        line-height: 2.5rem;
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component chosen-second-category {
+        .sub-category {
+            .col-xs-11.manipulate {
+                width: 85% !important;
+            }
+        }
+    }
+}
+// Mobile Comments
+@media screen and (max-width: 991px) {
+    @component estimates {
+        @descendent inner {
+            .line {
+                line-height: 2.5rem;
+            }
+        }
+        @descendent star {
+            margin-left: 1rem;
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component uploads {
+        &.files {
+            display: block;
+            .left-label {
+                width: 100%;
+                display: block;
+                margin-bottom: 1rem;
+            }
+            .files-inner {
+                width: 100%;
+                display: block;
+            }
+            ul {
+                &.file-list {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component uploads {
+        &.files {
+            ul {
+                &.file-list {
+                    .file {
+                        padding: .5rem 1rem .3rem;
+                        margin-bottom: 1rem;
+                        border-radius: 8px;
+                        background: $soft_gray;
+                        .download {
+                            .name {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                width: 85%;
+                                display: inline-block;
+                                white-space: nowrap;
+                            }
+                            i {
+                                position: relative;
+                                top: -4px;
+                            }
+                        }
+                        .remove {
+                            i {
+                                padding: .5rem .9rem .5rem .9rem;
+                                float: right;
+                                margin-left: 0;
+                                position: relative;
+                                top: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobile Filters
+@media screen and (max-width: 767px) {
+    @component filter {
+        @descendent checkbox {
+            display: none;
+            position: relative;
+            right: 0;
+            float: none;
+            margin-top: 1rem;
+        }
+    }
+}
+// Responsive Mobile Footer
+@media screen and (max-width: 991px) {
+    @component footer {
+        .container {
+            width: 560px;
+            margin: 0 auto;
+        }
+        @descendent top {
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component footer {
+        .container {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component footer {
+        @descendent left {
+            .socials {
+                text-align: center;
+                margin-bottom: 2rem;
+                a {
+                	font-size: 1.6rem;
+                	margin-left: 2rem;
+                }
+            }
+            .contacts {
+                .phone {
+                    .num {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        display: block;
+                        width: 100%;
+                    }
+                    .city {
+                        font-size: 1rem;
+                        margin: 1rem 0 2rem;
+                    }
+                }
+                .email {
+                    margin-top: 2rem;
+                    a {
+                        margin: .5rem 0 0;
+                        display: table;
+                        width: auto;
+                    }
+                }
+            }
+            .mobile {
+            	text-align: center;
+            	.h4 {
+            		margin-bottom: 2rem;
+            	}
+            	.google-play {
+            		margin-left: 0;
+            	}
+            }
+        }
+        @descendent right {
+        	.links {
+        		margin-bottom: 2rem;
+        	}
+        }
+    }
+}
+@media screen and (max-width:480px) {
+    @component form {
+        .submit-form-button {
+        	padding: 0 1rem;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+// Responcive Mobile Header
+@media screen and (max-width: 991px) {
+    @component header {
+        @descendent logo {
+            width: 310px;
+            margin: 1rem auto 2rem;
+        }
+        @descendent nav {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component header {
+        @descendent mobile {
+            display: block;
+            background: $white_color;
+            text-align: center;
+            position: relative;
+            position: fixed;
+            width: 100%;
+            z-index: 998;
+            box-shadow: 0 2px 4px #ececec;
+            a.call-bar {
+                position: fixed;
+                top: 0;
+                right: 0;
+                opacity: 1;
+                background: transparent;
+                color: $deep_blue;
+                padding: 1rem 1.5rem;
+                height: 59px;
+                width: 59px;
+                font-size: 1.7rem;
+                z-index: 1000;
+                line-height: 2rem;
+                &:hover,
+                &:focus {
+                    color: $white_color;
+                    background: $deep_blue;
+                }
+                &.close {
+                    right: 0;
+                    transition-duration: 1.5s;
+                }
+                &.open {
+                    right: 321px;
+                    transition-duration: 1.5s;
+                }
+            }
+            .mobile-menu {
+                padding: 1rem 0;
+                a.logo {
+                    img {
+                        width: 160px;
+                    }
+                }
+            }
+            .sidebar {
+                position: fixed;
+                display: block;
+                background: $white_color;
+                box-shadow: $gray_box_shadow;
+                height: 100%;
+                z-index: 999;
+                top: 0;
+                width: 380px;
+                right: -380px;
+                opacity: 1;
+                &.close {
+                    right: -380px;
+                    transition-duration: 1.5s;
+                }
+                &.open {
+                    right: 0;
+                    transition-duration: 1.5s;
+                }
+                a {
+                    font-size: 1.2rem;
+                    line-height: 1.2rem;
+                }
+                .top {
+                    background: $light_gray;
+                    height: 59px;
+                    padding: 1.2rem 0 1rem 2rem;
+                    text-align: left;
+                    a {
+                        color: $deep_blue;
+                        &:hover {
+                            color: $deep_red;
+                        }
+                        i {
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+        @descendent top {
+            padding: 6rem 0 1.5rem;
+        }
+        @descendent bottom {
+            display: none;
+        }
+        @descendent city {
+            text-align: center;
+        }
+        @descendent socials {
+            display: none;
+        }
+        @descendent user {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component header {
+        @descendent mobile {
+            a.call-bar {
+                width: 80px;
+                &.open {
+                    right: 69%;
+                }
+            }
+            .sidebar {
+                &.open {
+                    width: 90%;
+                }
+                .top {
+                    a.log-in {
+                        font-size: 1.3rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobile inputs
+@media screen and (max-width:991px) {
+    @component radio {
+        @descendent first-level {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    @component radio {
+        padding: 14px 0;
+        .check {
+            top: 16px;
+        }
+    }
+    @component checkbox {
+        padding: 14px 0;
+        .check {
+            top: 16px;
+        }
+    }
+    @component textarea {
+        @descendent with-button {
+            position: relative;
+            textarea {
+                padding-bottom: 5rem;
+            }
+        }
+    }
+    @component textarea {
+        @descendent with-button {
+            .btn {
+                &.private-info {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    margin: 1rem 0 2rem;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    input {
+        &.form-control {
+            &.inline {
+                margin-left: 0;
+                width: 50%;
+            }
+        }
+    }
+}
+// Mobile Orders & Works Line Items
+@media screen and (max-width: 991px) {
+    @component item {
+        @descendent header {
+            .line {
+                .item {
+                    &.date-start {
+                        display: none;
+                    }
+                    &.status {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+        @descendent line {
+            .line {
+                .item {
+                    &.date-start {
+                        display: none;
+                    }
+                    &.status {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    @component item {
+        @descendent header {
+            display: none;
+        }
+        @descendent line {
+            background: transparent;
+            border-top: none !important;
+            .line {
+                background: transparent;
+                .item {
+                    display: block;
+                    width: 100%;
+                    background: $light_gray;
+                    &.category,
+                    &.date-finish,
+                    &.status {
+                        display: none;
+                    }
+                    &.name {
+                        background: $light_blue;
+                    }
+                    &:first-child {
+                        border-top: none !important;
+                    }
+                    &:last-child {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    .proposals {
+        &.item-list {
+            .item-line {
+                .line {
+                    .item {
+                        &.name {
+                            border-radius: 4px 4px 0 0;
+                        }
+                        &.estimate {
+                            border-radius: 0 0 4px 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .order {
+        &.item-list {
+            .item-line {
+                .line {
+                    .item {
+                        &.name {
+                            border-radius: 4px 4px 0 0;
+                        }
+                        &.date {
+                            border-radius: 0 0 4px 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .one-fifth {
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width:480px) {
+    .one-fifth {
+        width: 100%;
+    }
+    .one-third {
+        width: 100%;
+    }
+}
+@media screen and (max-width:767px) {
+    a {
+        &.info-icon {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    @component modal {
+        .prew-locate {
+            display: block;
+            margin: 0 -15px 2rem;
+            padding: 1.5rem 2.5rem;
+            background: $soft_blue;
+            a {
+                color: $white_color;
+            }
+        }
+        @descendent location {
+            .modal-header {
+                padding-bottom: 0;
+                .close {
+                    display: none;
+                }
+            }
+            .modal-footer {
+                display: none;
+            }
+        }
+        .locate {
+            .first-locate {
+                .locate-list {
+                    .checkbox {
+                        border-top: 1px solid #DEF0F7;
+                    }
+                }
+            }
+            .second-locate {
+                .locate-list {
+                    .checkbox {
+                        border-top: 1px solid #D0E8F0;
+                    }
+                }
+            }
+            .third-locate {
+                .locate-list {
+                    .checkbox {
+                        border-top: 1px solid #badae6;
+                        background-image: none;
+                    }
+                    .divider {
+                        display: none !important;
+                    }
+                }
+            }
+            .second-locate,
+            .third-locate {
+                display: none;
+                .prew-locate {
+                    margin-bottom: 0;
+                }
+            }
+            .locate-inner {
+                padding: 0 0 1rem;
+            }
+            .locate-list {
+                .checkbox {
+                    padding: 18px 3rem;
+                    background-image: url(../images/interface/bg-arrow-right.png);
+                    background-size: 10px;
+                    background-repeat: no-repeat;
+                    background-position: 97% 50%;
+                    &.line-checkbox {
+                        padding: 18px 3rem;
+                    }
+                    label {
+                        font-size: 1.2rem;
+                        padding-left: 30px;
+                        .check {
+                            top: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        .photo-miniature-inner {
+            textarea {
+                &.form-control {
+                    height: 9.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component modal {
+        @descendent header {
+            .close {
+                right: .7rem;
+                top: .9rem;
+                background-size: 170%;
+                background-position: -20px 1px;
+                z-index: 999;
+            }
+            .h1 {
+                font-size: 24px;
+            }
+            .icon-input {
+                &.search {
+                    margin-top: 1rem;
+                }
+            }
+            .city-now {
+                span {
+                    display: block;
+                    width: 100%;
+                }
+                a {
+                    margin-top: .5rem;
+                    font-size: 1.2rem;
+                    white-space: nowrap;
+                    &.inline {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        @descendent square {
+            .modal-dialog {
+                top: 0;
+                margin: 0;
+            }
+        }
+        .line-checkbox {
+            .left {
+                width: 100% !important;
+                .divider {
+                    display: none;
+                }
+            }
+            .right {
+                display: none !important;
+            }
+        }
+        .photo-miniature {
+            width: 200px;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    @component modal {
+        .photo-miniature-descr {
+            min-height: 15%;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component modal {
+        @descendent header {
+            .h1 {
+                font-size: 26px;
+            }
+        }
+        @descendent body {
+            .content-narrow {
+                width: 100%;
+                .form {
+                    width: 280px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .photo-miniature {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .photo-miniature-inner {
+            textarea {
+                &.form-control {
+                    height: 15rem;
+                }
+            }
+        }
+        .photo-miniature-descr {
+            font-size: .9rem;
+            line-height: 1.3rem;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    @component modal {
+        @descendent body {
+            .content-narrow {
+                .form {
+                    width: 220px;
+                }
+            }
+        }
+    }
+}
+// Responsive Navigation 
+@media screen and (max-width: 480px) {
+    @component mobile-navigate {
+        @descendent link {
+            a {
+                padding: 1.5rem 2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+// Mobile Pagination
+@media screen and (max-width: 990px) {
+    @component pagination {
+        li {
+            display: none;
+            &:first-child,
+            &:last-child {
+                display: inline-block !important;
+                width: 50%;
+                border: $gray_border;
+                a {
+                    padding: .3rem 2rem;
+                    &:hover {
+                        background: $light_gray;
+                        color: $text_gray;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:991px) {
+    .drag-n-drop {
+        display: none;
+    }
+    @component photo-miniature {
+        @descendent add {
+            a {
+                font-size: .9rem;
+                padding: 29% 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    @component photo-miniature {
+        @descendent add {
+            a {
+                font-size: 1rem;
+                padding: 30% 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    @component photo-miniature {
+        @descendent descr {
+            min-height: 30%;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        @descendent add {
+            a {
+                padding: 1rem
+            }
+        }
+    }
+}
+// Mobile Search Results
+@media screen and (max-width: 991px) {
+    @component choose-expert {
+        @descendent table {
+            margin-bottom: 2rem;
+            height: 200px;
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            .table {
+                .result-line {
+                    tr {
+                        td {
+                            &.avatar {
+                                img {
+                                    width: 60px;
+                                }
+                            }
+                            &.name {
+                                font-size: .9rem;
+                                max-width: 140px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                padding-right: 10px !important;
+                            }
+                            font-size: .9rem;
+                            &.rating {
+                                min-width: 105px;
+                                i {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            &.orders {
+                                display: none;
+                            }
+                        }
+                        &.first-line {
+                            padding: 16px 10px 0;
+                            td {
+                                &.rating {
+                                    padding: 16px 10px 0 0;
+                                }
+                            }
+                        }
+                        &.second-line {
+                            td {
+                                padding: 0 10px 16px;
+                            }
+                        }
+                        &.third-line {
+                            td {
+                                &.photo-inner {
+                                    padding: 0 10px 16px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component choose-expert {
+        padding: 2rem 0 0;
+        @descendent list {
+            .divider {
+                &.divider-date {
+                    display: none;
+                }
+            }
+        }
+        @descendent filters {
+            .title {
+                font-size: 1rem;
+            }
+            .label {
+                padding: .6rem;
+                font-size: 1rem;
+                margin-right: .8rem;
+            }
+        }
+        @descendent table {
+            border-radius: 0;
+            margin-bottom: 0;
+            height: 100%;
+        }
+        @descendent card {
+            display: none;
+            &.single-card {
+                display: block;
+            }
+            &.all-view {
+                display: block;
+            }
+            .hint {
+                display: none;
+            }
+            &.mobile {
+                height: 100%;
+                position: absolute;
+                z-index: 997;
+                display: block;
+                width: 80%;
+                top: 0;
+                background: $light_blue;
+                &.open {
+                    right: 0;
+                    width: 85%;
+                    transition-duration: 1.5s;
+                    display: block;
+                    top: 0;
+                }
+                &.close {
+                    width: 85%;
+                    right: -85%;
+                    transition-duration: 1.5s;
+                    display: none;
+                }
+                .implementer-card {
+                    border-radius: 0;
+                }
+                .btn-more {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .photo-miniature {
+            .photo-miniature-descr {
+                display: none;
+            }
+        }
+        .dop-mobile-choose-expert-inner {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            margin: 1rem -15px 0;
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            .table {
+                .result-line {
+                    tr {
+                        td {
+                            &.avatar {
+                                img {
+                                    width: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .more-results {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component choose-expert {
+        @descendent card {
+            .implementer-card {
+                text-align: center;
+                .col-xs-3 {
+                    width: 100%!important;
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 1rem;
+                    .avatar {
+                        img {
+                            width: 160px;
+                        }
+                    }
+                }
+                .col-xs-9 {
+                    width: 100%!important;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            &.single-card {
+                .implementer-proposal-card {
+                    text-align: center;
+                    .col-xs-3 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                        margin-bottom: 1rem;
+                        .avatar {
+                            img {
+                                width: 160px;
+                            }
+                        }
+                    }
+                    .col-xs-9 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+            &.mobile {
+                height: 504px;
+                overflow-y: scroll;
+                padding: 1rem 1rem 2rem;
+                &.open {
+                    width: 82%;
+                    transition-duration: 1.5s;
+                }
+                &.close {
+                    width: 82%;
+                    right: -82%;
+                    transition-duration: 1.5s;
+                }
+            }
+        }
+        @descendent filters {
+            .label {
+                padding: .5rem 1rem;
+            }
+        }
+        .photo-miniature {
+            .photo-miniature-descr {
+                display: block;
+            }
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            border-radius: 0;
+            margin-bottom: 3rem;
+            .table {
+                .result-line {
+                    tr {
+                        td {
+                            &.avatar {
+                                img {
+                                    width: 40px;
+                                }
+                            }
+                            &.name {
+                                display: none;
+                            }
+                        }
+                        &.first-line {
+                            td {
+                                &.avatar {
+                                    padding: 16px 20px!important;
+                                }
+                                &.price {
+                                    padding: 16px 0 0;
+                                }
+                            }
+                        }
+                        &.second-line {
+                            td {
+                                &.title,
+                                &.name {
+                                    display: table-cell;
+                                    padding: 0 10px 16px 0;
+                                    white-space: normal;
+                                }
+                                &.descr,
+                                &.time {
+                                    display: none;
+                                }
+                            }
+                        }
+                        &.third-line,
+                        &.categories-line {
+                            display: none;
+                        }
+                        &.mobile-line {
+                            display: table-cell;
+                            td {
+                                white-space: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @descendent card {
+            &.mobile {
+                position: absolute;
+                z-index: 997;
+                display: block;
+                width: 80%;
+                top: 0;
+                height: 663px;
+                overflow-y: scroll;
+                padding: 1rem 1rem 2rem;
+                background: $light_blue;
+                &.open {
+                    right: 0;
+                    width: 82%;
+                    transition-duration: 1.5s;
+                    display: block;
+                    top: 0;
+                }
+                &.close {
+                    width: 82%;
+                    right: -82%;
+                    transition-duration: 1.5s;
+                    display: none;
+                }
+                .result-card {
+                    text-align: center;
+                    border-radius: 0;
+                    .col-xs-3 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                        margin-bottom: 1rem;
+                        .avatar {
+                            img {
+                                width: 160px;
+                            }
+                        }
+                    }
+                    .col-xs-9 {
+                        width: 100%!important;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                    .parameters {
+                        i {
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+                .btn-more {
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .choose-orders-result {
+            position: relative;
+            padding: 0;
+            margin: 1rem -15px 0;
+        }
+        .choose-implementers-result {
+            position: relative;
+            padding: 0;
+            margin: 1rem -15px 0;
+        }
+        .more-results {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    @component choose-expert {
+        @descendent table {
+            .expert-line {
+                .status {
+                    display: none;
+                }
+                .orders {
+                    display: none;
+                }
+                .location {
+                    display: none;
+                }
+            }
+        }
+    }
+    @component choose-result {
+        @descendent table {
+            border-radius: 0;
+            margin-bottom: 3rem;
+            .table {
+                .result-line {
+                    tr {
+                        &.first-line {
+                            td {
+                                &.avatar {
+                                    padding: 16px 20px 16px 10px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Responsive Mobile Sections
+@media screen and (max-width: 991px) {
+    @component top-infographic {
+        br {
+            display: none;
+        }
+        @descendent credo {
+            p {
+                text-align: center;
+            }
+        }
+        @descendent image {
+            width: 540px;
+            margin: 1rem auto 0;
+        }
+    }
+    @component i-am-customer {
+        .container {
+            background-image: none;
+        }
+        @descendent search {
+            width: 400px;
+            margin: 0 auto;
+        }
+        @descendent hint {
+            width: 400px;
+            margin: 3rem auto 0;
+            padding: 1rem 2rem 2rem;
+            background: $white_color;
+            box-shadow: $gray_box_shadow;
+            .link-more {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @component i-am-implementer {
+        .container {
+            background-image: none;
+        }
+        @descendent search {
+            width: 400px;
+            margin: 0 auto;
+        }
+        @descendent hint {
+            width: 400px;
+            margin: 3rem auto 0;
+            padding: 1rem 2rem 2rem;
+            background: $white_color;
+            box-shadow: $gray_box_shadow;
+            .link-more {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @component advantages {
+        .container {
+            .dotted-line {
+                display: none;
+            }
+        }
+        @descendent third {
+            margin: 3rem auto 0;
+            width: 40%;
+        }
+    }
+    @component order-budget {
+        @descendent price {
+            margin-top: 1rem;
+        }
+    }
+    @component create-order {
+        .implementer-proposal {
+            display: none;
+        }
+    }
+    @component mobile-implementer-proposal {
+        display: block;
+        .implementer-proposal {
+            display: block;
+        }
+        .panel-default {
+            .panel-heading {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component top-infographic {
+        display: none;
+        @descendent image {
+            width: 100%;
+            margin: 1rem auto 0;
+        }
+    }
+    @component banner-carousel {
+        display: none;
+    }
+    @component single-article {
+        @descendent body {
+            img {
+                width: 100%;
+                &.left {
+                    margin: 0 0 1rem;
+                }
+            }
+            p {
+                text-align: left;
+            }
+        }
+    }
+    @component top-personal-questionary {
+        .buttons-inner {
+            text-align: center;
+            padding-bottom: 0;
+            button {
+                width: 380px;
+                display: inline;
+            }
+        }
+        .divider {
+            display: none;
+        }
+    }
+    @component create-order {
+        .what-the-category {
+            .title {
+                display: block;
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+        .opponent-card {
+            .implementer-short-card {
+                .name {
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .short-order-card {
+            .bottom {
+                .param {
+                    display: block;
+                    width: 100%;
+                    margin-top: 1rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    @component create-order {
+        .opponent-card {
+            .implementer-short-card {
+                .name {
+                    margin-top: 0;
+                }
+            }
+        }
+        .short-order-card {
+            .bottom {
+                .param {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component i-am-customer {
+        padding: 1rem 0 3rem;
+        @descendent search {
+            width: 100%;
+        }
+        @descendent hint {
+            width: 100%;
+        }
+    }
+    @component i-am-implementer {
+        padding: 1rem 0 3rem;
+        @descendent search {
+            width: 100%;
+        }
+        @descendent hint {
+            width: 100%;
+        }
+    }
+    @component advantages {
+        .h2 {
+            font-size: 1.6rem;
+        }
+        @descendent third {
+            width: 80%;
+        }
+    }
+    @component create-order {
+        .h3 {
+            font-size: 18px;
+        }
+        .implementer-short-card {
+            text-align: center;
+            .col-xs-3 {
+                width: 100%!important;
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 1rem;
+                .avatar {
+                    img {
+                        width: 160px;
+                    }
+                }
+            }
+            .col-xs-9 {
+                width: 100%!important;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .short-order-card {
+            a {
+                &.title {
+                    font-size: 1rem;
+                    margin-bottom: .5rem;
+                }
+            }
+            .descr {
+                font-size: .9rem;
+            }
+        }
+        .order-details-process {
+            .actions {
+                .col-xs-6 {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    @component create-order {
+        .short-order-card {
+            .col-xs-3,
+            .col-xs-4,
+            .col-xs-8,
+            .col-xs-9 {
+                width: 100%;
+            }
+            a {
+                &.title {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+// Mobile Sidebar
+@media screen and (max-width: 767px) {
+    @component sidebar {
+        .banner {
+            &.stub-class {
+                &:last-child {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+// Mobile Tabs
+@media screen and (max-width: 480px) {
+    @component tabs {
+        @descendent block {
+            .tab {
+                display: block;
+                width: 100%;
+                margin: 0 0 1rem;
+            }
+            &.items-filters {
+                .tab {
+                    a {
+                        text-align: center;
+                        font-weight: bold;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    i {
+        &.fa-info-circle {
+        	display: none;
+        }
+    }
+}

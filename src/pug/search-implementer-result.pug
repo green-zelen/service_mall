@@ -1,0 +1,202 @@
+extends header-user.pug
+
+//- Make Order Sections
+block section-top-order-preview
+	section.page-top.top-order-preview.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li 
+								a(href="#") Поиск исполнителей
+							li.active Анатолий Тютюев
+					div.top
+						h1.blue-h1 Анатолий Тютюев
+block section-choose-expert
+	section.choose-expert
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-7
+					div.choose-expert-card.single-card
+						div.implementer-proposal-card
+							div.row
+								div.col-xs-3.col-sm-3
+									div.avatar
+										img(src="images/stubs/avatar.png")
+								div.col-xs-9.col-sm-9
+									div.info
+										div.name Анатолий Юриевич Тютюев
+										div.old 39 лет, г. Южно-Сахалинск
+										div.rating
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											span.experience Опыт: 4 года
+										div.orders
+											span.strong 144 заказа
+											| 
+											span – 1100 р/ч	
+							div.descr
+								p.eduation Дальневосточный государственный политехнический университет, специалитет «Горное дело». 1997-2002 гг.
+								p.eduation Профессионально-техническое училище №44, столяр. 1995-1997 гг.
+								div.divider.divider-dotted.divider-blue
+								p.about-implementer Меня зовут Иванов Иван Иванович. Я окончил Дальневосточный государственный политехнический университет в 2002 году по специальности «Горное дело». С 2004 года занимаюсь ремонтами и строительством как частное лицо. Я специализируюсь на отделочных работах, установке окон и дверей, партнерствую с опытными электриками и сантехниками. С 2011года руковожу собственной бригадой.  Берусь за выполение сложных заказов, консультирую по вопросам ремонта.
+						div.divider.divider-category
+							span.category Изготовление и ремонт мебели
+						div.professional-category
+							div.h5.title.left Мягкая мебель
+							p Профессионально занимаюсь  проектированием, созданием и сборкой корпусной мебели по итальянской технологии с 2014 года. Имею выход на поставщиков немецких материалов высшего качества.
+							div.photos
+								div.dop-row
+									div.one-third
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub1.png")/
+												div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+									div.one-third
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub2.png")/
+												div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения.
+									div.one-third
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub1.png")/
+												div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+						div.other-category
+							div#accordionImplementerDetails1.panel-group(role='tablist' aria-multiselectable='true')
+							div.panel.panel-default
+								div#headingImplementerDetails1.panel-heading(role='tab')
+									div.h4.panel-title
+										a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerDetails1' aria-expanded='true' aria-controls='collapseOne') 
+											div.row
+												div.col-xs-10 Детская мебель
+												div.col-xs-2
+													i.fa.fa-caret-down
+								div#collapseImplementerDetails1.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerDetails1')
+									div.panel-body
+										div.implementer-details-block
+											p Профессионально занимаюсь  проектированием, созданием и сборкой корпусной мебели по итальянской технологии с 2014 года. Имею выход на поставщиков немецких материалов высшего качества.
+											div.photos
+												div.dop-row
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub2.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения.
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+						div.other-category
+							div#accordionImplementerDetails2.panel-group(role='tablist' aria-multiselectable='true')
+							div.panel.panel-default
+								div#headingImplementerDetails2.panel-heading(role='tab')
+									div.h4.panel-title
+										a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerDetails2' aria-expanded='true' aria-controls='collapseOne') 
+											div.row
+												div.col-xs-10 Корпусная мебель
+												div.col-xs-2
+													i.fa.fa-caret-down
+								div#collapseImplementerDetails2.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerDetails2')
+									div.panel-body
+										div.implementer-details-block
+											p Профессионально занимаюсь  проектированием, созданием и сборкой корпусной мебели по итальянской технологии с 2014 года. Имею выход на поставщиков немецких материалов высшего качества.
+											div.photos
+												div.dop-row
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub2.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения.
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+						div.divider.divider-category
+							span.category Косметичейский и черновой ремонт
+						div.other-category
+							div#accordionImplementerDetails3.panel-group(role='tablist' aria-multiselectable='true')
+							div.panel.panel-default
+								div#headingImplementerDetails3.panel-heading(role='tab')
+									div.h4.panel-title
+										a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerDetails3' aria-expanded='true' aria-controls='collapseOne') 
+											div.row
+												div.col-xs-10 Укладка кафеля
+												div.col-xs-2
+													i.fa.fa-caret-down
+								div#collapseImplementerDetails3.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerDetails3')
+									div.panel-body
+										div.implementer-details-block
+											p Профессионально занимаюсь  проектированием, созданием и сборкой корпусной мебели по итальянской технологии с 2014 года. Имею выход на поставщиков немецких материалов высшего качества.
+											div.photos
+												div.dop-row
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub2.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения.
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+						div.other-category
+							div#accordionImplementerDetails4.panel-group(role='tablist' aria-multiselectable='true')
+							div.panel.panel-default
+								div#headingImplementerDetails4.panel-heading(role='tab')
+									div.h4.panel-title
+										a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerDetails4' aria-expanded='true' aria-controls='collapseOne') 
+											div.row
+												div.col-xs-10 Выравнивание стен
+												div.col-xs-2
+													i.fa.fa-caret-down
+								div#collapseImplementerDetails4.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerDetails4')
+									div.panel-body
+										div.implementer-details-block
+											p Профессионально занимаюсь  проектированием, созданием и сборкой корпусной мебели по итальянской технологии с 2014 года. Имею выход на поставщиков немецких материалов высшего качества.
+											div.photos
+												div.dop-row
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub2.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения.
+													div.one-third
+														div.photo-miniature
+															a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																img(src="images/stubs/stub1.png")/
+																div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+				div.col-xs-12.col-sm-12.col-md-5
+					div.sidebar.banners
+						div.banner.stub-class
+							div.h5 Рекламный баннер
+						div.banner.stub-class
+							div.h5 Рекламный баннер
+				

@@ -1,0 +1,150 @@
+// Orders & Works Line Items
+@component item {
+    @descendent list {
+        margin: 1rem 0;
+        .table {
+            display: table;
+        }
+    }
+    @descendent header {
+        background: $hover_light_gray;
+        border-radius: 4px;
+        margin: 0;
+        display: table-row-group;
+        .line {
+            display: table-row;
+            border-radius: 4px;
+            .item {
+                display: table-cell;
+                font-weight: bold;
+                color: $text_gray;
+                font-size: .8rem;
+                border-top: none !important;
+                padding: .4rem .5rem;
+                white-space: nowrap;
+                &.filter {
+                    button {
+                        color: $text_gray;
+                        &:hover {
+                            color: $dark_gray;
+                        }
+                        &:focus {
+                        	outline: none;
+                        }
+                        i {
+                            margin-left: .5rem;
+                        }
+                    }
+                    &.up {
+                        i.i.fa.fa-sort-amount-asc {
+                            display: block;
+                        }
+                        i.fa.fa-sort-amount-desc {
+                            display: none;
+                        }
+                        i.i.fa.fa-sort-numeric-asc {
+                            display: block;
+                        }
+                        i.fa.fa-sort-numeric-desc {
+                            display: none;
+                        }
+                    }
+                    &.down {
+                        i.i.fa.fa-sort-amount-asc {
+                            display: none;
+                        }
+                        i.fa.fa-sort-amount-desc {
+                            display: block;
+                        }
+                        i.i.fa.fa-sort-numeric-asc {
+                            display: none;
+                        }
+                        i.fa.fa-sort-numeric-desc {
+                            display: block;
+                        }
+                    }
+                }
+                &:first-child {
+                    border-radius: 4px 0 0 4px;
+                }
+                &:last-child {
+                    text-align: right;
+                    border-radius: 0 4px 4px 0;
+                }
+            }
+        }
+    }
+    @descendent line {
+        border-radius: 4px;
+        background: $light_gray;
+        color: $black_color;
+        font-size: .8rem;
+        margin: 0;
+        display: table-row-group;
+        .line {
+            display: table-row;
+            border-radius: 4px;
+            .item {
+                display: table-cell;
+                font-weight: bold;
+                font-size: .9rem;
+                border-top: none !important;
+                padding: .5rem;
+                white-space: nowrap;
+                &.name,
+                &.category {
+                	white-space: normal;
+                }
+                &.status {
+                    &.yellow {
+                        color: #DEB133;
+                    }
+                    &.green {
+                        color: $deep_green;
+                    }
+                    &.blue {
+                        color: $deep_blue;
+                    }
+                    &.red {
+                        color: $deep_red;
+                    }
+                }
+                &.date,
+                &.category,
+                &.date-start,
+                &.date-finish {
+                    font-weight: normal;
+                }
+                &:first-child {
+                    border-radius: 4px 0 0 4px;
+                }
+                &:last-child {
+                    text-align: right;
+                    border-radius: 0 4px 4px 0;
+                }
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            background: $light_blue;
+        }
+    }
+    @descendent divider {
+        display: table-row-group;
+        .line {
+            display: table-row;
+            .item {
+                display: table-cell;
+                padding: .2rem 0;
+                &.title {
+                    padding: .6rem 0 .5rem;
+                    span {
+                        color: $black_color;
+                        font-size: .9rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

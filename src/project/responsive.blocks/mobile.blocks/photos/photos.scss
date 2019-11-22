@@ -1,0 +1,39 @@
+@media screen and (max-width:991px) {
+    .drag-n-drop {
+        display: none;
+    }
+    @component photo-miniature {
+        @descendent add {
+            a {
+                font-size: .9rem;
+                padding: 29% 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    @component photo-miniature {
+        @descendent add {
+            a {
+                font-size: 1rem;
+                padding: 30% 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    @component photo-miniature {
+        @descendent descr {
+            min-height: 30%;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+        @descendent add {
+            a {
+                padding: 1rem
+            }
+        }
+    }
+}

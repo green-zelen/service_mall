@@ -1,0 +1,173 @@
+extends header.pug
+
+//- All Index Sections
+//- Top Infographic
+block section-top-infographic
+	section.top-infographic
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-6
+					div.top-infographic-credo
+						p   
+							| Service mall – это место встречи
+							br
+							| заказчиков и исполнителей 
+							br
+							| не выходя из дома!
+				div.col-xs-12.col-sm-12.col-md-6
+					div.top-infographic-image
+						img(src='images/infographic/top-infographic.png' alt="Преимущества ServiceMall")
+//- Banner carousel
+block section-banner-carousel
+	section.banner-carousel
+		div.container
+			div.row
+				div.col-xs-12
+					img(src='images/infographic/carousel1.png' alt="Слайдер ServiceMall")
+//- Customer's Block
+block section-i-am-customer
+	section.i-am-customer.blue-section
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-6
+					div.i-am-customer-search
+						div.h1.blue-h1 Я заказчик
+						div.input-group.input-group-search
+							input.input.input-without-border.form-control(type="text" placeholder="Ищу исполнителя...")
+							span.input-group-btn
+								button.btn.btn-default(type="button")
+									i.fa.fa-search
+						div.input-hints
+							p #[span.strong 1567] исполнителей в Южно-Сахалинске
+							p #[span.strong 2129] исполнителей в Сахалинской области
+						div.create-order
+							button.btn.btn-large.btn-round.btn-green Создать заказ
+				div.col-xs-12.col-sm-12.col-md-6
+					div.i-am-customer-hint
+						div.h4 Чем сервис мне полезен?
+						div.check-list
+							div.ckeck #[i.fa.fa-check] 
+								span.strong Экономит время
+								p Сервис рассылает заказы автоматически по всем доступным исполнителям из указанной категории.
+							div.ckeck #[i.fa.fa-check] 
+								span.strong Экономит деньги 
+								p Среди исполнителей серьезная конкуренция и они не могу завышать цены в борьбе за клиента.
+							div.ckeck #[i.fa.fa-check] 
+								span.strong Гарантирует качество 
+								p У исполнителей есть рейтинг и им невыгодно расстраивать вас, чтобы не потерять звездочки. Вы получите высокое качество выполненных работ за хороший отзыв.
+							div.link-more.green 
+								a.link-more(href='#') 
+									span Еще больше подробностей
+									i.fa.fa-chevron-right
+//- Implementer's Block
+block section-i-am-implementer
+	section.i-am-implementer.green-section
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-6.special-right
+					div.i-am-implementer-search
+						div.h1.green-h1 Я исполнитель
+						div.input-group.input-group-search
+							input.input.input-without-border.form-control(type="text" placeholder="Ищу исполнителя...")
+							span.input-group-btn
+								button.btn.btn-default(type="button")
+									i.fa.fa-search
+						div.input-hints
+							div.catalog-of-orders
+								a(href='#') Каталог заказов
+							p #[span.strong 1567] заказов в Южно-Сахалинске
+							p #[span.strong 2129] заказов в Сахалинской области
+						div.create-order
+							button.btn.btn-large.btn-round.btn-blue Стать исполнителем
+				div.col-xs-12.col-sm-12.col-md-6
+					div.i-am-implementer-hint
+						div.h4 Чем сервис мне полезен?
+						div.check-list
+							div.ckeck #[i.fa.fa-check] 
+								span.strong Привлекает новых клиентов
+								p Дополнительный поток клиентов, которые без каталога так и не узнали бы о вашем существовании.
+							div.ckeck #[i.fa.fa-check] 
+								span.strong Экономит время  
+								p Вы не ищите заказы, уведомления о них приходят вам на почту и на телефон. Остается только выбрать.
+							div.ckeck #[i.fa.fa-check] 
+								span.strong Экономит деньги 
+								p Партнерские магазины будут предоставлять вам скидки на расходные материалы. Купоны со скидками появляются у каждого участника проекта, прошедшего регистрацию.
+							div.link-more.blue 
+								a.link-more(href='#')
+									span Еще больше подробностей
+									i.fa.fa-chevron-right
+				
+//- Advantages Block
+block section-advantages
+	section.advantages
+		div.container
+			div.row
+				div.col-xs-12
+					div.h2 НАШИ ПРЕИМУЩЕСТВА
+				div.col-xs-12.col-sm-12.col-md-4
+					div.advantages-third
+						figure.advantage
+							img(src='images/infographic/advantage-icon1.png' alt="Бесплатно")
+							div.h4.strong Бесплатно
+							p Участие в проекте бесплатно для заказчиков и исполнителей
+				div.col-xs-12.col-sm-12.col-md-4
+					div.advantages-third
+						figure.advantage
+							img(src='images/infographic/advantage-icon2.png' alt="Бесплатно")
+							div.h4.strong Экономно
+							p Экономит время и деньги благодаря автоматической рассылке и торгам
+				div.col-xs-12.col-sm-12.col-md-4
+					div.advantages-third
+						figure.advantage
+							img(src='images/infographic/advantage-icon3.png' alt="Бесплатно")
+							div.h4.strong Надежно
+							p Комментарии пользователей и система рейтингов обеспечивают доверие
+				div.dotted-line.first
+				div.dotted-line.second
+//- News&Articles Block
+block section-articles
+	section.articles
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-6
+					div.news-block
+						div.h1  Новости
+							a.link-more(href='#')
+								i.fa.fa-chevron-right
+						div.news-list
+							div.one-news.green За прошлую неделю к нам присоединились 1560 новых исполнителей. И 140 из них успели получить высокие оценки от заказчиков
+								a.link-article-more(href='#') подробнее…
+							div.one-news.red Теперь мы работаем в партнерстве с изданием «Вестник Сахалина» и в перспективе на сайте будут особая система поощрений для исполнителей в категории журналистики и копирайтинга – они смогут повышать рейтинг и проходить обучение у нашего партнера
+								a.link-article-more(href='#') подробнее…
+							div.one-news.blue На сайте появились новые категории для заказчиков и исполнителей: интернет-маркетинг, разработка мобильных приложений, разработка сайтов, smm
+								a.link-article-more(href='#') подробнее…
+
+				div.col-xs-12.col-sm-12.col-md-6
+					div.articles-block
+						div.h1  Статьи
+							a.link-more(href='#')
+								i.fa.fa-chevron-right
+						div.articles-list
+							div.one-article 
+								div.title.strong Как повысить рейтинг исполнителя на сайте?
+								p Повышение и понижение рейтинга зависит от количества выполненных вами работ. Оно пропорционально оценкам ваших заказчиков и рассчитывается по формуле
+									a.link-article-more(href='#') читать далее…
+							div.one-article 
+								div.title.strong Как стать экспертом?
+								p Статус эксперта присваивается мастеру, если у него есть более чем пять лет опыта работы в области 
+									a.link-article-more(href='#') читать далее…
+							div.one-article 
+								div.title.strong Для чего становиться экспертом?
+								p Пользователь со статусом эксперт имеет дополнительные возможности оценки стоимости и необходимых работ для заказчиков 
+									a.link-article-more(href='#') читать далее…
+
+
+
+		
+
+		 
+
+
+
+					
+

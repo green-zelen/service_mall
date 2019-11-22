@@ -1,0 +1,89 @@
+// Mobile Categories
+@media screen and (max-width: 991px) {
+    @component choose-order-category {
+        padding: 2rem 0;
+        .divider {
+            margin-top: 2rem;
+        }
+    }
+    @component choose-imp-category {
+        padding: 2rem 0;
+    }
+    @component chosen-first-category {
+        .locates-inner {
+            .line {
+                display: flex;
+                span {
+                    &.locate {
+                        width: auto;
+                        max-width: calc(100% - 60px);
+                        display: inline-block;
+                        text-align: left;
+                    }
+                    &.actions {
+                        width: 55px;
+                        display: inline-block;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component chosen-second-category {
+        .sub-category {
+            .portfolio {
+                button {
+                    margin: 2rem 0;
+                }
+            }
+        }
+    }
+    @component subcategories {
+        a {
+            margin-bottom: 1rem;
+        }
+    }
+    @component category {
+        @descendent list {
+            text-align: center;
+            border-bottom: 1px solid $soft_gray_border;
+            padding-bottom: 2rem;
+            margin-bottom: 4rem;
+            .image {
+                text-align: center;
+                img {
+                    width: 160px;
+                }
+            }
+            .title {
+                text-align: center;
+                a {
+                    font-size: 1.4rem;
+                }
+            }
+            .list {
+                ul {
+                    li {
+                        line-height: 2.5rem;
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component chosen-second-category {
+        .sub-category {
+            .col-xs-11.manipulate {
+                width: 85% !important;
+            }
+        }
+    }
+}

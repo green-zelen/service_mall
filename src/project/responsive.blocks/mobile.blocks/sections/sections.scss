@@ -1,0 +1,263 @@
+// Responsive Mobile Sections
+@media screen and (max-width: 991px) {
+    @component top-infographic {
+        br {
+            display: none;
+        }
+        @descendent credo {
+            p {
+                text-align: center;
+            }
+        }
+        @descendent image {
+            width: 540px;
+            margin: 1rem auto 0;
+        }
+    }
+    @component i-am-customer {
+        .container {
+            background-image: none;
+        }
+        @descendent search {
+            width: 400px;
+            margin: 0 auto;
+        }
+        @descendent hint {
+            width: 400px;
+            margin: 3rem auto 0;
+            padding: 1rem 2rem 2rem;
+            background: $white_color;
+            box-shadow: $gray_box_shadow;
+            .link-more {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @component i-am-implementer {
+        .container {
+            background-image: none;
+        }
+        @descendent search {
+            width: 400px;
+            margin: 0 auto;
+        }
+        @descendent hint {
+            width: 400px;
+            margin: 3rem auto 0;
+            padding: 1rem 2rem 2rem;
+            background: $white_color;
+            box-shadow: $gray_box_shadow;
+            .link-more {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @component advantages {
+        .container {
+            .dotted-line {
+                display: none;
+            }
+        }
+        @descendent third {
+            margin: 3rem auto 0;
+            width: 40%;
+        }
+    }
+    @component order-budget {
+        @descendent price {
+            margin-top: 1rem;
+        }
+    }
+    @component create-order {
+        .implementer-proposal {
+            display: none;
+        }
+    }
+    @component mobile-implementer-proposal {
+        display: block;
+        .implementer-proposal {
+            display: block;
+        }
+        .panel-default {
+            .panel-heading {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component top-infographic {
+        display: none;
+        @descendent image {
+            width: 100%;
+            margin: 1rem auto 0;
+        }
+    }
+    @component banner-carousel {
+        display: none;
+    }
+    @component single-article {
+        @descendent body {
+            img {
+                width: 100%;
+                &.left {
+                    margin: 0 0 1rem;
+                }
+            }
+            p {
+                text-align: left;
+            }
+        }
+    }
+    @component top-personal-questionary {
+        .buttons-inner {
+            text-align: center;
+            padding-bottom: 0;
+            button {
+                width: 380px;
+                display: inline;
+            }
+        }
+        .divider {
+            display: none;
+        }
+    }
+    @component create-order {
+        .what-the-category {
+            .title {
+                display: block;
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+        .opponent-card {
+            .implementer-short-card {
+                .name {
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .short-order-card {
+            .bottom {
+                .param {
+                    display: block;
+                    width: 100%;
+                    margin-top: 1rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    @component create-order {
+        .opponent-card {
+            .implementer-short-card {
+                .name {
+                    margin-top: 0;
+                }
+            }
+        }
+        .short-order-card {
+            .bottom {
+                .param {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component i-am-customer {
+        padding: 1rem 0 3rem;
+        @descendent search {
+            width: 100%;
+        }
+        @descendent hint {
+            width: 100%;
+        }
+    }
+    @component i-am-implementer {
+        padding: 1rem 0 3rem;
+        @descendent search {
+            width: 100%;
+        }
+        @descendent hint {
+            width: 100%;
+        }
+    }
+    @component advantages {
+        .h2 {
+            font-size: 1.6rem;
+        }
+        @descendent third {
+            width: 80%;
+        }
+    }
+    @component create-order {
+        .h3 {
+            font-size: 18px;
+        }
+        .implementer-short-card {
+            text-align: center;
+            .col-xs-3 {
+                width: 100%!important;
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 1rem;
+                .avatar {
+                    img {
+                        width: 160px;
+                    }
+                }
+            }
+            .col-xs-9 {
+                width: 100%!important;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .short-order-card {
+            a {
+                &.title {
+                    font-size: 1rem;
+                    margin-bottom: .5rem;
+                }
+            }
+            .descr {
+                font-size: .9rem;
+            }
+        }
+        .order-details-process {
+            .actions {
+                .col-xs-6 {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    @component create-order {
+        .short-order-card {
+            .col-xs-3,
+            .col-xs-4,
+            .col-xs-8,
+            .col-xs-9 {
+                width: 100%;
+            }
+            a {
+                &.title {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,240 @@
+extends header.pug
+
+//- Become Implementer Questionary
+block section-top-personal-questionary
+	section.page-top.top-personal-questionary.blue-section.success-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li 
+								a(href="#") Личный кабинет
+							li.active Мои заказы
+					div.top-search
+						h1.blue-h1 Мои заказы
+block section-profile-tabs
+	section.profile-tabs.gray-section 
+		div.container
+			div.tabs-block.profile
+				div.tab
+					a(href="#")
+						i.fa.fa-user
+						| Личный кабинет
+				div.tab
+					a(href="#")
+						i.fa.fa-list
+						| Мои заказы
+				div.tab.selected
+					a(href="#")
+						i.fa.fa-wrench
+						| Работа
+block section-my-orders-list
+	section.my-orders-list
+		div.container
+			div.item-list-filter
+				div.row
+					div.col-xs-12.col-sm-8.col-md-8
+						div.tabs-block.items-filters
+							div.tab.selected
+								a(href="#") Предложения о работе
+							div.tab
+								a(href="#") Закрепленные за мной
+					div.col-xs-12.col-sm-4.col-md-4
+						//- Класс .open открывает фильтры, .close закрывает
+						div.filter-checkbox.close Отображать столбцы
+							i.fa.fa-caret-down.input-i
+							div.body
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Категория
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Заголовок
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Цена
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Статус
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Город
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Дата начала
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Срок
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Дата окончания
+										div.check
+			div.item.proposals.item-list
+				div.table
+					div.item-header
+						div.line
+							div.item.category Категория
+							div.item.name Заголовок
+							div.item.price.filter.up
+								button.btn-no-style Цена
+									i.fa.fa-sort-numeric-asc
+									i.fa.fa-sort-numeric-desc
+							div.item.status Статус
+							div.item.location Город
+							//- классы .up и .down выводят разные иконки для смены сортировки
+							div.item.date-start.filter.up
+								button.btn-no-style Дата начала
+									i.fa.fa-sort-amount-asc
+									i.fa.fa-sort-amount-desc
+							div.item.estimate.filter.up
+								button.btn-no-style Срок
+									i.fa.fa-sort-numeric-asc
+									i.fa.fa-sort-numeric-desc
+							div.item.date-finish.filter.up
+								button.btn-no-style Дата окончания
+									i.fa.fa-sort-amount-asc
+									i.fa.fa-sort-amount-desc
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Строительно-монтажные работы
+							div.item.name Починить забор частного дома
+							div.item.price 6700 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Южно-Сахалинск
+							div.item.date-start 14 мая 2017
+							div.item.estimate 2 дня
+							div.item.date-finish 16 мая 2017
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Услуги курьера
+							div.item.name Отнести документы в налоговую
+							div.item.price ≈ 400 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Находка
+							div.item.date-start 17 мая 2017
+							div.item.estimate 1 день
+							div.item.date-finish 18 мая 2017
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Грузоперевозки и вывоз мусора
+							div.item.name Вывезти мусор из сарая
+							div.item.price 800 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Владивосток
+							div.item.date-start 14 мая 2017
+							div.item.estimate 1 день
+							div.item.date-finish 15 мая 2017
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Репетиторы и образование
+							div.item.name Написать курсовую по морской экологии
+							div.item.price 11000 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Москва
+							div.item.date-start 20 апр 2017
+							div.item.estimate 3 недели
+							div.item.date-finish 12 мая 2017
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Строительно-монтажные работы
+							div.item.name Починить забор частного дома
+							div.item.price 6700 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Южно-Сахалинск
+							div.item.date-start 14 мая 2017
+							div.item.estimate 2 дня
+							div.item.date-finish 16 мая 2017
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Услуги курьера
+							div.item.name Отнести документы в налоговую
+							div.item.price ≈ 400 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Находка
+							div.item.date-start 17 мая 2017
+							div.item.estimate 1 день
+							div.item.date-finish 18 мая 2017
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Грузоперевозки и вывоз мусора
+							div.item.name Вывезти мусор из сарая
+							div.item.price 800 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Владивосток
+							div.item.date-start 14 мая 2017
+							div.item.estimate 1 день
+							div.item.date-finish 15 мая 2017
+					div.item-divider
+						div.line
+							div.item
+					a.item-line(href="#")
+						div.line
+							div.item.category Репетиторы и образование
+							div.item.name Написать курсовую по морской экологии
+							div.item.price 11000 руб.
+							div.item.status.yellow Поиск исполнителя
+							div.item.location Москва
+							div.item.date-start 20 апр 2017
+							div.item.estimate 3 недели
+							div.item.date-finish 12 мая 2017
+			nav.pagination-inner
+				ul.pagination
+					li.disabled
+						a(href="#" aria-label="Предыдущая")
+							i.fa.fa-caret-left
+					li.active
+						a(href="#") 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3
+					li
+						a(href="#") ...
+					li
+						a(href="#") 13
+					li
+						a(href="#") 14
+					li
+						a(href="#") 15
+					li
+						a(href="#" aria-label="Следующая")
+							i.fa.fa-caret-right

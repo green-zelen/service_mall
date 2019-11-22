@@ -1,0 +1,95 @@
+// Links
+body {
+    a {
+        color: $deep_blue;
+        &:hover {
+            text-decoration: none;
+        }
+        &:focus {
+            outline: none;
+            text-decoration: none;
+        }
+        &.dotted {
+            border-bottom: 2px dotted $deep_blue;
+        }
+        &.green {
+            color: $deep_green;
+            &.dotted {
+                border-bottom: 2px dotted $deep_green;
+            }
+        }
+        &.red {
+            color: $deep_red;
+            &.dotted {
+                border-bottom: 2px dotted $deep_red;
+            }
+        }
+        &.inline {
+            margin: 0 .5rem;
+        }
+    }
+}
+
+@component link {
+    @descendent dotted {
+        border-bottom: 2px dotted $text_gray;
+        &.blue {
+            border-color: $deep_blue;
+        }
+    }
+    @descendent more {
+        margin-bottom: 2rem;
+        font-weight: 700;
+        i {
+            margin-left: 1rem;
+            background: $deep_red;
+            border-radius: 50rem;
+            padding: .3rem .7rem .3rem 1rem;
+            color: $white_color;
+            font-size: 1rem;
+            &:hover {
+                background: $deep_blue;
+            }
+        }
+        &.green {
+            span {
+                color: $deep_green;
+                border-bottom: 2px dotted $deep_green;
+            }
+            &:hover {
+                span {
+                    color: $hover_green;
+                    border-bottom: 2px dotted $hover_green;
+                }
+            }
+        }
+        &.blue {
+            span {
+                color: $deep_blue;
+                border-bottom: 2px dotted $deep_blue;
+            }
+            &:hover {
+                span {
+                    color: $hover_blue;
+                    border-bottom: 2px dotted $hover_blue;
+                }
+            }
+        }
+    }
+    @descendent article-more {
+        color: $deep_blue;
+        margin-left: .5rem;
+    }
+}
+
+// Icons
+a {
+    &.info-icon {
+        color: $deep_red;
+        margin-left: .5rem;
+        position: relative;
+        &:hover {
+            color: #f06334;
+        }
+    }
+}

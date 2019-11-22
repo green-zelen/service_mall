@@ -1,0 +1,61 @@
+// Tabs
+@component tabs {
+    @descendent block {
+        .tab {
+            display: inline-block;
+            width: auto;
+            margin-right: 1rem;
+            a {
+                display: block;
+            }
+        }
+        &.profile {
+            .tab {
+                a {
+                    background: transparent;
+                    border: $soft_gray_border;
+                    padding: .8rem 1.5rem;
+                    font-weight: bold;
+                    color: $text_gray;
+                    border-radius: 4px;
+                    i {
+                    	margin-right: .5rem;
+                    }
+                    &:hover {
+                        border: 1px solid $light_blue;
+                        background: $light_blue;
+                        color: $deep_blue;
+                    }
+                }
+                &.selected {
+                    a {
+                        border: 1px solid $light_blue;
+                        background: $light_blue;
+                        color: $deep_blue;
+                    }
+                }
+            }
+        }
+        &.items-filters {
+            .tab {
+                a {
+                    background: $light_gray;
+                    border: none;
+                    padding: .4rem 1rem;
+                    color: $text_gray;
+                    border-radius: 50rem;
+                    &:hover {
+                        background: $light_green;
+                        color: $deep_green;
+                    }
+                }
+                &.selected {
+                    a {
+                        background: $light_green;
+                        color: $deep_green;
+                    }
+                }
+            }
+        }
+    }
+}

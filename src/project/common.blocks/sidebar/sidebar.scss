@@ -1,0 +1,18 @@
+// Sidebar
+
+@component sidebar {
+	.banner {
+		&.stub-class {
+			height: 280px;
+			background: $light_gray;
+			border-radius: 8px;
+			font-size: 1rem;
+			text-align: center;
+			padding: 2rem;
+			margin-bottom: 1rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

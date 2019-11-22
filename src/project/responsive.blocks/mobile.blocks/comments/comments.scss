@@ -1,0 +1,77 @@
+// Mobile Comments
+@media screen and (max-width: 991px) {
+    @component estimates {
+        @descendent inner {
+            .line {
+                line-height: 2.5rem;
+            }
+        }
+        @descendent star {
+            margin-left: 1rem;
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component uploads {
+        &.files {
+            display: block;
+            .left-label {
+                width: 100%;
+                display: block;
+                margin-bottom: 1rem;
+            }
+            .files-inner {
+                width: 100%;
+                display: block;
+            }
+            ul {
+                &.file-list {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component uploads {
+        &.files {
+            ul {
+                &.file-list {
+                    .file {
+                        padding: .5rem 1rem .3rem;
+                        margin-bottom: 1rem;
+                        border-radius: 8px;
+                        background: $soft_gray;
+                        .download {
+                            .name {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                width: 85%;
+                                display: inline-block;
+                                white-space: nowrap;
+                            }
+                            i {
+                                position: relative;
+                                top: -4px;
+                            }
+                        }
+                        .remove {
+                            i {
+                                padding: .5rem .9rem .5rem .9rem;
+                                float: right;
+                                margin-left: 0;
+                                position: relative;
+                                top: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,177 @@
+extends header-user.pug
+
+//- Make Order Sections
+block section-top-order-preview
+	section.page-top.top-order-preview.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li.active Просмотр заказа №5675
+					div.top
+						h1.blue-h1 Просмотр заказа №5675
+block section-create-order-preview
+	section.create-order.create-order-preview
+		div.container
+			div.row
+				div.col-xs-12
+					div.h3.strong.what-the-category
+						| Задание в категории: 
+						span.title.blue Изготовление и ремонт мебели / Шкафы
+					div.row
+						div.col-xs-12.col-sm-12.col-md-6
+							div.opponent-card
+								div.implementer-short-card
+									div.row
+										div.col-xs-3.col-sm-3
+											div.avatar
+												img(src="images/stubs/avatar2.png")
+										div.col-xs-9.col-sm-9
+											div.info
+												div.role Заказчик
+												div.name Константин Павлович Шишков
+												div.old 44 года, г. Южно-Сахалинск
+												div.rating
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+							div.created-order-info.gray
+								div.h4.strong Отремонтировать старый шкаф
+								p.descr Нужно починить старый бабушкин шкаф (подкрутить дверцы, починить вдывижные ящики, полки) и переобить выдвижной каркасный диван. Материалы куплены, есть степлер для мебели. нужен человек с опытом 1-2 года, который сумеет выполнить работу за 1 день. 
+								div.downloads
+										div.dop-row
+											div.one-third
+												div.photo-miniature
+													a(href="#" data-toggle="modal" data-target="#fullPhotoModal").strech-img
+														img(src="images/stubs/stub1.png")/
+														div.photo-miniature-descr Старый диван, который необходимо перетянуть
+											div.one-third
+												div.photo-miniature
+													a(href="#" data-toggle="modal" data-target="#fullPhotoModal").strech-img 
+														img(src="images/stubs/stub2.png")/
+														div.photo-miniature-descr Ожидаемый результат
+								div.parameters
+									div.parameter.dates
+										span.strong
+											i.fa.fa-calendar
+											| 14.07.2017 –15.07.2017
+									div.parameter.address
+										span.strong
+											i.fa.fa-map-marker
+											| Ул. Ленина, д. 45а, кв. 44
+									div.parameter.budget
+										span.strong
+											i.fa.fa-rub
+											| Бюджет: 
+											span.num 7000 руб.
+							div.category-sub-parameters.gray
+								div.h5.strong Дополнительные параметры
+								ul.sub-parameters
+									li материалы закупает заказчик
+									li инструменты исполнителя
+									li транспортировка при необходимости на исполнителе
+						div.col-xs-12.col-sm-12.col-md-6
+							div.implementer-proposal
+								div.form
+									div.implementer-field.start-date
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дата начала работ
+											div.row
+												div.col-xs-7
+													div.icon-input
+														input.form-control.border(type="text" placeholder="Дата")/
+														i.fa.fa-calendar.input-i
+														a.bottom-link сегодня
+														a.bottom-link завтра
+												div.col-xs-5
+													div.icon-input
+														input.form-control.border(type="text" placeholder="Время")/
+														i.fa.fa-clock-o.input-i
+									div.implementer-field.finish-date.visible
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дата окончания работ
+											div.row
+												div.col-xs-7
+													div.icon-input
+														input.form-control.border(type="text" placeholder="Дата")/
+														i.fa.fa-calendar.input-i
+														a.bottom-link сегодня
+														a.bottom-link завтра
+												div.col-xs-5
+													div.icon-input
+														input.form-control.border(type="text" placeholder="Время")/
+														i.fa.fa-clock-o.input-i
+									div.implementer-field.order-budget-price
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Ваша цена
+											input.input.form-control.border(type="text" placeholder="1000")
+											label.form-label.thin.large.currency руб.
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Это приблизительная цена
+													div.check
+									div.divider.divider-dotted
+									div.comment
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дополнительные детали
+											textarea.form-control.border(type="text" rows="9" )
+									button.btn.btn-blue.btn-right Предложить свои услуги
+block section-mobile-implementer-proposal
+	section.create-order.create-order-preview.mobile-implementer-proposal
+		div.container
+			div#accordionImplementerProposal.panel-group(role='tablist' aria-multiselectable='true')
+				div.panel.panel-default
+					div#headingImplementerProposal.panel-heading(role='tab')
+						div.h4.panel-title
+							a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerProposal' aria-expanded='true' aria-controls='collapseOne') 
+								div.row
+									div.col-xs-10 Предложить свои условия выполнения задания
+									div.col-xs-2
+										i.fa.fa-caret-down
+					div#collapseImplementerProposal.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerProposal')
+						div.panel-body
+							div.implementer-proposal
+								div.form
+									div.implementer-field.start-date
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дата начала работ
+											div.row
+												div.col-xs-7
+													div.icon-input
+														input.form-control(type="text" placeholder="Дата")/
+														i.fa.fa-calendar.input-i
+														a.bottom-link сегодня
+														a.bottom-link завтра
+												div.col-xs-5
+													div.icon-input
+														input.form-control(type="text" placeholder="Время")/
+														i.fa.fa-clock-o.input-i
+									div.implementer-field.finish-date.visible
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дата окончания работ
+											div.row
+												div.col-xs-7
+													div.icon-input
+														input.form-control(type="text" placeholder="Дата" value="16.07.2015")/
+														i.fa.fa-calendar.input-i
+														a.bottom-link сегодня
+														a.bottom-link завтра
+												div.col-xs-5
+													div.icon-input
+														input.form-control(type="text" placeholder="Время")/
+														i.fa.fa-clock-o.input-i
+									div.implementer-field.order-budget-price
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Предполагаемый бюджет
+											input.input.form-control(type="text" placeholder="1000")
+											label.form-label.thin.large.currency руб.
+											i.fa.fa-exclamation.m2
+									div.comment
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дополнительные детали
+											textarea.form-control(type="text" rows="5" )
+			button.btn.btn-block.btn-blue Предложить свои услуги

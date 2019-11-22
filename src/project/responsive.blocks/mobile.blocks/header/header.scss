@@ -1,0 +1,140 @@
+// Responcive Mobile Header
+@media screen and (max-width: 991px) {
+    @component header {
+        @descendent logo {
+            width: 310px;
+            margin: 1rem auto 2rem;
+        }
+        @descendent nav {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @component header {
+        @descendent mobile {
+            display: block;
+            background: $white_color;
+            text-align: center;
+            position: relative;
+            position: fixed;
+            width: 100%;
+            z-index: 998;
+            box-shadow: 0 2px 4px #ececec;
+            a.call-bar {
+                position: fixed;
+                top: 0;
+                right: 0;
+                opacity: 1;
+                background: transparent;
+                color: $deep_blue;
+                padding: 1rem 1.5rem;
+                height: 59px;
+                width: 59px;
+                font-size: 1.7rem;
+                z-index: 1000;
+                line-height: 2rem;
+                &:hover,
+                &:focus {
+                    color: $white_color;
+                    background: $deep_blue;
+                }
+                &.close {
+                    right: 0;
+                    transition-duration: 1.5s;
+                }
+                &.open {
+                    right: 321px;
+                    transition-duration: 1.5s;
+                }
+            }
+            .mobile-menu {
+                padding: 1rem 0;
+                a.logo {
+                    img {
+                        width: 160px;
+                    }
+                }
+            }
+            .sidebar {
+                position: fixed;
+                display: block;
+                background: $white_color;
+                box-shadow: $gray_box_shadow;
+                height: 100%;
+                z-index: 999;
+                top: 0;
+                width: 380px;
+                right: -380px;
+                opacity: 1;
+                &.close {
+                    right: -380px;
+                    transition-duration: 1.5s;
+                }
+                &.open {
+                    right: 0;
+                    transition-duration: 1.5s;
+                }
+                a {
+                    font-size: 1.2rem;
+                    line-height: 1.2rem;
+                }
+                .top {
+                    background: $light_gray;
+                    height: 59px;
+                    padding: 1.2rem 0 1rem 2rem;
+                    text-align: left;
+                    a {
+                        color: $deep_blue;
+                        &:hover {
+                            color: $deep_red;
+                        }
+                        i {
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+        @descendent top {
+            padding: 6rem 0 1.5rem;
+        }
+        @descendent bottom {
+            display: none;
+        }
+        @descendent city {
+            text-align: center;
+        }
+        @descendent socials {
+            display: none;
+        }
+        @descendent user {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    @component header {
+        @descendent mobile {
+            a.call-bar {
+                width: 80px;
+                &.open {
+                    right: 69%;
+                }
+            }
+            .sidebar {
+                &.open {
+                    width: 90%;
+                }
+                .top {
+                    a.log-in {
+                        font-size: 1.3rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

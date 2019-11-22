@@ -1,0 +1,163 @@
+extends header-user.pug
+
+//- Make Order Sections
+block section-top-order-preview
+	section.page-top.top-order-preview.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li.active Ваше задание №5675
+					div.top
+						h1.blue-h1 Ваше задание №5675 выполняется
+block section-create-order-preview
+	section.create-order.create-order-preview
+		div.container
+			div.row
+				div.col-xs-12
+					div.h3.strong.what-the-category
+						| Задание в категории: 
+						span.title.blue Изготовление и ремонт мебели / Шкафы
+					div.row
+						div.col-xs-12.col-sm-12.col-md-7
+							div.short-order-card.gray
+								div.row
+									div.col-xs-3
+										img(src="images/stubs/stub1.png")
+									div.col-xs-9
+										a.title.h4.strong(href="#") Отремонтировать старый диван
+										div.descr Нужно починить старый бабушкин шкаф (подкрутить дверцы, починить вдывижные ящики, полки) и переобить выдвижной каркасный диван. Материалы куплены, ес…
+						div.col-xs-12.col-sm-12.col-md-5
+							div.order-details-process.finish
+								div.title.h4.strong.center Ваше задание завершено
+								a.implementer(hreh="#")
+									i.fa.fa-user
+									| Иван Петрович Певек
+								div.actions
+									div.row
+										div.col-xs-6
+											button.btn.btn-red.btn-block
+												i.fa.fa-remove
+												| Не принимать
+										div.col-xs-6
+											button.btn.btn-green.btn-block
+												i.fa.fa-check
+												| Принять
+							div.order-details-process.hide
+								div.title.h4.strong.center.black Ваше задание выполняет
+								a.implementer(hreh="#")
+									i.fa.fa-user
+									| Иван Петрович Певек
+							div.order-details-process.hide
+								div.title.h4.strong.center Вы наняты для выполнения
+									br
+									| этого задания
+								div.actions
+									button.btn.btn-blue.btn-block
+										i.fa.fa-flag-checkered
+										| Завершить работу
+					div.h3.strong  Комментарии: 
+					div.comments
+						div.comments-more
+							a.open-more(href="#") Показать предыдущие комментарии
+								span.amount (19)
+								i.fa.fa-caret-down
+						div.comments-list
+							div.comments-one
+								div.avatar
+									img(src="images/stubs/avatar.png")
+								div.descr
+									div.title
+										a(href="#") Иван Петрович Певек
+										span.date
+											i.fa.fa-clock-o
+											| 01 мая 2017
+											span.time 17:02
+									div.text
+										p Можно вот такой вариант сделать. Только я не уверен, что материалы есть в наличии, уточню у партнеров. 
+									div.uploads.photos
+										div.photo-miniature.mini
+											a.strech-img(href="#" data-toggle="modal" data-target="#fullPhoto2Modal")
+												img(src="images/stubs/file1.jpeg")/
+												div.zoom
+													i.fa.fa-search-plus
+										div.photo-miniature.mini
+											a.strech-img(href="#" data-toggle="modal" data-target="#fullPhoto2Modal")
+												img(src="images/stubs/file2.jpeg")/
+												div.zoom
+													i.fa.fa-search-plus
+							div.comments-one
+								div.avatar
+									img(src="images/stubs/avatar2.png")
+								div.descr
+									div.title
+										a(href="#") Константин Павлович Шишков
+										span.date
+											i.fa.fa-clock-o
+											| 01 мая 2017
+											span.time 18:27
+									div.text
+										p Да, второй мне нравится. Отпишитесь по наличию. 
+							div.comments-one
+								div.avatar
+									img(src="images/stubs/avatar.png")
+								div.descr
+									div.title
+										a(href="#") Иван Петрович Певек
+										span.date
+											i.fa.fa-clock-o
+											| 02 мая 2017
+											span.time 09:40
+									div.text
+										p Повезло! Второй как раз в наличии. Под ваш размер нужно 4,5 метра. Партнеры скинули условия заказа, ознакомьтесь – и я им позвоню, нужно будет забрать в течение дня.
+									div.uploads.files
+										div.left-label
+											span.strong Прикрепленные файлы:
+										div.files-inner
+											ul.file-list
+												li.file
+													a.download(href="#")
+														span.name Диван_ткань_заказ_2017.docx
+														i.fa.fa-download
+												li.file
+													a.download(href="#")
+														span.name Договор_партнерства_ИП_Певек_И.П.docx
+														i.fa.fa-download
+						div.comments-add-new
+							div.form
+								div.comment
+									fieldset.form-group.with-label
+										label.form-label.thin.block.large Добавьте комментарий
+										textarea.form-control.border(type="text" rows="4" )
+									div.photo-inner
+										//- Блок .drag-n-drop появляется только при перетасквании изображений в окно браузера
+										div.drag-n-drop Перетащите сюда выбранные фотографии
+										div.uploads.files
+											div.left-label
+												span.strong Прикрепленные файлы:
+											div.files-inner
+												ul.file-list
+													li.file
+														span.download
+															span.name Диван_ткань_заказ_2017.docx
+															a.remove(href="#")
+																i.fa.fa-remove
+													li.file
+														span.download
+															span.name Договор_партнерства_ИП_Певек_И.П.docx
+															a.remove(href="#")
+																i.fa.fa-remove
+										div.uploads.photo
+											div.photo-miniature.mini
+												img(src="images/stubs/stub1.png")/
+												a.photo-miniature-delete(href="#")
+											div.photo-miniature.mini
+												img(src="images/stubs/stub2.png")/
+												a.photo-miniature-delete(href="#")
+									button.btn.add-photo.btn-green 
+											i.fa.fa-plus
+											i.fa.fa-file
+									button.btn.btn-blue.btn-right Добавить комментарий

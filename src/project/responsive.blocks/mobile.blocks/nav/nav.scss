@@ -1,0 +1,11 @@
+// Responsive Navigation 
+@media screen and (max-width: 480px) {
+    @component mobile-navigate {
+        @descendent link {
+            a {
+                padding: 1.5rem 2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

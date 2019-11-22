@@ -1,0 +1,160 @@
+extends header.pug
+
+//- Become Implementer Questionary
+block section-top-personal-questionary
+	section.page-top.top-personal-questionary.blue-section.success-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li 
+								a(href="#") Личный кабинет
+							li.active Личные данные
+					div.top-search
+						h1.blue-h1 Личные данные
+block section-profile-tabs
+	section.profile-tabs.gray-section 
+		div.container
+			div.tabs-block.profile
+				div.tab.selected
+					a(href="#")
+						i.fa.fa-user
+						| Личный кабинет
+				div.tab
+					a(href="#")
+						i.fa.fa-list
+						| Мои заказы
+block section-about-user
+	section.about-user
+		div.container
+			div.form
+				div.text-error Укажите корректный email
+				div.row
+					div.col-xs-12.col-sm-8.col-md-9
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Фамилия
+							input.input.form-control(type="text" placeholder="Фамилия" value="Белоголовцев")
+							i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Имя
+							input.input.form-control(type="text" placeholder="Имя" value="Иван")
+							i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Отчество
+							input.input.form-control(type="text" placeholder="Отчество" value="Сергеевич")
+							i.fa.fa-exclamation
+						div.row
+							div.col-xs-12.col-sm-7.col-md-7
+								fieldset.form-group.with-label
+									label.form-label.thin.block.large.gray Телефон
+									input.input.form-control(type="tel" placeholder="Телефон" value="+79147332720")
+									i.fa.fa-exclamation
+							div.col-xs-12.col-sm-5.col-md-5
+								fieldset.form-group.with-label
+									label.form-label.thin.block.large.gray Дата рождения
+									div.icon-input
+										input.form-control(type="text" placeholder="Дата рождения" value="21.12.1975")
+										i.fa.fa-calendar.input-i
+										i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							//- Селект открывается классом .open
+							label.form-label.thin.block.large.gray Город
+							div.select
+								div.form-control Южно-Сахалинск
+									i.fa.fa-caret-down.input-i
+									div.options
+										div.search
+											input.input(type="text" placeholder="Введите название города...")
+										ul.options-inner
+											li
+												a(href="#") Абакан
+											li
+												a(href="#") Абинск
+											li
+												a(href="#") Адлер
+											li
+												a(href="#") Абакан
+											li
+												a(href="#") Абинск
+											li
+												a(href="#") Адлер
+								i.fa.fa-check
+								i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Логин
+							input.input.form-control(type="text" placeholder="Логин" value="foxxx88")
+							i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Email
+							input.input.form-control(type="email" placeholder="Email" value="belogolovtsev.ivan@mail.ru")
+							i.fa.fa-exclamation
+							div.checkbox
+								label 
+									input(type="checkbox")/ 
+									| Получать рассылку о новых функциях сервиса, новостях и акциях
+									div.check
+					div.col-xs-12.col-sm-4.col-md-3
+						div.photo-inner
+							div.downloads
+								div.photo-miniature.avatar
+									img(src="images/stubs/avatar-src.png")/
+									a.remove-photo(href="#")
+										i.fa.fa-remove
+							//- Блок .drag-n-drop появляется только при перетасквании изображений в окно браузера
+							div.drag-n-drop.green Перетащите сюда выбранное изображение
+							button.btn.btn-green.btn-block Изменить фото 
+								i.fa.fa-camera
+					div.col-xs-12
+						div.divider.divider-transperent
+						button.btn.btn-small.btn-round.btn-blue Сохранить
+			div.change-password
+				div#accordionImplementerDetails.panel-group(role='tablist' aria-multiselectable='true')
+				div.panel.panel-default.gray
+					div#headingImplementerDetails.panel-heading(role='tab')
+						div.h4.panel-title
+							a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerDetails' aria-expanded='true' aria-controls='collapseOne') 
+								div.row
+									div.col-xs-12 
+										i.fa.fa-lock.m-right
+										span.link-dotted.blue Сменить пароль
+					div#collapseImplementerDetails.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerDetails')
+						div.panel-body
+							div.form
+								div.text-error Вы указади неверный текущий пароль
+								div.text-error Новые пароли не совпадают
+								div.row
+									div.col-xs-12.col-sm-6
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large.gray Введите старый пароль
+											input.input.form-control(type="pass")
+											i.fa.fa-exclamation
+								div.divider.divider-dotted.divider-gray
+								div.row
+									div.col-xs-12.col-sm-6
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large.gray Новый пароль
+											input.input.form-control(type="pass")
+											i.fa.fa-exclamation
+									div.col-xs-12.col-sm-6
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large.gray Повторите новый пароль
+											input.input.form-control(type="pass")
+											i.fa.fa-exclamation
+									div.col-xs-12
+										div.divider.divider-transperent
+											button.btn.btn-small.btn-round.btn-blue Сохранить новый пароль
+											div.divider.divider-transperent
+											div.text-notify.success Ваш пароль успешно изменен!
+			div.divider.divider-dotted.divider-blue
+			div.large-button-inner
+				button.btn.btn-large.btn-round.btn-green Стать исполнителем
+					i.fa.fa-info-circle.right
+block section-profile-actions
+	section.profile-actions
+		div.container
+			button.btn.btn-error
+				i.fa.fa-trash
+				| Удалить мою учетную запись

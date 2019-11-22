@@ -1,0 +1,256 @@
+extends header-user.pug
+
+//- Search Order Sections
+block section-top-order-search
+	section.page-top.top-order-search.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li.active Поиск заказов
+					div.top-search
+						div.results-title
+							| Мы нашли для вас
+							span.num 34
+							| заказа в разделе
+							a(href="#") Бытовой ремонт
+						div.form.form-search
+							fieldset.form-group
+								div.input-group.input-group-search
+									input.input.input-without-border.form-control(type="text" placeholder="Я ищу..." value="ремонт")
+									span.input-group-btn
+										button.btn.btn-default(type="button")
+											i.fa.fa-search
+								div.tags-inner
+									span.tag.search.active
+										a(href="#") бытовой ремонт
+									span.tag.search
+										a(href="#") ремонт электронной техники
+									span.tag.search
+										a(href="#") ремонт мебели
+									span.tag.search
+										a(href="#") ремонт автомобилей
+									span.tag.search
+										a(href="#") ремонт бытовой техники
+									span.tag.search
+										a(href="#") ремонт оборудования
+									span.tag.search
+										a(href="#") ремонт одежды
+block section-choose-result
+	section.choose-result
+		div.container
+			div.row
+				div.col-xs-12.col-sm-8.col-md-9
+					div.choose-orders-list
+						div.choose-expert-filters
+							//- классы .up и .down выводят разные иконки для смены сортировки
+							span.label.up дата
+							span.label.up рейтинг
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+							span.label.up цена
+								i.fa.fa-sort-numeric-asc
+								i.fa.fa-sort-numeric-desc
+							span.label.up город
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+							span.label.up сроки
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+						div.choose-orders-result
+							div.choose-result-table.choose-order
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений Коновалов
+											td.price 4000 руб.
+											td.rating(colspan="2")
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+										tr.second-line
+											td.title(colspan="2") Поставить входную дверь
+											td.descr(colspan="2") Поставить входную дверь. Необходимо занести на 6 этаж и поставить входную дверь, запенить отверстия, установить замок. В вечернее время, после 18:00…
+											td.time(colspan="2") Срок: 2 дня
+								table.table.selected
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="3")
+												img(src="images/stubs/avatar3.png")
+											td.name Борис Кащенко
+											td.price 32000 руб.
+											td.rating(colspan="2")
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+										tr.second-line
+											td.title(colspan="2") Ремонт в ванной, замена сантехники и отделочные работы
+											td.descr(colspan="2") Ремонт в ванной, замена сантехники и отделочные работы. Нужна зачистка помещения, змена труб, установка бытовой техники, душевой кабины и унитаза. Поставить входную дверь. Необходимо занести на 6 этаж и поставить входную дверь, запенить отверстия, установить замок. В вечернее время, после 18:00.
+											td.time(colspan="2") Срок: 3 недели
+										tr.third-line
+											td.photo-inner(colspan="3")
+												div.photo
+													a(href="#" data-toggle="modal" data-target="#fullPhoto2Modal")
+														img(src="images/stubs/stub3.png")
+												div.photo
+													a(href="#" data-toggle="modal" data-target="#fullPhoto2Modal")
+														img(src="images/stubs/stub4.png")
+												div.photo
+													a(href="#" data-toggle="modal" data-target="#fullPhoto2Modal")
+														img(src="images/stubs/stub5.png")
+												div.more
+													a(href="#") Подробнее
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar4.png")
+											td.name Рустам Хабибулиев
+											td.price ≈ 2000 руб.
+											td.rating(colspan="2")
+												span.strong Новичок
+										tr.second-line
+											td.title(colspan="2") Повесить полки со сверлением бетонной стены
+											td.descr(colspan="2") Повесить полки со сверлением бетонной стены. Вероятно, нужно будет помочь с выбором деталей в магазине, так как к полке не прилагаются шурупы.
+											td.time(colspan="2") Срок: 1 день
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений Коновалов
+											td.price 4000 руб.
+											td.rating(colspan="2")
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+										tr.second-line
+											td.title(colspan="2") Поставить входную дверь
+											td.descr(colspan="2") Поставить входную дверь. Необходимо занести на 6 этаж и поставить входную дверь, запенить отверстия, установить замок. В вечернее время, после 18:00…
+											td.time(colspan="2") Срок: 2 дня
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar3.png")
+											td.name Борис Кащенко
+											td.price 32000 руб.
+											td.rating(colspan="2")
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+										tr.second-line
+											td.title(colspan="2") Ремонт в ванной, замена сантехники и отделочные работы
+											td.descr(colspan="2") Ремонт в ванной, замена сантехники и отделочные работы. Нужна зачистка помещения, змена труб, установка бытовой техники, душевой кабины и унитаза...
+											td.time(colspan="2") Срок: 3 недели
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar4.png")
+											td.name Рустам Хабибулиев
+											td.price ≈ 2000 руб.
+											td.rating(colspan="2")
+												span.strong Новичок
+										tr.second-line
+											td.title(colspan="2") Повесить полки со сверлением бетонной стены.
+											td.descr(colspan="2") Повесить полки со сверлением бетонной стены. Вероятно, нужно будет помочь с выбором деталей в магазине, так как к полке не прилагаются шурупы.
+											td.time(colspan="2") Срок: 1 день
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений Коновалов
+											td.price 4000 руб.
+											td.rating(colspan="2")
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+										tr.second-line
+											td.title(colspan="2") Поставить входную дверь
+											td.descr(colspan="2") Поставить входную дверь. Необходимо занести на 6 этаж и поставить входную дверь, запенить отверстия, установить замок. В вечернее время, после 18:00…
+											td.time(colspan="2") Срок: 2 дня
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar3.png")
+											td.name Борис Кащенко
+											td.price 32000 руб.
+											td.rating(colspan="2")
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+										tr.second-line
+											td.title(colspan="2") Ремонт в ванной, замена сантехники и отделочные работы
+											td.descr(colspan="2") Ремонт в ванной, замена сантехники и отделочные работы. Нужна зачистка помещения, змена труб, установка бытовой техники, душевой кабины и унитаза...
+											td.time(colspan="2") Срок: 3 недели
+								table.table
+									tbody.result-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar4.png")
+											td.name Рустам Хабибулиев
+											td.price ≈ 2000 руб.
+											td.rating(colspan="2")
+												span.strong Новичок
+										tr.second-line
+											td.title(colspan="2") Повесить полки со сверлением бетонной стены.
+											td.descr(colspan="2") Повесить полки со сверлением бетонной стены. Вероятно, нужно будет помочь с выбором деталей в магазине, так как к полке не прилагаются шурупы.
+											td.time(colspan="2") Срок: 1 день
+							//- Подробно о задании в мобильной версии. Класс .open открывает, .close скрывает блок
+							div.choose-result-card.mobile.open
+								div.result-card
+									div.row
+										div.col-xs-3.col-sm-3
+											div.avatar
+												img(src="images/stubs/avatar3.png")
+										div.col-xs-9.col-sm-9
+											div.info
+												div.name Борис Сергеевич Кащенко
+												div.old 32 года, г. Южно-Сахалинск
+												div.rating
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+										div.col-xs-12
+											div.result-order-card.mobile
+												div.h4.strong Ремонт в ванной, замена сантехники и отделочные работы
+												div.descr
+													p Нужна зачистка помещения, змена труб, установка бытовой техники, душевой кабины и унитаза. Поставить входную дверь. Необходимо занести на 6 этаж и поставить входную дверь, запенить отверстия, установить замок. В вечернее время, после 18:00.
+													p Срок: 3 недели
+												div.divider.divider-dotted.divider-blue
+												div.parameters
+													div.parameter.dates
+														span.strong
+															i.fa.fa-calendar
+															| 3 мая 2017 – 24 мая 2017 (3 недели)
+													div.parameter.budget
+														span.strong
+															i.fa.fa-rub
+															| Стоимость: 32000 руб.
+								button.btn.btn-small.btn-round.btn-blue.btn-more Подробнее
+							div.more-results
+								a(href="#") Показать еще 20
+				div.col-xs-12.col-sm-4.col-md-3
+					div.sidebar.banners
+						div.banner.stub-class
+							div.h5 Рекламный баннер
+						div.banner.stub-class
+							div.h5 Рекламный баннер

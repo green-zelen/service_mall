@@ -1,0 +1,30 @@
+// Responsive Descktop Sections
+@media screen and (min-width:992px) and (max-width:1024px) {
+    @component i-am-customer {
+        @descendent hint {
+            .check-list {
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    @component i-am-implementer {
+        @descendent hint {
+            .check-list {
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    @component advantages {
+        @descendent third {
+            .advantage {
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}

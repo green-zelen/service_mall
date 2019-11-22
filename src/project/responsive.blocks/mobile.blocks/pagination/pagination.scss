@@ -1,0 +1,21 @@
+// Mobile Pagination
+@media screen and (max-width: 990px) {
+    @component pagination {
+        li {
+            display: none;
+            &:first-child,
+            &:last-child {
+                display: inline-block !important;
+                width: 50%;
+                border: $gray_border;
+                a {
+                    padding: .3rem 2rem;
+                    &:hover {
+                        background: $light_gray;
+                        color: $text_gray;
+                    }
+                }
+            }
+        }
+    }
+}

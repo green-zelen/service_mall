@@ -1,0 +1,145 @@
+// Choose order category
+@component choose-order-category {
+    .action {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+}
+
+@component chosen-first-category {
+    padding: 2rem 0;
+    .locate-title {
+        margin-bottom: 1rem;
+    }
+    .implementer-locate {
+        padding: 1rem 0;
+    }
+    .locates-inner {
+        background: $white_color;
+        padding: 1rem;
+        border-radius: 8px;
+        .line {
+            font-weight: 700;
+            color: $deep_green;
+            line-height: 2rem;
+            span {
+                margin-left: .5rem;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &.actions {
+                    a {
+                        color: $deep_green;
+                        opacity: .8;
+                        margin-left: 1rem;
+                        &:hover {
+                            color: $deep_red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@component chosen-second-category {
+    padding: 2rem 0 1rem;
+    .sub-category {
+        background: $light_gray;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        .form {
+            padding: 1rem 0;
+        }
+        .remove-link {
+            color: $black_color;
+            display: block;
+            margin: .5rem;
+            text-align: right;
+            &:hover {
+                color: $deep_red;
+            }
+        }
+        .portfolio {
+            margin-top: 2rem;
+            button {
+                margin-left: 1rem;
+            }
+        }
+        .expert-result {
+            background: $light_green;
+            border: 2px dotted $deep_green;
+            border-radius: 8px;
+            text-align: center;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: $deep_green;
+        }
+    }
+}
+
+@component category {
+    @descendent list {
+        margin-bottom: 4rem;
+        .image {
+            padding-bottom: .5rem;
+            img {
+                width: 80px;
+            }
+        }
+        .title {
+            padding: 1rem 0;
+            a {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: $deep_blue;
+                &:hover {
+                    color: $dark_blue;
+                }
+            }
+        }
+        .list {
+            padding-top: .5rem;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    line-height: 2rem;
+                    a {
+                        color: $black_color;
+                        &:hover {
+                            color: $deep_red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@component subcategories {
+    padding: 0 0 2rem;
+    a {
+        display: block;
+        font-weight: bold;
+        color: $deep_blue;
+        font-size: 1.1rem;
+        margin-bottom: .5rem;
+        span {
+            &.amount {
+                padding: .2rem .5rem;
+                background: $light_gray;
+                border-radius: 50rem;
+                margin-left: 1rem;
+                min-width: 42px;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        &:hover {
+            color: $dark_blue;
+        }
+    }
+}

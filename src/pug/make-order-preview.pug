@@ -1,0 +1,105 @@
+extends header-user.pug
+
+//- Make Order Sections
+block section-top-order-preview
+	section.page-top.top-order-preview.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li 
+								a(href="#")  Создание заказа
+							li.active Предварительный просмотр заказа
+					div.top
+						h1.blue-h1 Предварительный просмотр заказа
+block section-create-order-preview
+	//- Класс .error-section придается блоку при ошибке валидации
+	section.create-order.create-order-preview.green-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.selected-category
+						div.h3 
+							i.fa.fa-check
+							| Изготовление и ремонт мебели / Шкафы
+					div.created-order-info
+						div.h4.strong Отремонтировать старый шкаф
+						p.descr Нужно починить старый бабушкин шкаф (подкрутить дверцы, починить вдывижные ящики, полки) и переобить выдвижной каркасный диван. Материалы куплены, есть степлер для мебели. нужен человек с опытом 1-2 года, который сумеет выполнить работу за 1 день. 
+						div.downloads
+								div.dop-row
+									div.one-fifth
+										div.photo-miniature
+											a.strech-img
+												img(src="images/stubs/stub1.png")/
+												div.photo-miniature-descr Старый диван, который необходимо перетянуть
+									div.one-fifth
+										div.photo-miniature
+											a.strech-img 
+												img(src="images/stubs/stub2.png")/
+												div.photo-miniature-descr Ожидаемый результат
+						div.parameters
+							div.parameter.dates
+								span.strong
+									i.fa.fa-calendar
+									| 14.07.2017 –15.07.2017
+							div.parameter.address
+								span.strong
+									i.fa.fa-map-marker
+									| Ул. Ленина, д. 45а, кв. 44
+							div.parameter.budget
+								span.strong
+									i.fa.fa-rub
+									| Бюджет: 
+									span.num 7000 руб.
+					div.category-sub-parameters
+						div.h5.strong Дополнительные параметры
+						ul.sub-parameters
+							li материалы закупает заказчик
+							li инструменты исполнителя
+							li транспортировка при необходимости на исполнителе
+					div.chosen-implementer
+						div.h5.strong
+							i.fa.fa-user
+							| За заказом закреплен выбранный эксперт: 
+						div.row
+							div.col-xs-12.col-sm-12.col-md-7
+								div.implementer-short-card
+									div.row
+										div.col-xs-3.col-sm-3
+											div.avatar
+												img(src="images/stubs/avatar.png")
+										div.col-xs-9.col-sm-9
+											div.info
+												div.name Максим Григориевич Гарин
+												div.old 39 лет, г. Южно-Сахалинск
+												div.rating
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+													//- Класс .master и .expert расставляются согласно статусупользователя
+													span.status.expert 
+														i.icon
+														| Эксперт
+												div.orders
+													span.strong 144 заказа
+													| 
+													span – 1100 р/час.
+block section-order-preview-actions
+	section.order-preview-actions.green-section
+		div.container
+			div.divider.divider-dotted.divider-blue
+			div.buttons-inner.right
+				div.divider.divider-transperent
+				button.btn.btn-small.btn-round.btn-red
+					i.fa.fa-trash
+					| Удалить
+				button.btn.btn-small.btn-round.btn-green 
+					i.fa.fa-edit
+					| Редактировать
+				button.btn.btn-small.btn-round.btn-blue 
+					i.fa.fa-check
+					| Опубликовать

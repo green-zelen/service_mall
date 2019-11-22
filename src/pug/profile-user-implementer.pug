@@ -1,0 +1,643 @@
+extends header.pug
+
+//- Become Implementer Questionary
+block section-top-personal-questionary
+	section.page-top.top-personal-questionary.blue-section.success-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li 
+								a(href="#") Личный кабинет
+							li.active Личные данные
+					div.top-search
+						h1.blue-h1 Личные данные
+block section-profile-tabs
+	section.profile-tabs.gray-section 
+		div.container
+			div.tabs-block.profile
+				div.tab.selected
+					a(href="#")
+						i.fa.fa-user
+						| Личный кабинет
+				div.tab
+					a(href="#")
+						i.fa.fa-list
+						| Мои заказы
+				div.tab
+					a(href="#")
+						i.fa.fa-wrench
+						| Работа
+block section-about-user
+	section.about-user
+		div.container
+			div.form
+				div.text-error Укажите корректный email
+				div.row
+					div.col-xs-12.col-sm-8.col-md-9
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Фамилия
+							input.input.form-control(type="text" placeholder="Фамилия" value="Белоголовцев")
+							i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Имя
+							input.input.form-control(type="text" placeholder="Имя" value="Иван")
+							i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Отчество
+							input.input.form-control(type="text" placeholder="Отчество" value="Сергеевич")
+							i.fa.fa-exclamation
+						div.row
+							div.col-xs-12.col-sm-7.col-md-7
+								fieldset.form-group.with-label
+									label.form-label.thin.block.large.gray Телефон
+									input.input.form-control(type="tel" placeholder="Телефон" value="+79147332720")
+									i.fa.fa-exclamation
+							div.col-xs-12.col-sm-5.col-md-5
+								fieldset.form-group.with-label
+									label.form-label.thin.block.large.gray Дата рождения
+									div.icon-input
+										input.form-control(type="text" placeholder="Дата рождения" value="21.12.1975")
+										i.fa.fa-calendar.input-i
+										i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							//- Селект открывается классом .open
+							label.form-label.thin.block.large.gray Город
+							div.select
+								div.form-control Южно-Сахалинск
+									i.fa.fa-caret-down.input-i
+									div.options
+										div.search
+											input.input(type="text" placeholder="Введите название города...")
+										ul.options-inner
+											li
+												a(href="#") Абакан
+											li
+												a(href="#") Абинск
+											li
+												a(href="#") Адлер
+											li
+												a(href="#") Абакан
+											li
+												a(href="#") Абинск
+											li
+												a(href="#") Адлер
+								i.fa.fa-check
+								i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Логин
+							input.input.form-control(type="text" placeholder="Логин" value="foxxx88")
+							i.fa.fa-exclamation
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large.gray Email
+							input.input.form-control(type="email" placeholder="Email" value="belogolovtsev.ivan@mail.ru")
+							i.fa.fa-exclamation
+							div.checkbox
+								label 
+									input(type="checkbox")/ 
+									| Получать рассылку о новых функциях сервиса, новостях и акциях
+									div.check
+					div.col-xs-12.col-sm-4.col-md-3
+						div.photo-inner
+							div.downloads
+								div.photo-miniature.avatar
+									img(src="images/stubs/avatar-src.png")/
+									a.remove-photo(href="#")
+										i.fa.fa-remove
+							//- Блок .drag-n-drop появляется только при перетасквании изображений в окно браузера
+							div.drag-n-drop.green Перетащите сюда выбранное изображение
+							button.btn.btn-green.btn-block Изменить фото 
+								i.fa.fa-camera
+					div.col-xs-12
+						div.divider.divider-transperent
+						button.btn.btn-small.btn-round.btn-blue Сохранить
+			div.change-password
+				div#accordionImplementerDetails.panel-group(role='tablist' aria-multiselectable='true')
+				div.panel.panel-default.gray
+					div#headingImplementerDetails.panel-heading(role='tab')
+						div.h4.panel-title
+							a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerDetails' aria-expanded='true' aria-controls='collapseOne') 
+								div.row
+									div.col-xs-12 
+										i.fa.fa-lock.m-right
+										span.link-dotted.blue Сменить пароль
+					div#collapseImplementerDetails.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerDetails')
+						div.panel-body
+							div.form
+								div.text-error Вы указади неверный текущий пароль
+								div.text-error Новые пароли не совпадают
+								div.row
+									div.col-xs-12.col-sm-6
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large.gray Введите старый пароль
+											input.input.form-control(type="pass")
+											i.fa.fa-exclamation
+								div.divider.divider-dotted.divider-gray
+								div.row
+									div.col-xs-12.col-sm-6
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large.gray Новый пароль
+											input.input.form-control(type="pass")
+											i.fa.fa-exclamation
+									div.col-xs-12.col-sm-6
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large.gray Повторите новый пароль
+											input.input.form-control(type="pass")
+											i.fa.fa-exclamation
+									div.col-xs-12
+										div.divider.divider-transperent
+											button.btn.btn-small.btn-round.btn-blue Сохранить новый пароль
+											div.divider.divider-transperent
+											div.text-notify.success Ваш пароль успешно изменен!
+block section-imp-professional-info
+	//- Класс .error-section придается блоку при ошибке валидации
+	section.imp-professional-info.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.form
+						div.h3.title.strong.mbottom Обо мне
+						//- Класс error придается fieldset при ошибке валидации
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large Напишите пару слов о себе и своей работе
+							textarea.form-control(type="text" rows="8" placeholder="Например: Меня зовут Иванов Иван Иванович. Я окончил Дальневосточный государственный политехнический университет в 2002 году по специальности «Горное дело». С 2004 года занимаюсь ремонтами и строительством как частное лицо. Я специализируюсь на отделочных работах, установке окон и дверей, партнерствую с опытными электриками и сантехниками. С 2011года руковожу собственной бригадой.  Берусь за выполение сложных заказов, консультирую по вопросам ремонта.") Меня зовут Иванов Иван Иванович. Я окончил Дальневосточный государственный политехнический университет в 2002 году по специальности «Горное дело». С 2004 года занимаюсь ремонтами и строительством как частное лицо. Я специализируюсь на отделочных работах, установке окон и дверей, партнерствую с опытными электриками и сантехниками. С 2011года руковожу собственной бригадой.  Берусь за выполение сложных заказов, консультирую по вопросам ремонта.
+					div.divider.divider-dotted.divider-blue
+					div.form
+						div.h3.title.strong.mbottom Образование
+						div.row
+							div.col-xs-10.col-sm-11.col-md-4
+								fieldset.form-group
+									//- Селект открывается классом .open
+									div.select
+										div.form-control Университет
+											i.fa.fa-caret-down.input-i
+											div.options
+												ul.options-inner
+													li
+														a(href="#") Университет
+													li
+														a(href="#") ПТУ
+													li
+														a(href="#") Курсы
+							div.col-xs-1.col-sm-1.col-md-4
+								fieldset.form-group
+									a.remove-link.blue(href="#")
+										i.fa.fa-remove
+						//- Класс error придается fieldset при ошибке валидации
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large Укажите образовательное учреждение и полученные знания
+							textarea.form-control(type="text" rows="4" placeholder="Например: Дальневосточный государственный политехнический университет, специалитет «Горное дело». 1997-2002 гг." value="Дальневосточный государственный политехнический университет, специалитет «Горное дело». 1997-2002 гг.")
+							div.row
+								div.col-xs-12.col-sm-12.col-md-8
+									a.bottom-link.blue Добавить информацию об образовании
+								div.col-xs-12.col-sm-12.col-md-4
+									div.buttons-inner.right
+										button.btn.btn-small.btn-round.btn-blue Сохранить
+//- Add New Category
+block section-add-new-category
+	section.add-new-category.green-section
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-8
+					div.h3.title.strong.mbottom Навыки по выбранным категориям
+				div.col-xs-12.col-sm-12.col-md-4
+					div.buttons-inner.right
+						div.divider.divider-transperent
+						button.btn.btn-small.btn-round.btn-green
+							i.fa.fa-plus
+							| Добавить категориию
+//- Choose Implementer Category
+block section-choose-imp-category
+	section.choose-imp-category
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Одежда, обувь и аксуссуары
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox" checked) 
+								| Изготовление и ремонт мебели
+								div.check
+							div.radio-second-level
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Диваны и кресла
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Детская мебель
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Шкафы
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Кухни
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Столы и стулья
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Кровати
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Комоды
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Офисная мебель
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Другое
+										div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Компьютерная помощь
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Спорт и активный отдых
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Установка и ремонт техники
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/
+								| Бухгалтерские услуги
+								div.check
+						div.checkbox 
+							label 
+								input(type="checkbox")/
+								| Животные
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Музыка
+								div.check
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Курьерские услуги
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox") 
+								| Бытовой ремонт
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Грузоперевозки
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox" checked)/ 
+								| Уборка и помощь по хозяйству
+								div.check
+							div.radio-second-level
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Уборка помещений
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Услуги прачечной
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Садовые работы
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Услуги сиделки
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox" checked)/ 
+										| Вывоз мусора
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Бэбиситинг
+										div.check
+								div.checkbox
+									label 
+										input(type="checkbox")/ 
+										| Готовка
+										div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Мероприятия и промо-акции
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/
+								| Дизайн
+								div.check
+						div.checkbox 
+							label 
+								input(type="checkbox")/
+								| Web-разработка
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Фото- и видео-услуги
+								div.check
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Красота и здоровье
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox") 
+								| Ремонт цифровой техники
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Юридическая помощь
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Репетиторы и образование
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Ремонт транспорта
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/
+								| Другое
+								div.check
+				div.col-xs-12
+					div.buttons-inner.right
+						button.btn.btn-small.btn-round.btn-blue Добавить
+					div.divider.divider-transperent
+block section-chosen-first-category
+	section.chosen-first-category.green-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.form
+						//- Класс error придается fieldset при ошибке валидации
+						fieldset.form-group.dotted-border
+							div.h4.title.strong.black Мебель
+							textarea.form-control(type="text" rows="8" placeholder="Подробно опишите вашу компетенцию по данному направлению. Например: Занимаюсь изготовлением корпусно и мягкой мебели с 2009 года. Работаю с натуральным деревом,  листовыми композиционнами материалами и металлическими конструкциями.") Занимаюсь изготовлением корпусно и мягкой мебели с 2009 года. Работаю с натуральным деревом,  листовыми композиционнами материалами и металлическими конструкциями. 
+							div.checkbox
+								label 
+									input(type="checkbox" checked)/ 
+									| Получать уведомления оиз подкатегории «Другое» по данному направлению
+									div.check
+						//- Класс error придается fieldset при ошибке валидации
+						fieldset.form-group.implementer-locate
+							div.locate-title.strong Точки обслуживания / продаж
+							div.row
+								div.col-xs-12.col-sm-12.col-md-4
+									div.select
+										div.form-control Офис
+											i.fa.fa-caret-down.input-i
+											div.options
+												ul.options-inner
+													li
+														a(href="#") Офис
+													li
+														a(href="#") Точка выдачи товаров
+													li
+														a(href="#") Склад
+								div.col-xs-12.col-sm-12.col-md-4
+									//- Селект открывается классом .open
+									div.select
+										div.form-control  Южно-Сахалинск
+											i.fa.fa-caret-down.input-i
+											div.options
+												div.search
+													input.input(type="text" placeholder="Введите название города...")
+												ul.options-inner
+													li
+														a(href="#") Абакан
+													li
+														a(href="#") Абинск
+													li
+														a(href="#") Адлер
+													li
+														a(href="#") Абакан
+													li
+														a(href="#") Абинск
+													li
+														a(href="#") Адлер
+								div.col-xs-10.col-sm-11.col-md-3
+									input.input.form-control(type="text" placeholder="Горького, 62б" value="Ленина 44, офис 226")
+								div.col-xs-1.col-sm-1.col-md-1
+									fieldset.form-group
+										a.remove-link.green(href="#")
+											i.fa.fa-remove
+							a.bottom-link Добавить еще один адрес
+						//- Класс error придается fieldset при ошибке валидации
+						fieldset.form-group.implementer-locate
+							div.locate-title.strong Географическая принадлежность предоставляемых услуг/товаров
+							div.divider.divider-transperent
+							div.locates-inner
+								div.line
+									span.locate – Россия, Дальневосточный федеральный округ, Сахалинская область,Южно-Сахалинск
+									span.actions
+										a.edit(href="#")
+											i.fa.fa-pencil
+										a.remove(href="#")
+											i.fa.fa-remove
+								div.line
+									span.locate – Россия, Дальневосточный федеральный округ, Сахалинская область
+									span.actions
+										a.edit(href="#")
+											i.fa.fa-pencil
+										a.remove(href="#")
+											i.fa.fa-remove
+								div.line
+									span.locate – Вся Россия
+									span.actions
+										a.edit(href="#")
+											i.fa.fa-pencil
+										a.remove(href="#")
+											i.fa.fa-remove
+							div.divider.divider-transperent
+							a.bottom-link Добавить еще один адрес
+//- Add New Category
+block section-add-new-subcategory
+	section.add-new-subcategory
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-8
+					div.h3.title.strong.mbottom.green Подкатегории
+				div.col-xs-12.col-sm-12.col-md-4
+					div.buttons-inner.right
+						div.divider.divider-transperent
+						button.btn.btn-small.btn-round.btn-green
+							i.fa.fa-plus
+							| Добавить подкатегориию
+//- Choose Implementer Category
+block section-choose-new-subcategory
+	section.choose-new-subcategory.gray-section
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Диваны и кресла
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox") 
+								| Детская мебель
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox" checked)/ 
+								| Шкафы
+								div.check
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.checkbox
+							label 
+								input(type="checkbox" checked)/ 
+								| Кухни
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox") 
+								| Столы и стулья
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox" checked)/ 
+								| Кровати
+								div.check
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.checkbox
+							label 
+								input(type="checkbox" checked)/ 
+								| Комоды
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox") 
+								| Офисная мебель
+								div.check
+						div.checkbox
+							label 
+								input(type="checkbox")/ 
+								| Другое
+								div.check
+				div.col-xs-12
+					div.divider.divider-dotted.divider-blue.b-margin
+					div.buttons-inner.right
+						button.btn.btn-small.btn-round.btn-blue Добавить
+					div.divider.divider-transperent
+block section-chosen-second-category
+	section.chosen-second-category
+		div.container
+			div.row
+				div.col-xs-12
+					div.sub-category
+						div.row
+							div.col-xs-10
+								div.h4.title.black.strong Диваны и кресла
+							div.col-xs-2
+								a.remove-link.green(href="#")
+											i.fa.fa-remove
+						div.divider.divider-dotted.divider-green
+						div.form
+							fieldset.form-group
+								label.form-label Я занимаюсь этим направлением
+								input.form-control.inline(type="text" value="12")
+								label.form-label лет
+							div.divider.divider-transperent
+							fieldset.form-group
+								textarea.form-control(type="text" rows="8" placeholder="Подробно опишите вашу компетенцию по данному направлению. Например: Профессионально занимаюсь  обивкой диванов и кресел по итальянской технологии с 2014 года. Имею выход на поставщиков зарубежных тканей (Китай, Япония, Польша, Германия).") Профессионально занимаюсь  обивкой диванов и кресел по итальянской технологии с 2014 года. Имею выход на поставщиков зарубежных тканей (Китай, Япония, Польша, Германия).
+							fieldset.form-group
+								label.form-label Минимальная стоимость за час в данном направлении:
+								input.form-control.inline(type="text" value="1100")
+								label.form-label руб / час
+							div.portfolio
+								div.h4.title.strong Портфолио
+									button.btn.btn-small.btn-round.btn-green(data-toggle="modal" data-target="#addPortfolioPhotoModal")
+										i.fa.fa-plus
+										| Добавить
+								div.photo-inner
+									//- Блок .drag-n-drop появляется только при перетасквании изображений в окно браузера
+									div.drag-n-drop Перетащите сюда выбранные фотографии
+									div.downloads
+										div.dop-row
+											div.one-fifth
+												div.photo-miniature
+													a.strech-img(href='#' data-toggle="modal" data-target="#fullPhotoModal")
+														img(src="images/stubs/stub1.png")/
+														a.photo-miniature-delete(href="#")
+														div.photo-miniature-descr Старый диван, который необходимо перетянуть
+											div.one-fifth
+												div.photo-miniature
+													a.strech-img(href='#' data-toggle="modal" data-target="#fullPhotoModal") 
+														img(src="images/stubs/stub2.png")/
+														a.photo-miniature-delete(href="#")
+														div.photo-miniature-descr Ожидаемый результат
+											div.one-fifth
+												div.photo-miniature-add
+													a.add-image(href="#")
+														i.fa.fa-plus
+														span Добавить фото
+					div.buttons-inner.right
+						button.btn.btn-small.btn-round.btn-blue.disabled Сохранить
+					div.divider.divider-dotted.divider-blue.t-margin.b-margin
+block section-profile-actions
+	section.profile-actions
+		div.container
+			button.btn.btn-error
+				i.fa.fa-trash
+				| Удалить мою учетную запись
+			button.btn.btn-warning
+				i.fa.fa-wrench
+				| Перестать быть исполнителем

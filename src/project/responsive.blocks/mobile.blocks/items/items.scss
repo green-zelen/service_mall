@@ -1,0 +1,94 @@
+// Mobile Orders & Works Line Items
+@media screen and (max-width: 991px) {
+    @component item {
+        @descendent header {
+            .line {
+                .item {
+                    &.date-start {
+                        display: none;
+                    }
+                    &.status {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+        @descendent line {
+            .line {
+                .item {
+                    &.date-start {
+                        display: none;
+                    }
+                    &.status {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    @component item {
+        @descendent header {
+            display: none;
+        }
+        @descendent line {
+            background: transparent;
+            border-top: none !important;
+            .line {
+                background: transparent;
+                .item {
+                    display: block;
+                    width: 100%;
+                    background: $light_gray;
+                    &.category,
+                    &.date-finish,
+                    &.status {
+                        display: none;
+                    }
+                    &.name {
+                        background: $light_blue;
+                    }
+                    &:first-child {
+                        border-top: none !important;
+                    }
+                    &:last-child {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    .proposals {
+        &.item-list {
+            .item-line {
+                .line {
+                    .item {
+                        &.name {
+                            border-radius: 4px 4px 0 0;
+                        }
+                        &.estimate {
+                            border-radius: 0 0 4px 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .order {
+        &.item-list {
+            .item-line {
+                .line {
+                    .item {
+                        &.name {
+                            border-radius: 4px 4px 0 0;
+                        }
+                        &.date {
+                            border-radius: 0 0 4px 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

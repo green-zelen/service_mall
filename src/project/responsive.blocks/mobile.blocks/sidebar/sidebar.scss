@@ -1,0 +1,12 @@
+// Mobile Sidebar
+@media screen and (max-width: 767px) {
+    @component sidebar {
+        .banner {
+            &.stub-class {
+                &:last-child {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

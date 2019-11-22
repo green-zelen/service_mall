@@ -1,0 +1,60 @@
+// Typography
+html {
+    font-size: 14px;
+    body {
+        font-family: $regular_font !important;
+        color: $black_color;
+    }
+}
+
+h5,
+.h5 {
+    font-size: 16px !important;
+}
+.title {
+    &.mbottom {
+        margin-bottom: 2rem;
+    }
+    &.center {
+        text-align: center !important;
+    }
+    &.left {
+        text-align: left !important;
+    }
+    &.black {
+        color: $black_color !important;
+    }
+    &.blue {
+        color: $deep_blue;
+    }
+    &.green {
+        color: $deep_green;
+    }
+}
+
+// Text Selection
+.strong {
+    font-weight: 700 !important;
+}
+
+// Headers types
+.blue-h1 {
+    color: $deep_blue;
+    font-weight: 700;
+    text-shadow: $gray_text_shadow;
+}
+
+.green-h1 {
+    color: $deep_green;
+    font-weight: 700;
+    text-shadow: $gray_text_shadow;
+}
+
+i {
+    &.fa {
+        &.right {
+            margin-right: 0;
+            margin-left: .5rem;
+        }
+    }
+}

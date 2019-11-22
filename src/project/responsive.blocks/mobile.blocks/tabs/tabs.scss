@@ -1,0 +1,21 @@
+// Mobile Tabs
+@media screen and (max-width: 480px) {
+    @component tabs {
+        @descendent block {
+            .tab {
+                display: block;
+                width: 100%;
+                margin: 0 0 1rem;
+            }
+            &.items-filters {
+                .tab {
+                    a {
+                        text-align: center;
+                        font-weight: bold;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

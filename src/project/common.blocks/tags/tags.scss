@@ -1,0 +1,66 @@
+// Tags
+@component tags {
+    @descendent inner {
+        margin-top: 1rem;
+        .tag {
+            display: inline-block;
+            margin-right: .5rem;
+            margin-bottom: .5rem;
+            &.article {
+                a {
+                    color: $white_color;
+                    font-weight: bold;
+                    padding: .3rem 1rem;
+                    display: block;
+                    border-radius: 50rem;
+                }
+                &:nth-child(1n+0) {
+                    a {
+                        background: $deep_blue;
+                        &:hover {
+                            background: $hover_blue;
+                        }
+                    }
+                }
+                &:nth-child(2n+0) {
+                    a {
+                        background: $deep_red;
+                        &:hover {
+                            background: $hover_red;
+                        }
+                    }
+                }
+                &:nth-child(3n+0) {
+                    a {
+                        background: $deep_green;
+                        &:hover {
+                            background: $hover_green;
+                        }
+                    }
+                }
+            }
+            &.search {
+                a {
+                    color: $white_color;
+                    font-weight: bold;
+                    padding: .3rem 2rem;
+                    display: block;
+                    border-radius: 50rem;
+                    background: $soft_blue;
+                    opacity: .5;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                &.active {
+                    a {
+                        opacity: 1;
+                        &:hover {
+                            cursor: disabled;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

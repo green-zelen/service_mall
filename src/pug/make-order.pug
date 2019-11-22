@@ -1,0 +1,732 @@
+extends header-user.pug
+
+//- Make Order Sections
+block section-top-order-search
+	section.page-top.top-order-search.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li.active Создание заказа
+					div.top-search
+						h1.blue-h1 Создание заказа
+						div.form.form-search
+							fieldset.form-group
+								div.input-group.input-group-search
+									input.input.input-without-border.form-control(type="text" placeholder="Я ищу...")
+									span.input-group-btn
+										button.btn.btn-default(type="button")
+											i.fa.fa-search
+								div.hint * Введите примерное название категории, к которой вы отнесете ваше задание или выберите одну или несколько из предложенных
+//- Choose Order Category
+block section-choose-order-category
+	section.choose-order-category
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Одежда, обувь и аксуссуары
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first" checked) 
+								| Изготовление и ремонт мебели
+								div.check
+							div.radio-second-level
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Диваны и кресла
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Детская мебель
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second" checked)/ 
+										| Шкафы
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Кухни
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Столы и стулья
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Кровати
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Комоды
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Офисная мебель
+										div.check
+								div.radio
+									label 
+										input(type="radio" name="second")/ 
+										| Другое
+										div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Компьютерная помощь
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Спорт и активный отдых
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Установка и ремонт техники
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/
+								| Бухгалтерские услуги
+								div.check
+						div.radio 
+							label 
+								input(type="radio" name="first")/
+								| Животные
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Музыка
+								div.check
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Курьерские услуги
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first") 
+								| Бытовой ремонт
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Грузоперевозки
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Уборка и помощь по хозяйству
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Мероприятия и промо-акции
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/
+								| Дизайн
+								div.check
+						div.radio 
+							label 
+								input(type="radio" name="first")/
+								| Web-разработка
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Фото- и видео-услуги
+								div.check
+				div.col-xs-12.col-sm-12.col-md-4
+					div.radio-first-level
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Красота и здоровье
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first") 
+								| Ремонт цифровой техники
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Юридическая помощь
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Репетиторы и образование
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/ 
+								| Ремонт транспорта
+								div.check
+						div.radio
+							label 
+								input(type="radio" name="first")/
+								| Другое
+								div.check
+				div.col-xs-12
+					div.divider.divider-dotted.divider-blue
+					div.action
+						//- Класс .disabled придается неактивным кнопкам до выбора категории. Удаляется при выборе
+						button.btn.btn-small.btn-round.btn-blue.disabled Применить
+block section-create-order-part-1
+	//- Класс .error-section придается блоку при ошибке валидации
+	section.create-order.part1.green-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.selected-category
+						div.h3 
+							i.fa.fa-check
+							| Изготовление и ремонт мебели / Шкафы
+							a.edit(href="#")
+								i.fa.fa-pencil
+					div.form.no-bottom-padding
+						//- Класс error придается fieldset при ошибке валидации
+						fieldset.form-group.with-label
+							div.text-error.left Вам необходимо указать заголовок для задания
+							label.form-label.thin.block.large Мне нужно
+							input.form-control(type="text" placeholder="Застеклить балкон")
+							i.fa.fa-exclamation.m5
+							div.call-expert
+								//- Вызов эксперта в первой версии проекта не используется и скрыт
+								a.expert.hide(href="#") Позвать эксперта
+								a.info-icon.hide(href="#")
+									i.fa.fa-info-circle
+									//- Класс .visible делает подсказку tooltip видимой. Класс .hidden скрывает.
+									div.tooltip.visible
+										div.tooltip-inner Если вы не уверены в точности постановки задачи, то вы можете за отдельную плату нанять эксперта для постановки технического задания и найма исполнителей.
+										div.tooltip-arrow
+//- Choose Expert
+//- Вызов эксперта в первой версии проекта не используется и скрыт										
+block section-choose-expert
+	section.choose-expert.hide
+		div.container
+			div.row
+				div.col-xs-12
+					div.choose-expert-list
+						div.form.form-search
+							fieldset.form-group
+								div.input-group.input-group-search.experts-search
+									input.input.input-without-border.form-control(type="text" placeholder="Поиск экспертов")
+									span.input-group-btn
+										button.btn.btn-default(type="button")
+											i.fa.fa-search
+				div.col-xs-12.col-sm-12.col-md-5
+					div.choose-expert-list
+						div.choose-expert-filters
+							//- классы .up и .down выводят разные иконки для смены сортировки
+							span.label.up по рейтингу
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+							span.label.up по цене
+								i.fa.fa-sort-numeric-asc
+								i.fa.fa-sort-numeric-desc
+							span.label.up по городам
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+							span.label.up по кол-ву заказов
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+						div.dop-mobile-choose-expert-inner
+							div.choose-expert-table
+								table.table
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений К.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 900 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 92 заказа
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line.selected
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Маским Г.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert 
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 127 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Михаил П.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 600 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 12 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Григорий О.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 66 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений К.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 900 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 92 заказа
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Маским Г.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert 
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 127 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Михаил П.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 600 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 12 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Григорий О.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 66 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений К.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 900 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 92 заказа
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Маским Г.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert 
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 127 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Михаил П.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 600 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 12 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Григорий О.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 66 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений К.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 900 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 92 заказа
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Маским Г.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert 
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 127 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Михаил П.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 600 р/час
+											td.status.expert 
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 12 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Григорий О.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.price 1100 р/час
+											td.status.expert
+												i.icon
+												| Эксперт
+										tr.second-line
+											td.orders(colspan="2") 66 заказов
+											td.location(colspan="2") г. Южно-Cахалинск
+							//- Подробно об исполнителе в мобильной версии. Класс .open открывает, .close скпывае блок
+							div.choose-expert-card.mobile.open
+								div.implementer-card
+									div.row
+										div.col-xs-3.col-sm-3
+											div.avatar
+												img(src="images/stubs/avatar.png")
+										div.col-xs-9.col-sm-9
+											div.info
+												div.name Максим Григориевич Гарин
+												div.old 39 лет, г. Южно-Сахалинск
+												div.rating
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+													//- Класс .master и .expert расставляются согласно статусу пользователя
+													span.status.expert 
+														i.icon
+														| Эксперт
+												div.orders
+													span.strong 144 заказа
+													| 
+													span – 1100 р/час.
+										div.col-xs-12
+											div.descr
+												p.eduation Дальневосточный государственный политехнический университет, специалитет «Горное дело». 1997-2002 гг.
+												p.eduation Профессионально-техническое училище №44, столяр. 1995-1997 гг.
+												div.divider.divider-dotted.divider-blue
+												p.about-implementer Меня зовут Иванов Иван Иванович. Я окончил Дальневосточный государственный политехнический университет в 2002 году по специальности «Горное дело». С 2004 года занимаюсь ремонтами и строительством как частное лицо. Я специализируюсь на отделочных работах, установке окон и дверей, партнерствую с опытными электриками и сантехниками. С 2011года руковожу собственной бригадой.  Берусь за выполение сложных заказов, консультирую по вопросам ремонта.
+								button.btn.btn-small.btn-round.btn-blue.btn-more Подробнее
+				div.col-xs-12.col-sm-12.col-md-7
+					div.choose-expert-card
+						div.implementer-card
+							div.row
+								div.col-xs-3.col-sm-3
+									div.avatar
+										img(src="images/stubs/avatar.png")
+								div.col-xs-9.col-sm-9
+									div.info
+										div.name Максим Григориевич Гарин
+										div.old 39 лет, г. Южно-Сахалинск
+										div.rating
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											//- Класс .master и .expert расставляются согласно статусу пользователя
+											span.status.expert 
+												i.icon
+												| Эксперт
+										div.orders
+											span.strong 144 заказа
+											| 
+											span – 1100 р/час.
+								div.col-xs-12
+									div.descr
+										p.eduation Дальневосточный государственный политехнический университет, специалитет «Горное дело». 1997-2002 гг.
+										p.eduation Профессионально-техническое училище №44, столяр. 1995-1997 гг.
+										div.divider.divider-dotted.divider-blue
+										p.about-implementer Меня зовут Иванов Иван Иванович. Я окончил Дальневосточный государственный политехнический университет в 2002 году по специальности «Горное дело». С 2004 года занимаюсь ремонтами и строительством как частное лицо. Я специализируюсь на отделочных работах, установке окон и дверей, партнерствую с опытными электриками и сантехниками. С 2011года руковожу собственной бригадой.  Берусь за выполение сложных заказов, консультирую по вопросам ремонта.
+						div.professional-category
+							div.h5.title Корпусная мебель
+							p Профессионально занимаюсь  проектированием, созданием и сборкой корпусной мебели по итальянской технологии с 2014 года. Имею выход на поставщиков немецких материалов высшего качества.
+							div.photos
+								div.dop-row
+									div.one-third
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub1.png")/
+												div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+									div.one-third
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub2.png")/
+												div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения.
+									div.one-third
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub1.png")/
+												div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+block section-create-order-part-2
+	//- Класс .error-section придается блоку при ошибке валидации
+	section.create-order.part2.green-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.form
+						//- Класс error придается fieldset при ошибке валидации
+						fieldset.form-group.textarea-with-button.with-label
+							div.text-error.left Обязательно подробно опишите ваше задание
+							label.form-label.thin.block.large Детали задачи и ваши пожелания
+							div.textarea-with-button
+								textarea.form-control(type="text" rows="8" placeholder="Что вы хотите, чтобы для вас сделали? Какие виды работ необходимо выполнить? На какое время вы хотите нанять исполнителя? Какие требования к исполнителю у вас?  Например: Необходимо застеклить балкон 3.4х1.2 метра, материалы приобрету и закажу окна по вашим расчетам. Необходимо в вечернее время на рабочей неделе сделать замеры и расчет по материалам, а за выходные (суббота-воскресенье) застеклить. Оплата договорная, хотелось бы уложиться в 18 000 рублей. Нужен русский мастер со стажем работы не менее 3х лет в отрасли, возможно с напарником.")
+								//- Класс .active придается кнопке .private-info при ее нажатии.
+								button.btn.private-info.inactive
+									i.fa.fa-lock
+									| Приватная информация
+							i.fa.fa-exclamation.m5
+						div.photo-inner
+							button.btn.add-photo.btn-green 
+								i.fa.fa-plus
+								i.fa.fa-camera
+							//- Блок .drag-n-drop появляется только при перетасквании изображений в окно браузера
+							div.drag-n-drop Перетащите сюда выбранные фотографии
+							div.downloads
+								div.dop-row
+									div.one-fifth
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub1.png")/
+												a.photo-miniature-delete(href="#")
+												div.photo-miniature-descr Старый диван, который необходимо перетянуть
+									div.one-fifth
+										div.photo-miniature
+											a.strech-img(href="#")
+												img(src="images/stubs/stub2.png")/
+												a.photo-miniature-delete(href="#")
+												div.photo-miniature-descr Ожидаемый результат
+									div.one-fifth
+										div.photo-miniature-add
+											a.add-image(href="#")
+												i.fa.fa-plus
+												span Добавить фото
+						div.start-finish-date
+							div.row
+								div.col-xs-12.col-sm-12.col-md-5
+									div.start-date
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дата начала работ
+											div.row
+												div.col-xs-7
+													div.icon-input
+														input.form-control(type="text" placeholder="Дата")/
+														i.fa.fa-calendar.input-i
+														a.bottom-link(href="#") сегодня
+														a.bottom-link(href="#") завтра
+												div.col-xs-5
+													div.icon-input
+														input.form-control(type="text" placeholder="Время")/
+														i.fa.fa-clock-o.input-i
+								div.col-xs-12.col-sm-12.col-md-5
+									div.create-finish-date.visible
+										div.checkbox
+											label 
+												input(type="checkbox")/ 
+												| Указать дату окончания работ
+												div.check
+									//- При активации чек-бокса появляется форма для выбора даты. .hide скрывает, .visible открывает
+									div.finish-date.hide
+										fieldset.form-group.with-label
+											label.form-label.thin.block.large Дата окончания работ
+											div.row
+												div.col-xs-7
+													div.icon-input
+														input.form-control(type="text" placeholder="Дата")/
+														i.fa.fa-calendar.input-i
+														a.bottom-link(href="#") сегодня
+														a.bottom-link(href="#") завтра
+												div.col-xs-5
+													div.icon-input
+														input.form-control(type="text" placeholder="Время")/
+														i.fa.fa-clock-o.input-i
+						fieldset.form-group.with-label
+							label.form-label.thin.block.large Адрес
+							div.icon-input
+								input.form-control(type="text" placeholder="Улица, дом, строение, корпус, квартира")/
+								i.fa.fa-map-marker.input-i
+								a.bottom-link(href="#") Добавить еще один адрес
+//- Choose Budget
+block section-order-budget
+	//- Класс .error-section придается блоку при ошибке валидации
+	section.order-budget.blue-section.gray-color
+		div.container
+			div.row
+				div.col-xs-12
+					div.form
+						div.text-error.left Если вы выбрали «Бюджет», то необходимо указать сумму
+						div.row
+							div.col-xs-12.div.col-sm-12.col-md-4
+									div.order-budget-list
+										div.radio
+											label 
+												input(type="radio" name="price" checked)/ 
+												| Бюджет
+												div.check
+										div.radio
+											label 
+												input(type="radio" name="price")/ 
+												| Предложите цену сами
+												div.check
+							div.col-xs-12.div.col-sm-12.col-md-4
+								//- Отображается только при выборе первых двух вариантов бюджета
+								div.order-budget-price
+									//- Класс error придается fieldset при ошибке валидации
+									fieldset.form-group.with-label
+										label.form-label.thin.block.large Сумма
+										input.input.form-control(type="text" placeholder="1000")
+										label.form-label.thin.large.currency руб.
+										i.fa.fa-exclamation.m2
+							div.col-xs-12
+								div.submit-form-button
+									button.btn.btn-large.btn-round.btn-blue Опубликовать

@@ -1,0 +1,10 @@
+@media screen and (max-width:480px) {
+    @component form {
+        .submit-form-button {
+        	padding: 0 1rem;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

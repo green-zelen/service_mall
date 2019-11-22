@@ -1,0 +1,15 @@
+// Labels
+@component form-label {
+	&.thin {
+		font-weight: 300;
+	}
+	&.block {
+		display: block;
+	}
+	&.large {
+		font-size: 1.2rem;
+	}
+	&.gray {
+		color: $text_gray;
+	}
+}

@@ -1,0 +1,127 @@
+extends header-user.pug
+
+//- Make Order Sections
+block section-top-order-preview
+	section.page-top.top-order-preview.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li.active Ваше задание №5675
+					div.top
+						h1.blue-h1 Оцените исполителя
+block section-create-order-preview
+	section.create-order.create-order-preview
+		div.container
+			div.row
+				div.col-xs-12
+					div.h3.strong.what-the-category
+						| Задание в категории: 
+						span.title.blue Изготовление и ремонт мебели / Шкафы
+					div.row
+						div.col-xs-12
+							div.short-order-card.finish.gray
+								div.row
+									div.col-xs-4.col-sm-3.col-md-2
+										img(src="images/stubs/stub1.png")
+									div.col-xs-8.col-sm-9.col-md-10
+										a.title.h4.strong(href="#") Отремонтировать старый диван
+										div.descr Нужно починить старый бабушкин шкаф (подкрутить дверцы, починить вдывижные ящики, полки) и переобить выдвижной каркасный диван. Материалы куплены, есть степлер для мебели. нужен человек с опытом 1-2 года, который сумеет выполнить работу за 1 день. 
+										div.bottom
+											span.param.price
+												i.fa.fa-rub
+												| Бюджет: 6000 руб.
+											span.param.time
+												i.fa.fa-calendar
+												| 14.07.2017 –16.07.2017
+						div.col-xs-12.col-sm-12.col-md-7
+							div.choose-expert-card.all-view
+								div.implementer-card
+									div.row
+										div.col-xs-3.col-sm-3
+											div.avatar
+												img(src="images/stubs/avatar.png")
+										div.col-xs-9.col-sm-9
+											div.info
+												div.name Максим Григориевич Гарин
+												div.old 39 лет, г. Южно-Сахалинск
+												div.rating
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+												div.orders
+													span.strong 144 заказа
+						div.col-xs-12.col-sm-12.col-md-5
+							div.estimates
+								div.h4.strong Оцените оказанную вам услугу
+								div.estimates-inner
+									div.line
+										div.title
+											span.strong Качество
+										div.rating
+											span.estimates-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a(href="#")
+													i.fa.fa-star
+												a(href="#")
+													i.fa.fa-star
+									div.line
+										div.title
+											span.strong Скорость работы
+										div.rating
+											span.estimates-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a(href="#")
+													i.fa.fa-star
+									div.line
+										div.title
+											span.strong Удобство
+										div.rating
+											span.estimates-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a.selected(href="#")
+													i.fa.fa-star
+												a(href="#")
+													i.fa.fa-star
+												a(href="#")
+													i.fa.fa-star
+									
+					div.add-review
+						div.form
+							div.comment
+								fieldset.form-group.with-label
+									label.form-label.thin.block.large Добавьте отзыв о работе исполнителя
+									textarea.form-control.border(type="text" rows="4" )
+								div.photo-inner.hide
+									//- Блок .drag-n-drop появляется только при перетасквании изображений в окно браузера
+									div.drag-n-drop Перетащите сюда выбранные фотографии
+									div.uploads.photo
+										div.photo-miniature.mini
+											img(src="images/stubs/stub1.png")/
+											a.photo-miniature-delete(href="#")
+										div.photo-miniature.mini
+											img(src="images/stubs/stub2.png")/
+											a.photo-miniature-delete(href="#")
+								button.btn.add-photo.btn-green 
+										i.fa.fa-plus
+										i.fa.fa-camera
+								button.btn.btn-blue.btn-right Оценить исполнителя

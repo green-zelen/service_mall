@@ -1,0 +1,64 @@
+// Header
+@component header {
+    @descendent mobile {
+        display: none;
+        .sidebar {
+            display: none;
+        }
+    }
+    @descendent top {
+        background: $white_color;
+        padding: .5rem 0;
+        box-shadow: $gray_box_shadow;
+    }
+    @descendent city {
+        text-align: left;
+        .geolocation {
+            color: $deep_blue;
+            a {
+                margin-left: .5rem;
+                color: $deep_red;
+                border-bottom: 2px dotted $deep_red;
+                &:hover {
+                    color: $deep_blue;
+                    border-bottom: 2px dotted $deep_blue;
+                }
+            }
+        }
+    }
+    @descendent socials {
+        text-align: center;
+        a {
+            margin-left: .5rem;
+            color: $soft_gray;
+            i.fa {
+                font-size: 1rem;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:hover {
+                color: $deep_blue;
+            }
+        }
+    }
+    @descendent user {
+        text-align: right;
+        a {
+            color: $deep_blue;
+            i {
+                margin-right: .5rem;
+            }
+            &:hover {
+                color: $deep_red;
+            }
+        }
+    }
+    @descendent bottom {
+        padding: 2rem 0;
+    }
+    @descendent nav {
+        text-align: right;
+        padding: .6rem 0;
+    }
+}

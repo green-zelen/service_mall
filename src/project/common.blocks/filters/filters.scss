@@ -1,0 +1,42 @@
+// Filters
+@component filter {
+    @descendent checkbox {
+        background: $light_gray;
+        border-radius: 4px;
+        padding: .5rem;
+        color: $text_gray;
+        font-size: .9rem;
+        width: auto;
+        display: inline-block;
+        position: absolute;
+        z-index: 999;
+        right: 1rem;
+        box-shadow: 1px 1px 4px #bfbfbf;
+        i.fa-caret-down {
+            margin-left: .5rem;
+        }
+        .body {
+            padding: 1rem 0 0;
+        }
+        &.close {
+            opacity: 1;
+            .body {
+                display: none;
+            }
+        }
+        &.open {
+            opacity: 1;
+            .body {
+                display: block;
+            }
+            &:hover {
+                background: $light_gray;
+            }
+        }
+        &:hover {
+            background: $hover_light_gray;
+            cursor: pointer;
+            color: $text_gray;
+        }
+    }
+}

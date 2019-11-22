@@ -1,0 +1,18 @@
+// Images
+
+body {
+	img {
+		width: 100%;
+		position: relative;
+	}
+	.avatar {
+		img {
+			border-radius: 50rem;
+		}
+		&.photo-miniature {
+			img {
+				border-radius: 8px;
+			}
+		}
+	}
+}

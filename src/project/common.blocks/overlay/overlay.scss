@@ -1,0 +1,13 @@
+// Overlay
+@component overlay {
+    display: none;
+    &.visible {
+        display: block;
+        background: $black_color;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        opacity: .7;
+        z-index: 998;
+    }
+}

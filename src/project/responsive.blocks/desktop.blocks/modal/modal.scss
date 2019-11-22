@@ -1,0 +1,15 @@
+// Descktop Modals
+@media screen and (min-width: 992px) {
+    @component modal {
+        @descendent square {
+            .modal-dialog {
+                &.standart {
+                    width: 800px;
+                }
+                &.wide {
+                    width: 960px;
+                }
+            }
+        }
+    }
+}

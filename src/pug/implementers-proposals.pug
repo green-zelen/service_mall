@@ -1,0 +1,288 @@
+extends header-user.pug
+
+//- Make Order Sections
+block section-top-order-preview
+	section.page-top.top-order-preview.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li.active Предложения исполнителей
+					div.top
+						h1.blue-h1 Предложения исполнителей для заказа №7879
+block section-choose-expert
+	section.choose-expert
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-5
+					div.choose-expert-list
+						div.choose-implementer-hint Выберите из списка исполнителей тех, кого считаете подходящими выполнения задания
+						div.choose-expert-filters
+							//- классы .up и .down выводят разные иконки для смены сортировки
+							span.label.up дата
+							span.label.up рейтинг
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+							span.label.up цена
+								i.fa.fa-sort-numeric-asc
+								i.fa.fa-sort-numeric-desc
+							span.label.up город
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+							span.label.up заказы
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+							span.label.up сроки
+								i.fa.fa-sort-amount-asc
+								i.fa.fa-sort-amount-desc
+						div.dop-mobile-choose-expert-inner
+							div.divider.divider-date
+								span.date Сегодня
+							div.choose-expert-table.choose-proposal
+								table.table
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений К.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") 6900 руб.
+										tr.second-line
+											td.orders(colspan="2") 92 заказа
+											td.time(colspan="2") до 5 мая (2 дня)
+									tbody.expert-line.selected
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Маским Г.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") ≈ 6000 руб.
+										tr.second-line
+											td.orders(colspan="2") 127 заказов
+											td.time(colspan="2") до 8 мая (5 дней)
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Михаил П.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") 7500 руб.
+										tr.second-line
+											td.orders(colspan="2") 12 заказов
+											td.time(colspan="2") до 4 мая (1 день)
+							div.divider.divider-date
+								span.date Вчера
+							div.choose-expert-table.choose-proposal
+								table.table
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений К.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") 6900 руб.
+										tr.second-line
+											td.orders(colspan="2") 92 заказа
+											td.time(colspan="2") до 5 мая (2 дня)
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Маским Г.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") ≈ 6000 руб.
+										tr.second-line
+											td.orders(colspan="2") 127 заказов
+											td.time(colspan="2") до 8 мая (5 дней)
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Михаил П.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") 7500 руб.
+										tr.second-line
+											td.orders(colspan="2") 12 заказов
+											td.time(colspan="2") до 4 мая (1 день)
+							div.divider.divider-date
+								span.date На этой неделе
+							div.choose-expert-table.choose-proposal
+								table.table
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Евгений К.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") 6900 руб.
+										tr.second-line
+											td.orders(colspan="2") 92 заказа
+											td.time(colspan="2") до 5 мая (2 дня)
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Маским Г.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") ≈ 6000 руб.
+										tr.second-line
+											td.orders(colspan="2") 127 заказов
+											td.time(colspan="2") до 8 мая (5 дней)
+									tbody.expert-line
+										tr.first-line
+											td.avatar(rowspan="2")
+												img(src="images/stubs/avatar.png")
+											td.name Михаил П.
+											td.rating 
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+											td.proposal(colspan="2") 7500 руб.
+										tr.second-line
+											td.orders(colspan="2") 12 заказов
+											td.time(colspan="2") до 4 мая (1 день)
+							//- Подробно об исполнителе в мобильной версии. Класс .open открывает, .close скрывает блок
+							div.choose-expert-card.mobile.open
+								div.implementer-card
+									div.row
+										div.col-xs-3.col-sm-3
+											div.avatar
+												img(src="images/stubs/avatar.png")
+										div.col-xs-9.col-sm-9
+											div.info
+												div.name Максим Григориевич Гарин
+												div.old 39 лет, г. Южно-Сахалинск
+												div.rating
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+													i.fa.fa-star
+												div.orders
+													span.strong 144 заказа
+										div.col-xs-12
+											div.implementer-proposal-card.mobile
+												div.h4.strong Предложение на ваше задание:
+												div.descr
+													p Выполню в срок, могу вывезти мебель в любой период времени с 8:00 до 11:00, но потребуется помошник для погрузки мебели в автомобиль. При необходимости могу пригласить своего грузчика за 400 р/час. Дополнительно хочу запросить возмещение расходов на бензин, при этом ручаюсь утилизировать мусор после выполнения всех работ.
+													p Привезу готовую мебель на следующий день с 17:00 до 21:00. Аналогично потребуется помошник.
+												div.divider.divider-dotted.divider-blue
+												div.parameters
+													div.parameter.dates
+														span.strong
+															i.fa.fa-calendar
+															| 3 мая 2017 – 8 мая 2017 (5 дней)
+													div.parameter.budget
+														span.strong
+															i.fa.fa-rub
+															| Стоимость: ≈ 6000 руб.
+								button.btn.btn-small.btn-round.btn-blue.btn-more Подробнее
+				div.col-xs-12.col-sm-12.col-md-7
+					div.choose-expert-card
+						div.implementer-card
+							div.row
+								div.col-xs-3.col-sm-3
+									div.avatar
+										img(src="images/stubs/avatar.png")
+								div.col-xs-9.col-sm-9
+									div.info
+										div.name Максим Григориевич Гарин
+										div.old 39 лет, г. Южно-Сахалинск
+										div.rating
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+											i.fa.fa-star
+										div.orders
+											span.strong 144 заказа
+						div.implementer-proposal-card
+							div.h4.strong Предложение на ваше задание:
+							div.descr
+								p Выполню в срок, могу вывезти мебель в любой период времени с 8:00 до 11:00, но потребуется помошник для погрузки мебели в автомобиль. При необходимости могу пригласить своего грузчика за 400 р/час. Дополнительно хочу запросить возмещение расходов на бензин, при этом ручаюсь утилизировать мусор после выполнения всех работ.
+								p Привезу готовую мебель на следующий день с 17:00 до 21:00. Аналогично потребуется помошник.
+							div.divider.divider-dotted.divider-blue
+							div.parameters
+								div.parameter.dates
+									span.strong
+										i.fa.fa-calendar
+										| 3 мая 2017 – 8 мая 2017 (5 дней)
+								div.parameter.budget
+									span.strong
+										i.fa.fa-rub
+										| Стоимость: ≈ 6000 руб.
+						div.implementer-details
+							div#accordionImplementerDetails.panel-group(role='tablist' aria-multiselectable='true')
+							div.panel.panel-default
+								div#headingImplementerDetails.panel-heading(role='tab')
+									div.h4.panel-title
+										a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseImplementerDetails' aria-expanded='true' aria-controls='collapseOne') 
+											div.row
+												div.col-xs-10 Подробнее об исполнителе
+												div.col-xs-2
+													i.fa.fa-caret-down
+								div#collapseImplementerDetails.panel-collapse.collapse(role='tabpanel' aria-labelledby='headingImplementerDetails')
+									div.panel-body
+										div.implementer-details-block
+											div.descr
+												p.eduation Дальневосточный государственный политехнический университет, специалитет «Горное дело». 1997-2002 гг.
+												p.eduation Профессионально-техническое училище №44, столяр. 1995-1997 гг.
+												div.divider.divider-dotted.divider-blue
+												p.about-implementer Меня зовут Иванов Иван Иванович. Я окончил Дальневосточный государственный политехнический университет в 2002 году по специальности «Горное дело». С 2004 года занимаюсь ремонтами и строительством как частное лицо. Я специализируюсь на отделочных работах, установке окон и дверей, партнерствую с опытными электриками и сантехниками. С 2011года руковожу собственной бригадой.  Берусь за выполение сложных заказов, консультирую по вопросам ремонта.
+											div.professional-category
+												div.h5.title Корпусная мебель
+												p Профессионально занимаюсь  проектированием, созданием и сборкой корпусной мебели по итальянской технологии с 2014 года. Имею выход на поставщиков немецких материалов высшего качества.
+												div.photos
+													div.dop-row
+														div.one-third
+															div.photo-miniature
+																a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																	img(src="images/stubs/stub1.png")/
+																	div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+														div.one-third
+															div.photo-miniature
+																a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																	img(src="images/stubs/stub2.png")/
+																	div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения.
+														div.one-third
+															div.photo-miniature
+																a.strech-img(href="#" data-toggle="modal" data-target="#fullPhotoModal")
+																	img(src="images/stubs/stub1.png")/
+																	div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан
+						button.btn.btn-right.btn-blue
+							i.fa.fa-check
+							| Утвердить исполнителя

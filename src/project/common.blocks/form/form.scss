@@ -1,0 +1,273 @@
+// Forms
+@component form {
+    padding: 2rem 0;
+    &.no-bottom-padding {
+        padding-bottom: 0;
+    }
+    .text-error {
+        display: none;
+        color: $deep_red;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+        text-align: center;
+        &.left {
+            text-align: left;
+        }
+        a {
+            color: $deep_blue;
+            border-bottom: 2px dotted $deep_blue;
+            &:hover {
+                color: $hover_blue;
+                border-bottom: 2px dotted $hover_blue;
+            }
+        }
+    }
+    .text-notify {
+        text-align: center;
+        &.success {
+            margin-bottom: 1rem;
+            background: #eaffeb;
+            color: #81af4e;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 2px dotted #81af4e;
+        }
+        a {
+            color: $deep_green;
+            border-bottom: 2px dotted $deep_green;
+            &:hover {
+                color: $hover_green;
+                border-bottom: 2px dotted $hover_green;
+            }
+        }
+    }
+    fieldset {
+        padding: 0;
+        margin: 0;
+        border: none;
+        position: relative;
+        i {
+            &.fa-check {
+                display: none;
+                position: absolute;
+                right: -1.5rem;
+                top: 1rem;
+            }
+            &.fa-exclamation {
+                display: none;
+                position: absolute;
+                right: -1rem;
+                top: 1rem;
+            }
+        }
+        .hint {
+            margin-top: .5rem;
+            font-size: 1rem;
+            color: $deep_blue;
+        }
+        a {
+            &.bottom-link {
+                position: relative;
+                color: $deep_green;
+                border-bottom: 2px dotted $deep_green;
+                margin-right: .5rem;
+                top: -0.5rem;
+                &.blue {
+                    color: $deep_blue;
+                    border-bottom: 2px dotted $deep_blue;
+                }
+            }
+            &.remove-link {
+                display: block;
+                margin-top: 1rem;
+                &.green {
+                    color: $deep_green;
+                    &:hover {
+                        color: $hover_green;
+                    }
+                }
+            }
+        }
+        &.dotted-border {
+            border: 2px dotted $deep_green;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        &.with-label {
+            .icon-input {
+                i.input-i {
+                    top: 1.2rem;
+                }
+            }
+            i.fa-exclamation {
+                top: 3rem;
+            }
+        }
+    }
+    button {
+        &.btn-blue {
+            &:hover {
+                background: $deep_blue;
+                cursor: default;
+            }
+        }
+        &.btn-green {
+            &:hover {
+                background: $deep_green;
+                cursor: default;
+            }
+        }
+    }
+    @descendent control {
+        height: 3.5rem;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 200;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        &.border {
+            border: 1px solid #d8d8d8;
+            box-shadow: none;
+        }
+    }
+    .forget-password {
+        margin-bottom: 1rem;
+        a {
+            color: $deep_red;
+            border-bottom: 2px dotted $deep_red;
+            font-size: 1rem;
+            &:hover {
+                color: $hover_red;
+                border-bottom: 2px dotted $hover_red;
+            }
+        }
+    }
+    .ask-verificate-code {
+        text-align: center;
+        margin-top: 1rem;
+        a {
+            color: $deep_green;
+            border-bottom: 2px dotted $deep_green;
+            font-size: 1rem;
+            &:hover {
+                color: $hover_green;
+                border-bottom: 2px dotted $hover_green;
+            }
+        }
+    }
+    .submit-form-button {
+        text-align: center;
+        margin-top: 2rem;
+        button {
+            width: 380px;
+        }
+    }
+    .hint-mark {
+        color: $deep_red;
+    }
+    &.form-search {
+        button {
+            opacity: 1;
+            &.btn {
+                i {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@component blue-section {
+    .form {
+        input {
+            &::-webkit-input-placeholder {
+                color: $soft_blue;
+            }
+            &::-moz-placeholder {
+                color: $soft_blue;
+            }
+            &:-moz-placeholder {
+                color: $soft_blue;
+            }
+            &:-ms-input-placeholder {
+                color: $soft_blue;
+            }
+        }
+    }
+}
+
+@component success-section {
+    fieldset {
+        &.success {
+            i.fa-check {
+                display: block;
+                color: $deep_green;
+            }
+        }
+    }
+    button {
+        opacity: 1;
+        &.btn-blue {
+            &:hover {
+                background: $hover_blue;
+                cursor: pointer;
+            }
+        }
+        &.btn-green {
+            &:hover {
+                background: $hover_green;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@component error-section {
+    .form {
+        .text-error {
+            display: block;
+        }
+        fieldset {
+            &.error {
+                i.fa-exclamation {
+                    display: block;
+                    color: $deep_red;
+                }
+                i.input-i {
+                    color: $deep_red;
+                }
+                &.with-label {
+                    i.fa-exclamation {
+                        &.m2 {
+                            margin-top: 2.3rem;
+                        }
+                        &.m5 {
+                            margin-top: 5rem;
+                        }
+                    }
+                }
+                input {
+                    &::-webkit-input-placeholder {
+                        color: $deep_red !important;
+                    }
+                    &::-moz-placeholder {
+                        color: $deep_red !important;
+                    }
+                    &:-moz-placeholder {
+                        color: $deep_red !important;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $deep_red !important;
+                    }
+                }
+                .select {
+                    .form-control {
+                        color: $deep_red;
+                    }
+                }
+            }
+        }
+    }
+}

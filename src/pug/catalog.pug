@@ -1,0 +1,202 @@
+extends header-user.pug
+
+//- Search Order Sections
+block section-top-order-search
+	section.page-top.top-order-search.blue-section
+		div.container
+			div.row
+				div.col-xs-12
+					div.breadcrumb-block
+						ul.breadcrumb
+							li 
+								a(href="#") Главная
+							li.active Каталог
+					div.top-search
+						h1.blue-h1 Каталог
+						div.form.form-search
+							fieldset.form-group
+								div.input-group.input-group-search
+									input.input.input-without-border.form-control(type="text" placeholder="Я ищу...")
+									span.input-group-btn
+										button.btn.btn-default(type="button")
+											i.fa.fa-search
+block section-catalog-list
+	section.catalog-list
+		div.container
+			div.row
+				div.col-xs-12.col-sm-6.col-md-4
+					div.category-list(style="height: 620px;")
+						div.image
+							img(src="images/stubs/catalog1.png")
+						div.title
+							a(href="#") Курьерские услуги
+						div.list
+							ul
+								li
+									a(href="#") Услуги пешего курьера
+								li
+									a(href="#") Услуги курьера на легковом авто
+								li
+									a(href="#") Купить и доставить
+								li
+									a(href="#") Срочная доставка
+								li
+									a(href="#") Доставка продуктов
+								li
+									a(href="#") Доставка еды из ресторанов
+								li
+									a(href="#") Курьер на день
+								li
+									a(href="#") Другая посылка	
+				div.col-xs-12.col-sm-6.col-md-4
+					div.category-list
+						div.image
+							img(src="images/stubs/catalog2.png")
+						div.title
+							a(href="#") Бытовой ремонт
+						div.list
+							ul
+								li
+									a(href="#") Мастер на час
+								li
+									a(href="#") Ремонт под ключ
+								li
+									a(href="#") Сантехнические работы
+								li
+									a(href="#") Электромонтажные работы
+								li
+									a(href="#") Отделочные работы
+								li
+									a(href="#") Потолки
+								li
+									a(href="#") Полы
+								li
+									a(href="#") Плиточные работы
+								li
+									a(href="#") Мастер на час
+								li
+									a(href="#") Ремонт под ключ
+								li
+									a(href="#") Сантехнические работы
+								li
+									a(href="#") Электромонтажные работы
+								li
+									a(href="#") Отделочные работы
+								li
+									a(href="#") Потолки
+								li
+									a(href="#") Полы
+								li
+									a(href="#") Плиточные работы	
+				div.col-xs-12.col-sm-6.col-md-4
+					div.category-list(style="height: 620px;")
+						div.image
+							img(src="images/stubs/catalog3.png")
+						div.title
+							a(href="#") Грузоперевозки
+						div.list
+							ul
+								li
+									a(href="#") Перевозка вещей, переезды
+								li
+									a(href="#") Пассажирские перевозки
+								li
+									a(href="#") Строительные грузы и оборудование
+								li
+									a(href="#") Вывоз мусора
+								li
+									a(href="#") Эвакуаторы
+								li
+									a(href="#") Междугородные перевозки
+								li
+									a(href="#") Услуги грузчиков
+								li
+									a(href="#") Перевозка продуктов
+								li
+									a(href="#") Услуги манипулятора
+								li
+									a(href="#") Другой груз
+				div.banner
+					img(src='images/stubs/horisontal-banner.png' alt="")
+				div.col-xs-12.col-sm-6.col-md-4
+					div.category-list
+						div.image
+							img(src="images/stubs/catalog4.png")
+						div.title
+							a(href="#") Уборка и помощь по хозяйству
+						div.list
+							ul
+								li
+									a(href="#") Поддерживающая уборка
+								li
+									a(href="#") Генеральная уборка
+								li
+									a(href="#") Мытье окон
+								li
+									a(href="#") Вынос мусора
+								li
+									a(href="#") Помощь швеи
+								li
+									a(href="#") Приготовление еды
+								li
+									a(href="#") Глажение белья
+								li
+									a(href="#") Химчистка
+								li
+									a(href="#") Вынос мусора
+								li
+									a(href="#") Помощь швеи
+								li
+									a(href="#") Приготовление еды
+								li
+									a(href="#") Глажение белья
+								li
+									a(href="#") Химчистка
+				div.col-xs-12.col-sm-6.col-md-4
+					div.category-list
+						div.image
+							img(src="images/stubs/catalog5.png")
+						div.title
+							a(href="#") Виртуальный помощник
+						div.list
+							ul
+								li
+									a(href="#") Работа с текстом, копирайтинг, переводы
+								li
+									a(href="#") Работа в Excel, Power Point и т.д.
+								li
+									a(href="#") Расшифровка аудио- и видеозаписей
+								li
+									a(href="#") Размещение объявлений
+								li
+									a(href="#") Реклама и продвижение в интернете
+								li
+									a(href="#") Обзвон по базе
+								li
+									a(href="#") Что-то другое	
+				div.col-xs-12.col-sm-6.col-md-4
+					div.category-list
+						div.image
+							img(src="images/stubs/catalog6.png")
+						div.title
+							a(href="#") Компьютерная помощь
+						div.list
+							ul
+								li
+									a(href="#") Ремонт компьютеров и ноутбуков
+								li
+									a(href="#") Установка и настройка операц. систем, программ
+								li
+									a(href="#") Удаление вирусов
+								li
+									a(href="#") Настройка интернета и Wi-Fi
+								li
+									a(href="#") Ремонт и замена комплектующих
+								li
+									a(href="#") Восстановление данных 
+								li
+									a(href="#") Настройка и ремонт оргтехники
+								li
+									a(href="#") Консультация и обучение
+								li
+									a(href="#") Что-то другое	

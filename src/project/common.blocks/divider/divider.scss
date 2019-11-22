@@ -1,0 +1,63 @@
+// Dividers
+@component divider {
+    display: block;
+    padding: .5rem 0 0;
+    margin-top: .5rem;
+    width: 100%;
+    border-top: 1px solid $light_gray;
+    @descendent transperent {
+        border: none;
+    }
+    @descendent dotted {
+        border-top: 2px dotted $light_gray;
+    }
+    @descendent blue {
+        border-color: $deep_blue;
+    }
+    @descendent green {
+        border-color: $deep_green;
+    }
+    @descendent gray {
+        border-color: $text_gray;
+    }
+    @descendent date {
+        position: relative;
+        margin: 1rem 0 0;
+        border-top: 1px solid #BABABA;
+        text-align: center;
+        padding: 0;
+        .date {
+            background: $white_color;
+            color: #b1b1b1;
+            font-weight: 700;
+            position: relative;
+            top: -.7rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+            font-size: .9rem;
+        }
+    }
+    @descendent category {
+        position: relative;
+        margin: 2rem 0 0;
+        border-top: 2px dotted $dark_gray;
+        text-align: center;
+        padding: 0;
+        .category {
+            background: $white_color;
+            color: $dark_gray;
+            font-weight: 700;
+            position: relative;
+            top: -.7rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+            font-size: 1;
+        }
+    }
+    &.t-margin {
+        margin-top: 1rem;
+    }
+    &.b-margin {
+        margin-bottom: 1rem;
+    }
+}

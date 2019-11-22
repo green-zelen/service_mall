@@ -1,0 +1,189 @@
+// Articles
+@component articles {
+    padding: 3rem 0;
+    border-top: $gray_border;
+    .h1 {
+        color: $deep_blue;
+        i {
+            position: relative;
+            top: -.4rem;
+            margin-left: 2rem;
+        }
+    }
+    .news-block {
+        .news-list {
+            margin-top: 2rem;
+            .one-news {
+                padding-left: 1rem;
+                margin-bottom: 1rem;
+                &:last-child {
+                    margin-bottom: none;
+                }
+                &.red {
+                    border-left: 5px solid $deep_red;
+                }
+                &.blue {
+                    border-left: 5px solid $deep_blue;
+                }
+                &.green {
+                    border-left: 5px solid $deep_green;
+                }
+            }
+        }
+    }
+    .articles-block {
+        .articles-list {
+            margin-top: 2rem;
+            .one-article {
+                padding: .5rem 1rem .1rem;
+                margin-bottom: .5rem;
+                background: $light_blue;
+                border-radius: 8px;
+                &:last-child {
+                    margin-bottom: none;
+                }
+            }
+        }
+    }
+    @descendent list {
+        padding: 2rem 0 3rem;
+    }
+    @descendent inner {
+        .article {
+            border-radius: 8px;
+            display: flex;
+            margin-bottom: 1rem;
+            .text {
+                padding: 1rem;
+                .title {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                }
+                .descr {
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        a {
+                            color: #0A91CA;
+                            margin-left: .5rem;
+                            &:hover {
+                                color: $deep_blue;
+                            }
+                        }
+                    }
+                }
+            }
+            &.with-image {
+                .image {
+                    width: 160px;
+                    display: inline-block;
+                    img {
+                        border-radius: 8px 0 0 8px;
+                    }
+                }
+                .text {
+                    width: calc(100% - 160px);
+                }
+            }
+            &:nth-child(odd) {
+                background: $light_blue;
+            }
+            &:nth-child(even) {
+                background: $light_gray;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@component news {
+    @descendent list {
+        padding: 2rem 0 3rem;
+    }
+    @descendent border {
+        margin-bottom: 1rem;
+        border-bottom: $soft_gray_border;
+    }
+    @descendent inner {
+        .article {
+            display: flex;
+            margin: 1rem 0 2rem;
+            .text {
+                padding-left: 1rem;
+                .title {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                    .date {
+                        font-size: 1rem;
+                        color: $text_gray;
+                        margin-left: 1rem;
+                        font-weight: normal;
+                        i {
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+                .descr {
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        a {
+                            color: #0A91CA;
+                            margin-left: .5rem;
+                            &:hover {
+                                color: $deep_blue;
+                            }
+                        }
+                    }
+                }
+            }
+            &.with-image {
+                .image {
+                    width: 160px;
+                    display: inline-block;
+                    padding-left: 1rem;
+                }
+                .text {
+                    width: calc(100% - 160px);
+                }
+            }
+            &:nth-child(1n+0) {
+                border-left: 5px solid $deep_green;
+            }
+            &:nth-child(2n+0) {
+                border-left: 5px solid $deep_red;
+            }
+            &:nth-child(3n+0) {
+                border-left: 5px solid $deep_blue;
+            }
+        }
+    }
+}
+
+@component single-article {
+    padding: 2rem 0 1rem;
+    @descendent body {
+        img {
+            width: auto;
+            &.left {
+                float: left;
+                margin: 0 1rem 1rem 0;
+            }
+        }
+        p {
+            text-align: justify;
+        }
+        .date {
+            font-size: 1rem;
+            color: $text_gray;
+            font-weight: normal;
+            i {
+                margin-right: .5rem;
+            }
+        }
+    }
+}

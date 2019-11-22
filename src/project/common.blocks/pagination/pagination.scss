@@ -1,0 +1,41 @@
+// Pagination
+@component pagination {
+    @descendent inner {
+        text-align: center;
+        font-weight: bold;
+    }
+    li {
+        a {
+            border: none;
+            color: $text_gray;
+            border-radius: 0;
+            padding: .3rem 1rem;
+            &:hover {
+                border: none;
+                background: transparent;
+                color: $deep_red;
+            }
+        }
+    }
+}
+
+.pagination>.active>a {
+    background-color: $deep_red;
+    border-color: $deep_red;
+    border-radius: 50rem;
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    &:hover,
+    &:focus {
+        background-color: $deep_red;
+        border-color: $deep_red;
+        border-radius: 50rem;
+        z-index: 3;
+        color: #fff;
+        cursor: default;
+    }
+}
+.pagination>.disabled>a {
+    opacity: .8;
+}

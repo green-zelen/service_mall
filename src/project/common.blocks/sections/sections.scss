@@ -1,0 +1,680 @@
+// All kind of sections in project
+// Color-sections 
+@component blue-section {
+    background: $light_blue;
+    color: $deep_blue;
+    .form {
+        .input {
+            &::-webkit-input-placeholder {
+                color: $soft_blue;
+            }
+            &::-moz-placeholder {
+                color: $soft_blue;
+            }
+            &:-moz-placeholder {
+                color: $soft_blue;
+            }
+            &:-ms-input-placeholder {
+                color: $soft_blue;
+            }
+        }
+    }
+    &.gray-color {
+        color: $black_color;
+        .form {
+            .input {
+                &::-webkit-input-placeholder {
+                    color: #adadad;
+                }
+                &::-moz-placeholder {
+                    color: #adadad;
+                }
+                &:-moz-placeholder {
+                    color: #adadad;
+                }
+                &:-ms-input-placeholder {
+                    color: #adadad;
+                }
+            }
+        }
+    }
+    .title {
+        color: $deep_blue;
+    }
+}
+
+@component green-section {
+    background: $light_green;
+    color: $black_color;
+    .form {
+        .input {
+            &::-webkit-input-placeholder {
+                color: #adadad;
+            }
+            &::-moz-placeholder {
+                color: #adadad;
+            }
+            &:-moz-placeholder {
+                color: #adadad;
+            }
+            &:-ms-input-placeholder {
+                color: #adadad;
+            }
+        }
+        .form-control {
+            &:focus {
+                border-color: #6ae966;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(83, 195, 79, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(83, 195, 79, 0.6);
+            }
+        }
+    }
+    .title {
+        color: $deep_green;
+    }
+}
+
+@component error-section {
+    background: $light_red !important;
+}
+
+@component gray-section {
+    background: $light_gray;
+    color: $dark_gray;
+}
+
+// Popular sections
+@component page-top {
+    padding: 1rem 0;
+}
+
+// Index
+// Top-infographic
+@component top-infographic {
+    background: $light_gray;
+    padding: 2rem 0;
+    @descendent credo {
+        padding: 1rem 0;
+        p {
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-align: left;
+            color: $dark_blue;
+        }
+    }
+}
+
+// Banner-carousel
+@component banner-carousel {
+    padding: 4rem 0;
+}
+
+// Catalog 
+@component catalog-list {
+    padding: 3rem 0 1rem;
+    .banner {
+        margin: 2rem 0 3rem;
+    }
+}
+
+// Customer search + info
+@component i-am-customer {
+    padding: 3rem 0 6rem;
+    .container {
+        background-image: url(../images/background/customer-hint.png);
+        background-size: 50%;
+        background-position: 92%;
+        background-repeat: no-repeat;
+    }
+    @descendent search {
+        margin-left: 10%;
+        width: 80%;
+        .input-group-search {
+            margin-top: 1.5rem;
+            z-index: 0;
+        }
+        .input-hints {
+            margin-top: 2rem;
+            p {
+                font-size: 1rem;
+                padding: 0;
+                margin: 0 0 .2rem;
+            }
+        }
+        .create-order {
+            margin-top: 2rem;
+            .btn {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    @descendent hint {
+        padding: 1rem 2rem 0 2rem;
+        .check-list {
+            .fa-check {
+                color: $deep_green;
+            }
+        }
+    }
+}
+
+// Implementer search + info
+@component i-am-implementer {
+    padding: 3rem 0 6rem;
+    ;
+    .container {
+        background-image: url(../images/background/implementer-hint.png);
+        background-size: 50%;
+        background-position: 3%;
+        background-repeat: no-repeat;
+    }
+    @descendent search {
+        margin-left: 10%;
+        width: 80%;
+        .input-group-search {
+            margin-top: 1.5rem;
+            z-index: 0;
+        }
+        .input-hints {
+            margin-top: 2rem;
+            .catalog-of-orders {
+                margin-bottom: 1rem;
+                a {
+                    color: $deep_blue;
+                    border-bottom: 2px dotted $deep_blue;
+                }
+            }
+            p {
+                font-size: 1rem;
+                padding: 0;
+                margin: 0 0 .2rem;
+            }
+        }
+        .create-order {
+            margin-top: 2rem;
+            .btn {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    @descendent hint {
+        padding: 2rem 3rem 0 2rem;
+        .check-list {
+            .fa-check {
+                color: $deep_blue;
+            }
+        }
+    }
+}
+
+// Advantages
+@component advantages {
+    text-align: center;
+    padding: 3rem 0;
+    .container {
+        position: relative;
+        .dotted-line {
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            background-image: url(../images/infographic/advantage-line.png);
+            background-size: 35%;
+            background-repeat: no-repeat;
+            top: 38%;
+            &.first {
+                left: 0;
+                background-position: 75%;
+            }
+            &.second {
+                right: 0;
+                background-position: 25%;
+            }
+        }
+    }
+    @descendent third {
+        margin: 3rem auto 0;
+        width: 65%;
+        .advantage {
+            text-align: center;
+            img {
+                width: 130px;
+                margin-bottom: 1.5rem;
+            }
+            p {
+                margin-top: 1rem;
+                color: $text_blue_gray;
+            }
+            &:last-child {
+                background-image: none;
+            }
+        }
+    }
+}
+
+@component photo-gallery {
+    padding: 1rem 0;
+}
+
+@component block-tags {
+    padding: 0 0 3rem;
+}
+
+// Create order
+@component create-order {
+    &.part1 {
+        padding: 2rem 0 0;
+    }
+    &.part2 {
+        padding: 0 0 3rem;
+    }
+    .opponent-card {
+        margin-bottom: 1rem;
+    }
+    .selected-category {
+        border: 2px dotted $deep_green;
+        padding: 1rem;
+        color: $deep_green;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        .h3 {
+            margin: 0;
+            i {
+                margin-right: .5rem;
+            }
+        }
+        a {
+            color: $deep_green;
+            &:hover {
+                color: $hover_green;
+            }
+            &.edit {
+                float: right;
+            }
+        }
+    }
+    .call-expert {
+        text-align: center;
+        a.expert {
+            color: $deep_blue;
+            border-bottom: 2px dotted $deep_blue;
+            &:hover {
+                color: $hover_blue;
+                border-bottom: 2px dotted $hover_blue;
+            }
+        }
+    }
+    .photo-inner {
+        margin-bottom: 2rem;
+    }
+    .start-finish-date {
+        margin-bottom: 1rem;
+        .create-finish-date {
+            padding-top: 1.5rem;
+        }
+    }
+    .implementer-short-card {
+        background: $light_gray;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border: 1px solid $soft_gray;
+        .info {
+            line-height: 1.8rem;
+            .role {
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+            .name {
+                font-weight: 700;
+                color: $deep_blue;
+            }
+            .old {
+                font-size: .9rem;
+                font-weight: 700;
+            }
+            .rating {
+                font-size: .9rem;
+                i {
+                    color: #FCD571;
+                }
+                .status {
+                    font-size: .9rem;
+                    font-weight: 700;
+                    padding-right: 1rem;
+                    margin-left: .5rem;
+                    &.master {
+                        color: $deep_blue;
+                        .icon {
+                            display: inline-block;
+                            width: 14px;
+                            height: 14px;
+                            top: 3px;
+                            position: relative;
+                            margin-right: .2rem;
+                            background-image: url(../images/interface/implement-icons.png);
+                            background-repeat: no-repeat;
+                            background-position: -17px 1px;
+                            background-size: 30px;
+                        }
+                    }
+                    &.expert {
+                        color: $deep_red;
+                        .icon {
+                            display: inline-block;
+                            width: 14px;
+                            height: 14px;
+                            top: 3px;
+                            position: relative;
+                            margin-right: .2rem;
+                            background-image: url(../images/interface/implement-icons.png);
+                            background-repeat: no-repeat;
+                            background-position: 1px 1px;
+                            background-size: 30px;
+                        }
+                    }
+                }
+            }
+            .orders {
+                display: inline-block;
+                width: auto;
+                font-size: .9rem;
+                background: #C9E6F2;
+                border-radius: 50rem;
+                padding: .5rem 1rem;
+                line-height: 1rem;
+                margin-top: .5rem;
+            }
+        }
+        i {
+            &.fa-star {
+                margin-right: 0;
+            }
+        }
+    }
+    .activate-expert {
+        padding-top: 1rem;
+    }
+    .chosen-implementer {
+        margin-top: 2rem;
+        i {
+            margin-right: 1rem;
+        }
+        .call-expert-button {
+            margin: 1rem 0 2rem;
+        }
+        .remove-expert-button {
+            margin: 1rem 0 2rem;
+        }
+    }
+    .changes {
+        .notification {
+            color: $deep_red;
+            padding: 1rem;
+            background: $light_red;
+            border-radius: 8px;
+            border: 2px dotted $deep_red;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .details {
+            color: $black_color;
+            padding: 1rem;
+            background: $light_red;
+            border-radius: 8px;
+            background: $white_color;
+            margin-bottom: 1rem;
+        }
+        .actions {
+            margin-top: 1rem;
+            button {
+                margin-right: .5rem;
+            }
+            .hint {
+                font-size: .8rem;
+                color: $deep_red;
+            }
+        }
+    }
+    .downloads {
+        margin-bottom: 2rem;
+    }
+    .implementer-proposal {
+        .implementer-field {
+            margin-bottom: 1rem;
+        }
+        .hint {
+            padding: 1rem;
+            color: $deep_blue;
+            font-weight: 700;
+            background: $light_blue;
+            border: 2px dotted $deep_blue;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .form {
+            fieldset {
+                a {
+                    &.bottom-link {
+                        color: $deep_blue;
+                        border-bottom: 2px dotted $deep_blue;
+                    }
+                }
+            }
+        }
+    }
+    .short-order-card {
+        padding: 1rem;
+        border-radius: 8px;
+        background: #f2f2f2;
+        margin-top: 1rem;
+        a {
+            color: $deep_blue;
+            &.title {
+                margin-bottom: 1rem;
+                display: block;
+                margin-top: 0;
+            }
+        }
+        .bottom {
+            margin-top: 1rem;
+            .param {
+                font-weight: 700;
+                font-size: 1.1rem;
+                margin-right: 2rem;
+                i {
+                    margin-right: .5rem;
+                }
+            }
+        }
+        &.finish {
+            margin-bottom: 1rem;
+        }
+    }
+    .order-details-process {
+        text-align: center;
+        background: $light_blue;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 1rem;
+        &.finish {
+            background: $light_green;
+            .title {
+                color: $deep_green;
+            }
+        }
+        .title {
+            color: $deep_blue;
+            &.black {
+                color: $black_color;
+            }
+        }
+        a {
+            &.implementer {
+                font-weight: 700;
+                color: $deep_blue;
+                font-size: 1.2rem;
+                i {
+                    margin-right: .5rem;
+                }
+            }
+        }
+        .actions {
+            margin-top: 1rem;
+        }
+    }
+    @descendent preview {
+        padding: 2rem 0 3rem;
+        .created-order-info {
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px dotted $deep_green;
+            margin-top: 1rem;
+            &.gray {
+                background: $light_gray;
+                border: 1px solid $soft_gray;
+            }
+        }
+        .category-sub-parameters {
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px dotted $deep_green;
+            margin-top: 2rem;
+            &.gray {
+                background: $light_gray;
+                border: 1px solid $soft_gray;
+            }
+        }
+        .parameters {
+            .parameter {
+                margin: .5rem 0;
+            }
+            i {
+                margin-right: 1rem;
+            }
+        }
+        .sub-parameters {
+            margin: 0;
+            padding: 0 0 0 1.3rem;
+            li {
+                font-weight: 700;
+            }
+        }
+    }
+    @descendent edit {
+        padding: 2rem 0 3rem;
+        .implementer-short-card {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+// Order budget
+@component order-budget {
+    padding: 2rem 0 3rem;
+    @descendent price {
+        .form-control {
+            display: inline-block;
+            width: 80%;
+        }
+        .currency {
+            margin-left: 1rem;
+        }
+    }
+}
+
+@component order-preview-actions {
+    padding: 0 0 2rem;
+}
+
+// Profile
+@component profile-tabs {
+    padding: 1.5rem 0;
+}
+
+@component about-user {
+    padding: 2rem 0 3rem;
+    .form {
+        background: $light_gray;
+        padding: 1rem;
+        border-radius: 8px;
+        .photo-inner > div {
+            margin-bottom: 1rem;
+            .photo-miniature {
+                &.avatar {
+                    max-width: 280px;
+                }
+            }
+        }
+    }
+}
+
+@component add-new-category {
+    padding: 2rem 0 1rem;
+}
+@component add-new-subcategory {
+    padding: 2rem 0 1rem;
+}
+@component choose-new-subcategory {
+    padding: 1rem 0;
+}
+@component profile-actions {
+    padding: 0 0 2rem;
+    .btn {
+        margin-right: .5rem;
+    }
+}
+
+@component my-orders-list {
+    padding: 1rem 0 3rem;
+}
+
+// Implementer settings
+@component imp-professional-info {
+    padding: 1rem 0 3rem;
+}
+
+@component save-implementor {
+    padding: 1rem 0 2rem;
+    .action {
+        text-align: center;
+        padding: 2rem 0;
+    }
+}
+
+@component mobile-implementer-proposal {
+    display: none;
+    background: $light_gray;
+    padding: 2rem 0;
+    .panel-default {
+        border: none;
+        border-bottom-left-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        .panel-heading {
+            padding: 1rem;
+            background: $light_blue;
+            border: 2px dotted $deep_blue;
+            border-radius: 8px;
+            box-shadow: none;
+            .h4 {
+                color: $deep_blue;
+                font-weight: 700;
+                i.fa-caret-down {
+                    float: right;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .panel-collapse {
+            .panel-body {
+                border-top: none;
+                padding: 0;
+            }
+        }
+    }
+}

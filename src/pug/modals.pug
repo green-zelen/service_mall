@@ -1,0 +1,724 @@
+extends layout.pug
+
+
+//- All Modals
+//- Все модалы входа/регистрации вызываются друг над другом экшенами или могут быть открыты присвоением стилей: display: block; opacity: 1;
+//- Login Modal
+block login-modal
+	div.modal.fade.modal-square#loginModal(tabindex="-1" role="dialog" aria-labelledby="loginModalLabel")
+		div.modal-dialog.standart(role="document")
+			div.modal-content
+				div.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.h1.modal-title#loginModalLabel Вход или 
+						a(href='#' data-toggle="modal" data-target="#registratedPhoneModal") регистрация
+					//- Заголовок для модала входа при создании заказа/ исполнителя неавторизированным пользователем
+
+					//- div.h3.modal-title#loginModalLabel
+					//- 	| Для создания заказа вам необходимо
+					//- 	br
+					//- 	| войти или 
+					//- 	a(href="#") зарегистрироваться
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section
+						div.content-narrow 
+							form.form
+								div.text-error Упс! Введенный вами email не зарегистрирован на нашем сервисе.
+								//- Класс success придается fieldset при успешной валидации
+								//- Класс error придается fieldset при ошибке валидации
+								fieldset.form-group
+									input.form-control(type="email" placeholder="Email")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								//- Класс success придается fieldset при успешной валидации
+								//- Класс error придается fieldset при ошибке валидации
+								fieldset.form-group
+									input.form-control(type="password" placeholder="Пароль")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								div.forget-password
+									a(href='#' data-toggle="modal" data-target="#forgetPasswordModal") Забыли пароль?
+								fieldset.form-group
+									button.btn.btn-blue.btn-large.disabled(type="submit") Войти
+				div.modal-footer
+					div.h4.strong * или быстрый вход через соцсети
+					div.socials
+						ul.socials-list
+							li.socials-list-links
+								a.vk(href="#") #[i.fa.fa-vk]
+							li.socials-list-links.facebook
+								a.facebook(href="#") #[i.fa.fa-facebook]
+							li.socials-list-links
+								a.google-plus(href="#") #[i.fa.fa-google-plus]
+//- Registration Modal. Add number
+block registrated-phone-modal
+	div.modal.fade.modal-square#registratedPhoneModal(tabindex="-1" role="dialog" aria-labelledby="registratedPhoneModalLabel")
+		div.modal-dialog.standart(role="document")
+			div.modal-content
+				div.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.h1.modal-title#registratedPhoneModalLabel Впервые на нашем сайте?
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section
+						div.content-narrow 
+							form.form
+								div.text-error Введите корректный номер телефона.
+								//- Класс success придается fieldset при успешной валидации
+								//- Класс error придается fieldset при ошибке валидации
+								fieldset.form-group
+									input.form-control(type="tel" placeholder="Номер телефона")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								div.captcha
+									img(src="images/interface/captcha.png")
+								div.ask-verificate-code
+									a(href='#' data-toggle="modal" data-target="#verificateCodeModal") Получить код подтверждения
+				div.modal-footer
+
+
+//- Forget Password Modal. Add number
+block forget-password-modal
+	div.modal.fade.modal-square#forgetPasswordModal(tabindex="-1" role="dialog" aria-labelledby="forgetPasswordModalLabel")
+		div.modal-dialog.standart(role="document")
+			div.modal-content
+				div.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.h1.modal-title#forgetPasswordModalLabel Восстановление пароля
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section
+						div.content-narrow 
+							form.form
+								div.text-error Введите корректный номер телефона или адрес электронной почты.
+								//- Класс success придается fieldset при успешной валидации
+								//- Класс error придается fieldset при ошибке валидации
+								fieldset.form-group
+									input.form-control(type="tel" placeholder="Номер телефона / email")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								div.captcha
+									img(src="images/interface/captcha.png")
+								div.ask-verificate-code
+									a(href='#' data-toggle="modal" data-target="#verificateCodeModal") Получить код подтверждения
+				div.modal-footer
+				
+//- Registration & Forget Password Modal. Verificate code
+block verificate-code-modal
+	div.modal.fade.modal-square#verificateCodeModal(tabindex="-1" role="dialog" aria-labelledby="verificateCodeModalLabel")
+		div.modal-dialog.standart(role="document")
+			div.modal-content
+				div.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.h1.modal-title#verificateCodeModalLabel Введите код из СМС
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section
+						div.content-narrow 
+							form.form
+								div.text-error 
+									| Время сессии истекло,
+									a(href="#") получите код
+									| еще раз
+								div.text-error Введенный вами код неверен
+								//- Класс success придается fieldset при успешной валидации
+								//- Класс error придается fieldset при ошибке валидации
+								fieldset.form-group
+									input.form-control(type="num" placeholder="Код подтверждения")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								//-  В этом модале капча выводится только при ошибке, когда время сессии истекает
+								div.captcha.hide
+									img(src="images/interface/captcha.png")
+								fieldset.form-group
+									button.btn.btn-blue.btn-large.disabled(type="submit" data-toggle="modal" data-target="#userInfoModal") Подтвердить
+									div.hint *у вас осталось 2 минут(ы) для ввода смс-кода 
+								div.ask-verificate-code
+									a(href="#") Получить код подтверждения еще раз 
+				div.modal-footer
+
+//- Registration Modal. User Info
+block user-info-modal
+	div.modal.fade.modal-square#userInfoModal(tabindex="-1" role="dialog" aria-labelledby="userInfoModalLabel")
+		div.modal-dialog.standart(role="document")
+			div.modal-content
+				div.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.h1.modal-title#userInfoModalLabel Заполните данные о себе
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section
+						div.content-narrow 
+							form.form
+								div.text-error Ваши пароли не совпадают
+								//- Класс success придается fieldset при успешной валидации
+								//- Класс error придается fieldset при ошибке валидации
+								fieldset.form-group
+									input.form-control(type="email" placeholder="Email")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								fieldset.form-group
+									input.form-control(type="text" placeholder="Фамилия")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								fieldset.form-group
+									input.form-control(type="text" placeholder="Имя")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								fieldset.form-group
+									input.form-control(type="text" placeholder="Отчество")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								div.divider.divider-dotted.divider-blue
+								fieldset.form-group
+									input.form-control(type="password" placeholder="Пароль")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								fieldset.form-group
+									input.form-control(type="password" placeholder="Подтверждение пароля")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								fieldset.form-group
+									button.btn.btn-blue.btn-large.disabled(type="submit") Зарегистрироваться
+				div.modal-footer
+
+//- Forget Password Modal. Success verificate & sen email
+//- Модальное окно не вызывается экшеном, только присвоением стилей: display: block; opacity: 1;
+block success-verificate-modal
+	div.modal.fade.modal-square#successVerificateModal(tabindex="-1" role="dialog" aria-labelledby="successVerificateModalLabel")
+		div.modal-dialog.standart(role="document")
+			div.modal-content
+				div.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.h1.modal-title#successVerificateModalLabel Восстановление пароля
+				div.modal-body
+					section.blue-section
+						div.content-narrow 
+							form.form
+								div.text-notify На ваш email maria.perlovskaya@gmail.com выслано письмо со ссылкой, по которой необходимо пройти для смены пароля.
+								
+				div.modal-footer
+//- Registration Modal. User Info
+block new-password-modal
+	div.modal.fade.modal-square#newPasswordModal(tabindex="-1" role="dialog" aria-labelledby="newPasswordModalLabel")
+		div.modal-dialog.standart(role="document")
+			div.modal-content
+				div.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.h1.modal-title#newPasswordModalLabel Придумайте новый пароль
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section
+						div.content-narrow 
+							form.form
+								div.text-error Ваши новые пароли не совпадают
+								//- Класс success придается fieldset при успешной валидации
+								//- Класс error придается fieldset при ошибке валидации
+								fieldset.form-group
+									input.form-control(type="password" placeholder="Пароль")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								fieldset.form-group
+									input.form-control(type="password" placeholder="Подтверждение пароля")
+									i.fa.fa-check
+									i.fa.fa-exclamation
+								fieldset.form-group
+									button.btn.btn-blue.btn-large.disabled(type="submit") Сохранить новый пароль
+				div.modal-footer
+
+//- Location Modals
+block choose-locate-modal
+	div.modal.fade.modal-square.modal-location#chooseLocateModal(tabindex="-1" role="dialog" aria-labelledby="chooseLocateModalLabel")
+		div.modal-dialog.wide(role="document")
+			div.modal-content
+				div.modal-header.left
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.container
+						div.row
+							div.col-xs-12.col-xs-12.col-md-6
+								div.h1.modal-title#chooseLocateModalLabel Выбор города
+							div.col-xs-12.col-xs-12.col-md-6
+								div.icon-input.search
+									input.form-control(type="text" placeholder="Название города")/
+									i.fa.fa-search.input-i
+									a.remove(href="#")
+										i.fa.fa-remove.input-i
+							div.col-xs-12
+								div.city-now
+									span Сейчас вы смотрите объявления для города
+									a.dotted.green.inline(href="#")
+										i.fa.fa-check
+										| Южно-Сахалинск
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section.locate
+						div.container
+							div.row.flex-rows
+								div.col-xs-12.col-sm-12.col-md-4.first-locate
+									div.locate-inner
+										div.prew-locate
+											a(href="#")
+												i.fa.fa-arrow-left
+												| Назад
+										div.all-russia
+											a.h4.strong(href='#' data-toggle="modal" data-target="#chooseRegionModal")
+												i.fa.fa-flag
+												| Вся Россия
+										div.locate-list
+											div.h4 Федеральный округ
+											div.checkbox.selected
+												label 
+													input(type="checkbox" checked)/ 
+													| Дальневосточный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Приволжский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Северо-Западный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Северо-Кавказский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Сибирский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Уральский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Центральный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Южный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Крымский
+													div.check
+								//- В мобильной версии скрыт, открывается пошагово
+								div.col-xs-12.col-sm-12.col-md-4.second-locate
+									div.locate-inner
+										div.prew-locate
+											a(href="#")
+												i.fa.fa-arrow-left
+												| Назад
+										div.locate-list
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Амурская область
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Еврейская автономная область
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Камчатский край
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Магаданская область
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox" checked)/ 
+													| Приморский край
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Республика Саха, Якутия
+													div.check
+											div.checkbox.selected
+												label 
+													input(type="checkbox" checked)/ 
+													| Сахалинская область
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Хабаровский край
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Чукотский АО
+													div.check
+								div.col-xs-12.col-sm-12.col-md-4.third-locate
+									div.locate-inner
+										div.prew-locate
+											a(href="#")
+												i.fa.fa-arrow-left
+												| Назад
+										div.locate-list
+											div.checkbox
+												label.all-cities
+													input(type="checkbox")/ 
+													| Выбрать все города региона 
+													div.check
+											div.checkbox
+												label.strong
+													input(type="checkbox" checked)/ 
+													| Южно-Сахалинск
+													span.num 21 080
+													div.check
+											div.checkbox
+												label.strong 
+													input(type="checkbox" checked)/ 
+													| Корсаков
+													span.num 2 789
+													div.check
+											div.checkbox
+												label.strong 
+													input(type="checkbox")/ 
+													| Холмск
+													span.num 809
+													div.check
+											div.divider.divider-dotted.divider-blue
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Александров-Сахалинский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Долинск
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Корсаков
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Красногорск
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Курильск
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Макаров
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Невельск
+													div.check
+				div.modal-footer
+					div.buttons-inner
+						button.btn.btn-small.btn-round.btn-blue Применить
+block choose-region-modal
+	div.modal.fade.modal-square.modal-location#chooseRegionModal(tabindex="-1" role="dialog" aria-labelledby="chooseRegionModalLabel")
+		div.modal-dialog.wide(role="document")
+			div.modal-content
+				div.modal-header.left
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.container
+						div.row
+							div.col-xs-12.col-xs-12.col-md-6
+								div.h1.modal-title#chooseRegionModalLabel Выбор города
+							div.col-xs-12.col-xs-12.col-md-6
+								div.icon-input.search
+									input.form-control(type="text" placeholder="Название города")/
+									i.fa.fa-search.input-i
+									a.remove(href="#")
+										i.fa.fa-remove.input-i
+							div.col-xs-12
+								div.city-now
+									span Сейчас вы смотрите объявления для города
+										a.dotted.green.inline(href="#")
+											i.fa.fa-check
+											| Южно-Сахалинск
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.blue-section.locate
+						div.container
+							div.row.flex-rows
+								div.col-xs-12.col-sm-12.col-md-4.first-locate
+									div.locate-inner
+										div.prew-locate
+											a(href="#")
+												i.fa.fa-arrow-left
+												| Назад
+										div.all-russia
+											a.h4.strong(href="#")
+												i.fa.fa-flag
+												| Вся Россия
+										div.locate-list
+											div.h4 Федеральный округ
+											//- Во всех чекбоксах можно убрать div.check и тогда будет список выбираемых городов без галочек-чекбоксов
+											div.checkbox.selected
+												label 
+													input(type="checkbox" checked)/ 
+													| Дальневосточный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Приволжский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Северо-Западный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Северо-Кавказский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Сибирский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Уральский
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Центральный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Южный
+													div.check
+											div.checkbox
+												label 
+													input(type="checkbox")/ 
+													| Крымский
+													div.check
+								div.col-xs-12.col-sm-12.col-md-8.second-locate
+									div.locate-inner
+										div.prew-locate
+											a(href="#")
+												i.fa.fa-arrow-left
+												| Назад
+										div.locate-list
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox")/ 
+														span.label-title Амурская область
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Благовещенск, Белогорск, Райчихинск, Тында, Благовещенск
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox")/ 
+														span.label-title Еврейская автономная область
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Биробиджан, Смидовичский район, Облучье, Биробиджан
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox")/ 
+														span.label-title Камчатский край
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Петропавловск-Камчатский, Елизово, Вилютино 
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox")/ 
+														span.label-title Магаданская область
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Магадан, Сусуман
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox" checked)/ 
+														span.label-title Приморский край
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Владивосток, Уссурийск, Находка, Артем, Лесозаводск
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox")/ 
+														span.label-title Республика Саха, Якутия
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Якутск, Нерюнгри, Алдан, Ленск, Мирный, Якутск
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox" checked)/ 
+														span.label-title Сахалинская область
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Южно-Cахалинск, Корсаков, Холмск, Курильск
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox")/ 
+														span.label-title Хабаровский край
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Хабаровск, Комсомольск-на-Амуре, Амурск, Хабаровск
+											div.checkbox.line-checkbox
+												div.left
+													label 
+														input(type="checkbox")/ 
+														span.label-title Чукотский АО
+														span.divider.divider-dotted.divider-blue
+														div.check
+												div.right
+													span.cities Анадырь, Певек, Билибино
+				div.modal-footer
+					div.buttons-inner
+						button.btn.btn-small.btn-round.btn-blue Применить
+
+//- Photo Modals
+block add-portfolio-photo-modal
+	div.modal.fade.modal-square#addPortfolioPhotoModal(tabindex="-1" role="dialog" aria-labelledby="addPortfolioPhotoModalLabel")
+		div.modal-dialog.wide(role="document")
+			div.modal-content
+				div.modal-header.left
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") 
+					div.container
+						div.h1.modal-title#addPortfolioPhotoModalLabel Добавьте фотографии для вашего портфолио
+				div.modal-body
+					//- Класс .success-section придается блоку при успешной валидации
+					//- Класс .error-section придается блоку при ошибке валидации
+					section.green-section.add-photos
+						div.container
+							div.photo-inner
+								button.btn.add-photo.btn-green 
+									i.fa.fa-plus
+									i.fa.fa-camera
+								div.drag-n-drop Перетащите сюда выбранные фотографии
+							div.photo-miniature-inner
+								div.row
+									div.col-xs-12.col-sm-4.col-md-2
+										div.photo-miniature
+											a.strech-img
+												img(src="images/stubs/stub1.png")/
+												a.photo-miniature-delete(href="#")
+									div.col-xs-12.col-sm-8.col-md-10
+										div.h5 Добавьте описание к фото img12.jpg
+										div.form
+											fieldset.form-group
+												textarea.form-control(type="text" rows="3") Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан на заказ за 2,5 недели. Каркас – ДСП, ткань на обивку – испанский велюр, раскладные механизмы и фурнитура – аллюминий. Гарантия 5 лет.
+							div.photo-miniature-inner
+								div.row
+									div.col-xs-12.col-sm-4.col-md-2
+										div.photo-miniature
+											a.strech-img
+												img(src="images/stubs/stub2.png")/
+												a.photo-miniature-delete(href="#")
+									div.col-xs-12.col-sm-8.col-md-10
+										div.h5 Добавьте описание к фото img13.jpg
+										div.form
+											fieldset.form-group
+												textarea.form-control(type="text" rows="3" placeholder="Подробное описание к фотографии")
+							div.buttons-inner
+								button.btn.btn-small.btn-round.btn-green Прикрепить портфолио
+				div.modal-footer
+block section-full-photo
+	div.modal.fade.modal-square#fullPhotoModal(tabindex="-1" role="dialog" aria-labelledby="fullPhotoModalLabel")
+		//- Необходимо задавать ширину с помощью js, отталкиваясь от ширины изображения, но максимум 960px
+		div.modal-dialog.img(role="document" style="width:960px")
+			div.modal-content
+				div.modal-header.empty
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true")
+				div.modal-body
+					img(src="images/stubs/full-stub.png")/
+					a.download-img(href="#")
+						i.fa.fa-download
+						| Скачать file3.jpeg
+					div.photo-miniature-descr Диван-кровать раскладной  3.20х1.60 м. с выдвижным ящиком для хранения. Сделан на заказ за 2,5 недели. Каркас – ДСП, ткань на обивку – испанский велюр, раскладные механизмы и фурнитура – аллюминий. Гарантия 5 лет.
+block section-full-photo2
+	div.modal.fade.modal-square#fullPhoto2Modal(tabindex="-1" role="dialog" aria-labelledby="fullPhoto2ModalLabel")
+		//- Необходимо задавать ширину с помощью js, отталкиваясь от ширины изображения, но максимум 960px
+		div.modal-dialog.img(role="document" style="width:800px")
+			div.modal-content
+				div.modal-header.empty
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true")
+				div.modal-body
+					img(src="images/stubs/file3.jpg")/
+					a.download-img(href="#")
+						i.fa.fa-download
+						| Скачать file3.jpeg
+block section-full-photo-gallery
+	div.modal.fade.modal-square#fullPhotoModalGallery(tabindex="-1" role="dialog" aria-labelledby="fullPhotoModalGalleryLabel")
+		//- Необходимо задавать ширину с помощью js, отталкиваясь от ширины изображения, но максимум 960px
+		div.modal-dialog.img(role="document" style="width:560px")
+			div.modal-content
+				div.modal-header.empty
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true")
+				div.modal-body
+					div.modal-gallery
+						div.nav
+							a.left(href="#")
+								i.fa.fa-angle-left
+							a.right(href="#")
+								i.fa.fa-angle-right
+						div.slider
+							div.image
+								img(src="images/stubs/gallery1.png")/
+							div.image
+								img(src="images/stubs/gallery2.png")/
